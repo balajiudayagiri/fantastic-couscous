@@ -2,18 +2,17 @@
 import React from "react";
 import { ModeToggle } from "@components/modeToggle";
 import Link from "next/link";
-import { Menu } from "lucide-react"; // Import Menu icon from lucide-react
+import { Menu, PanelRightClose } from "lucide-react"; // Import Menu icon from lucide-react
 import {
   Drawer,
   DrawerClose,
   DrawerContent,
-  DrawerDescription,
   DrawerFooter,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
 } from "@components/drawer";
-import { Button } from "@components/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@components/avatar";
 
 function Header() {
   const navLinks = [
@@ -23,53 +22,65 @@ function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div
-        className={
-          "container mx-auto flex justify-between items-center shadow-md py-4 px-6"
-        }>
+    <header className="mx-3 my-6 py-3 w-fit ml-auto  border border-solid border-accent-foreground sticky top-0 z-50 rounded-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-md">
+      <div className={"container mx-auto flex items-center gap-6 pr-6 pl-4"}>
         {/* Logo or app name can go here */}
-        <Link href="/">BU</Link>
-
-        {/* Hamburger menu icon for mobile */}
-        <div className="lg:hidden p-2 focus:outline-none">
-          <Drawer>
-            <DrawerTrigger>Open</DrawerTrigger>
-            <DrawerContent className="h-[50dvh]">
-              <DrawerHeader>
-                <DrawerTitle>Balaji Udayagiri</DrawerTitle>
-              </DrawerHeader>
-              <div className="flex flex-col p-5">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 py-2 px-4">
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-              <DrawerFooter>
-                <Button>Submit</Button>
+        <Link href="/">
+          <Avatar>
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+        </Link>
+        <div className="flex align-middle items-center gap-3">
+          <div className="sm:hidden">
+            {/* Mode toggle */}
+            <ModeToggle />
+          </div>
+          {/* Hamburger menu icon for mobile */}
+          <div className="sm:hidden p-2 focus:outline-none">
+            <Drawer direction="right">
+              <DrawerTrigger>
+                <Menu />
+              </DrawerTrigger>
+              <DrawerContent className="h-[100dvh] p-8">
                 <DrawerClose>
-                  <Button variant="outline">Cancel</Button>
+                  <PanelRightClose />
                 </DrawerClose>
-              </DrawerFooter>
-            </DrawerContent>
-          </Drawer>
+                <DrawerHeader>
+                  <DrawerTitle>Balaji Udayagiri</DrawerTitle>
+                </DrawerHeader>
+                <div className="flex flex-col p-5 gap-3">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="hover:bg-accent hover:text-accent-foreground rounded-sm focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50 py-2 px-4">
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+                <DrawerFooter></DrawerFooter>
+              </DrawerContent>
+            </Drawer>
+          </div>
+
+          {/* Navigation links */}
+          <nav className="hidden sm:flex space-x-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="rounded-md py-2 px-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground">
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="hidden sm:block">
+            {/* Mode toggle */}
+            <ModeToggle />
+          </div>
         </div>
-
-        {/* Navigation links */}
-        <nav className="hidden lg:flex space-x-4">
-          {navLinks.map((link) => (
-            <Link key={link.href} href={link.href}>
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-
-        {/* Mode toggle */}
-        <ModeToggle />
       </div>
     </header>
   );

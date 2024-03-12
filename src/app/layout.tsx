@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@b/components/theme-provider";
 import Header from "@components/header";
-import { ScrollArea } from "@b/components/ui/scroll-area";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
