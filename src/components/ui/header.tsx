@@ -22,7 +22,7 @@ function Header() {
   ];
 
   return (
-    <header className="mx-3 my-6 py-3 w-fit ml-auto  border border-solid border-accent-foreground sticky top-0 z-50 rounded-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-md">
+    <header className="mx-3 my-6 py-3 w-fit ml-auto  border border-solid border-accent-foreground sticky top-6 z-50 rounded-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-md">
       <div className={"container mx-auto flex items-center gap-6 pr-6 pl-4"}>
         {/* Logo or app name can go here */}
         <Link href="/">
