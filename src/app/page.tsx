@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <main className="text-accent-foreground xl:mx-36 lg:mx-16 md:mx-8 sm:mx-5 mx-4 h-[70dvh] flex flex-col justify-center">
-      <h1 className={"text-7xl font-extrabold mb-10 "}>
+    <main className="text-accent-foreground xl:mx-36 lg:mx-16 md:mx-8 sm:mx-5 mx-4 h-[70vh] flex flex-col justify-center">
+      <h1 className={"md:text-7xl sm:text-6xl text-4xl font-extrabold mb-10 "}>
         I&apos;m <br />
         Balaji Udayagiri
       </h1>

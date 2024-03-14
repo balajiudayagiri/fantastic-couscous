@@ -13,9 +13,12 @@ function Header() {
   ];
 
   return (
-    <div className="xl:mx-36 lg:mx-16 md:mx-8 sm:mx-5 mx-4">
-      <header className="mx-3 my-6 py-3 w-fit ml-auto  sticky top-6 z-50  bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-md">
-        <div className={"container mx-auto flex items-center gap-6 pr-6 pl-4"}>
+    <div className="xl:mx-36 lg:mx-16 md:mx-8 sm:mx-5 ">
+      <header className="mx-3 my-6 py-3 w-fit ml-auto mr-0  sticky top-6 z-50  bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-md">
+        <div
+          className={
+            "container mx-auto flex items-center gap-6 sm:pr-6 pr-3 pl-4"
+          }>
           {/* Logo or app name can go here */}
           <Link href="/">
             <Avatar>
