@@ -26,14 +26,16 @@ export default function RootLayout({
       <body
         className={`${poppins.className} dark:bg-dot-white/[0.3] bg-dot-black/[0.3] h-lvh m-0  relative`}>
         <div className="z-[-1] h-dvh absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange>
-          <Header />
-          {children}
-        </ThemeProvider>
+        <div className="overflow-y-scroll h-lvh relative">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange>
+            <Header />
+            {children}
+          </ThemeProvider>
+        </div>
       </body>
     </html>
   );

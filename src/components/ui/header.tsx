@@ -12,8 +12,8 @@ function Header() {
   ];
 
   return (
-    <div className="xl:mx-36 lg:mx-16 md:mx-8 sm:mx-5 pt-6">
-      <header className="mx-3 py-3 w-fit ml-auto mr-0  sticky top-6 z-50">
+    <div className="xl:mx-36 lg:mx-16 md:mx-8 sm:mx-5 pt-6  sticky top-0 z-50 backdrop-blur-sm dark:bg-black/80 bg-white/80">
+      <header className="mx-3 py-3 w-fit ml-auto mr-0">
         <div
           className={
             "container mx-auto flex items-center gap-6 sm:pr-6 pr-3 pl-4"

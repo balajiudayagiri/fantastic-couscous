@@ -25,7 +25,10 @@ export default function Home() {
         learning is an unending process, and I relish every opportunity to grow,
         both personally and professionally. 🌱
       </p>
-      <p className={"text-lg mt-6 font-semibold"}>
+      <p
+        className={
+          "text-lg mt-6 font-semibold dark:text-cyan-500 text-cyan-600"
+        }>
         #SoftwareEngineering #ProductDevelopment
       </p>
       <div className="flex gap-6 mt-3">
