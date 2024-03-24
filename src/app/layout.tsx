@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} dark:bg-dot-white/[0.3] bg-dot-black/[0.3] h-dvh m-0  relative`}>
+        className={`${poppins.className} dark:bg-dot-white/[0.3] bg-dot-black/[0.3] h-lvh m-0  relative`}>
         <div className="z-[-1] h-dvh absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
         <ThemeProvider
           attribute="class"
