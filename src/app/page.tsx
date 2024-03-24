@@ -1,3 +1,9 @@
+import {
+  InstagramColoredIcon,
+  LinkedInColoredIcon,
+  TwitterXIcon,
+} from "@b/_icons";
+
 export default function Home() {
   return (
     <main className="text-accent-foreground xl:mx-36 lg:mx-16 md:mx-8 sm:mx-5 mx-4 h-[70vh] flex flex-col justify-center">
@@ -22,6 +28,29 @@ export default function Home() {
       <p className={"text-lg mt-6 font-semibold"}>
         #SoftwareEngineering #ProductDevelopment
       </p>
+      <div className="flex gap-6 mt-3">
+        <a
+          href="https://www.instagram.com/balaji.udy"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:scale-125 transition cursor-pointer ease-in-out duration-300">
+          <InstagramColoredIcon size={"30px"} />
+        </a>
+        <a
+          href="https://in.linkedin.com/in/balaji-udayagiri-228747243"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:scale-125 transition cursor-pointer ease-in-out duration-300">
+          <LinkedInColoredIcon size={"30px"} />
+        </a>
+        <a
+          href="https://www.twitter.com/balaji_udy"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:scale-125 transition cursor-pointer ease-in-out duration-300">
+          <TwitterXIcon size={"30px"} className="text-accent-foreground" />
+        </a>
+      </div>
     </main>
   );
 }

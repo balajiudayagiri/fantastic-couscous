@@ -1,8 +1,7 @@
-// components/Header.js
 import React from "react";
 import { ModeToggle } from "@components/modeToggle";
 import Link from "next/link";
-import { Menu } from "lucide-react"; // Import Menu icon from lucide-react
+import { Menu } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@components/avatar";
 import { Sheet, SheetContent, SheetTrigger } from "./sheet";
 
@@ -13,18 +12,21 @@ function Header() {
   ];
 
   return (
-    <div className="xl:mx-36 lg:mx-16 md:mx-8 sm:mx-5 ">
-      <header className="mx-3 my-6 py-3 w-fit ml-auto mr-0  sticky top-6 z-50  bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-md">
+    <div className="xl:mx-36 lg:mx-16 md:mx-8 sm:mx-5 pt-6">
+      <header className="mx-3 py-3 w-fit ml-auto mr-0  sticky top-6 z-50">
         <div
           className={
             "container mx-auto flex items-center gap-6 sm:pr-6 pr-3 pl-4"
           }>
           {/* Logo or app name can go here */}
-          <Link href="/">
+          <Link
+            href="/"
+            className="hover:scale-125 transition cursor-pointer border-solid border-2 rounded-full outline outline-2 ">
             <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" alt="CN" />
-              <AvatarFallback>CN</AvatarFallback>
+              <AvatarImage src={"/images/balaji.png"} alt="BU" />
+              <AvatarFallback>BU</AvatarFallback>
             </Avatar>
+            {/* <img src={pic} alt="BU" height={45} width={45} /> */}
           </Link>
           <div className="flex align-middle items-center gap-3">
             <div className="sm:hidden">
