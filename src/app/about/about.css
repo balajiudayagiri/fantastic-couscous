@@ -1,0 +1,15 @@
+.scroll-styles::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+.scroll-styles::-webkit-scrollbar-track {
+    background: inherit;
+}
+
+/* Handle */
+.scroll-styles::-webkit-scrollbar-thumb {
+    background: #88888840;
+    border-radius: 99px;
+
+}

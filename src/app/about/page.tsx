@@ -6,10 +6,11 @@ import {
 } from "@b/components/ui/accordion";
 import { calculateExperience } from "@b/utilities/calculateExperience";
 import React from "react";
+import "./about.css";
 
 function page() {
   return (
-    <div className=" xl:mx-36 lg:mx-16 md:mx-8 sm:mx-5 mx-4 mt-16">
+    <div className=" xl:px-36 lg:px-16 md:px-8 sm:px-5 px-4 py-2">
       <h1
         className={
           "md:text-6xl sm:text-5xl text-4xl font-extrabold leading-tight mb-10 "
