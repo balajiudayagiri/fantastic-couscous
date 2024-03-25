@@ -1,11 +1,6 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@b/components/ui/accordion";
-import { calculateExperience } from "@b/utilities/calculateExperience";
 import React from "react";
+import { calculateExperience } from "@b/utilities/calculateExperience";
+import Cards from "@b/app/about/Cards";
 import "./about.css";
 
 function page() {
@@ -35,28 +30,14 @@ function page() {
         opportunities to learn and grow. Each project, each line of code, has
         been a step in my evolution as a tech enthusiast.
       </p>
-      <Accordion type="single" collapsible defaultValue="item-1">
-        <AccordionItem value="item-1">
-          <AccordionTrigger>Is it accessible?</AccordionTrigger>
-          <AccordionContent>
-            Yes. It adheres to the WAI-ARIA design pattern.
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-2">
-          <AccordionTrigger>Is it styled?</AccordionTrigger>
-          <AccordionContent>
-            Yes. It comes with default styles that matches the other
-            components&apos; aesthetic.
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-3">
-          <AccordionTrigger>Is it animated?</AccordionTrigger>
-          <AccordionContent>
-            Yes. It&apos;s animated by default, but you can disable it if you
-            prefer.
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion>
+      <p className="mt-6">
+        Collaborating with diverse teams, learning from challenges, and
+        embracing opportunities for growth, my journey has been a blend of hard
+        work, creativity, and a dash of spontaneity.
+      </p>
+      <h1 className="my-8 font-bold text-3xl">My Key skills</h1>
+
+      <Cards />
     </div>
   );
 }
