@@ -22,7 +22,8 @@ function Cards() {
           // </AccordionItem>
           <BackgroundGradient
             className="overflow-hidden rounded-md h-full"
-            containerClassName="rounded-md flex flex-col xl:w-[30%] lg:w-[47%] md:w-[47%] sm:w-full">
+            containerClassName="rounded-md flex flex-col xl:w-[30%] lg:w-[47%] md:w-[47%] sm:w-full"
+            key={value}>
             <div className="dark:bg-black bg-white p-5 rounded-3xl h-full">
               <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
               <p className="text-sm">{item.summary}</p>
