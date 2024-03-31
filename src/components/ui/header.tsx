@@ -9,6 +9,8 @@ function Header() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
+    { href: "/articles", label: "Articles" },
+    { href: "/contact", label: "Contact Me" },
   ];
 
   return (

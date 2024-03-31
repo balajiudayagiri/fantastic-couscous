@@ -1,17 +1,20 @@
 import React from "react";
 import { calculateExperience } from "@b/utilities/calculateExperience";
-import Cards from "@b/app/about/Cards";
 import "./about.css";
+import { CharminarIcon, IndiaGateIcon, IndiaIcon } from "@b/_icons";
 
-function page() {
+function About() {
   return (
-    <div className=" xl:px-36 lg:px-16 md:px-8 sm:px-5 px-4 py-2">
-      <h1
-        className={
-          "md:text-6xl sm:text-5xl text-4xl font-extrabold leading-tight mb-10 "
-        }>
-        I live in Hyderabad City, where I design my world
-      </h1>
+    <div className=" xl:px-36 lg:px-16 md:px-8 sm:px-5 px-4 py-2 pt-24">
+      <div className="flex items-center md:flex-row flex-col-reverse">
+        <h1
+          className={
+            "md:text-7xl sm:text-6xl text-4xl font-extrabold leading-tight md:mb-0 mb-10 "
+          }>
+          I live in Hyderabad City, where I design my world
+        </h1>
+        <CharminarIcon size={"250px"} />
+      </div>
       <p className={""}>
         Welcome to my digital abode! I&apos;m a{" "}
         <span className="dark:text-cyan-500 text-cyan-600 font-bold">
@@ -35,11 +38,29 @@ function page() {
         embracing opportunities for growth, my journey has been a blend of hard
         work, creativity, and a dash of spontaneity.
       </p>
-      <h1 className="my-8 font-bold text-3xl">My Key skills</h1>
-
-      <Cards />
+      <div className="flex items-center md:flex-row flex-col my-6">
+        <IndiaIcon size={"250px"} />
+        <p className="mt-6">
+          <span className="md:text-6xl sm:text-5xl text-4xl font-extrabold leading-tight md:mb-0 mb-10 ">
+            India
+          </span>{" "}
+          holds a special place in my heart, not only as my homeland but also as
+          a wellspring of inspiration and cultural richness. Growing up
+          surrounded by the vibrant tapestry of Indian traditions, I've
+          cultivated a deep appreciation for its diversity and heritage.
+        </p>
+      </div>
+      <div className="flex items-center md:flex-row flex-col my-6">
+        <p className="mt-6">
+          Beyond my role as a Software Engineer, I've also honed various talents
+          and skills rooted in the Indian ethos. From classical arts such as
+          music and dance to the culinary delights of Indian cuisine, I bring a
+          blend of cultural fluency and creativity to everything I do.
+        </p>
+        <IndiaGateIcon size={"250px"} />
+      </div>
     </div>
   );
 }
 
-export default page;
+export default About;
