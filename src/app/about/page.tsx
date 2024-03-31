@@ -46,13 +46,13 @@ function About() {
           </span>{" "}
           holds a special place in my heart, not only as my homeland but also as
           a wellspring of inspiration and cultural richness. Growing up
-          surrounded by the vibrant tapestry of Indian traditions, I've
+          surrounded by the vibrant tapestry of Indian traditions, I&apos;ve
           cultivated a deep appreciation for its diversity and heritage.
         </p>
       </div>
       <div className="flex items-center md:flex-row flex-col my-6">
         <p className="mt-6">
-          Beyond my role as a Software Engineer, I've also honed various talents
+          Beyond my role as a Software Engineer, I&apos;ve also honed various talents
           and skills rooted in the Indian ethos. From classical arts such as
           music and dance to the culinary delights of Indian cuisine, I bring a
           blend of cultural fluency and creativity to everything I do.
