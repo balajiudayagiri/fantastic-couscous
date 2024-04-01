@@ -12,18 +12,18 @@ export default function Home() {
         Balaji Udayagiri
       </h1>
       <p className={`text-justify text-[.9rem] leading-5`}>
-        Passionate Software Engineer 🚀 | Product Development 🔧
+        Passionate Software Engineer | Product Development
       </p>
       <p className={`text-justify text-[.9rem] leading-5`}>
         Specializing in React.js, HTML5 & CSS3, MUI, Mantine Ui, react-router,
         Redux toolkit, nested CSS, I&apos;m dedicated to ensuring seamless
-        performance, scalability, and user delight.💻
+        performance, scalability, and user delight.
       </p>
       <p className={`text-justify text-[.9rem] leading-5`}>
         My passion lies in utilizing existing skills while eagerly embracing new
         ones, within a dynamic and creative work environment. I believe that
         learning is an unending process, and I relish every opportunity to grow,
-        both personally and professionally. 🌱
+        both personally and professionally.
       </p>
       <p
         className={
