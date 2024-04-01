@@ -7,28 +7,27 @@ import {
 export default function Home() {
   return (
     <main className="text-accent-foreground xl:mx-36 lg:mx-16 md:mx-8 sm:mx-5 mx-4 h-[70vh] flex flex-col justify-center">
-      <h1 className={"md:text-7xl sm:text-6xl text-4xl font-extrabold mb-10 "}>
-        I&apos;m <br />
+      <h1 className={"md:text-7xl sm:text-6xl text-4xl font-extrabold mb-10"}>
+        I'm <br />
         Balaji Udayagiri
       </h1>
       <p className={`text-justify text-[.9rem] leading-5`}>
-        Passionate Software Engineer | Product Development
+        Welcome to my digital playground! I'm a{" "}
+        <span className="dark:text-cyan-500 text-cyan-600 font-bold text-xl">
+          Software Engineer
+        </span>{" "}
+        passionate about crafting awesome digital experiences.
       </p>
       <p className={`text-justify text-[.9rem] leading-5`}>
-        Specializing in React.js, HTML5 & CSS3, MUI, Mantine Ui, react-router,
-        Redux toolkit, nested CSS, I&apos;m dedicated to ensuring seamless
-        performance, scalability, and user delight.
+        With expertise in React.js, HTML5, CSS3, MUI, Mantine UI, and more, I
+        transform ideas into beautiful, functional websites and applications.
+        Let's turn your vision into reality!
       </p>
       <p className={`text-justify text-[.9rem] leading-5`}>
-        My passion lies in utilizing existing skills while eagerly embracing new
-        ones, within a dynamic and creative work environment. I believe that
-        learning is an unending process, and I relish every opportunity to grow,
-        both personally and professionally.
+        I'm all about growth and creativity. Join me on this journey of endless
+        learning and innovation. Together, we'll build something amazing.
       </p>
-      <p
-        className={
-          "text-lg mt-6 font-semibold dark:text-cyan-500 text-cyan-600"
-        }>
+      <p className="text-lg mt-6 font-semibold dark:text-cyan-500 text-cyan-600">
         #SoftwareEngineering #ProductDevelopment
       </p>
       <div className="flex gap-6 mt-3">
