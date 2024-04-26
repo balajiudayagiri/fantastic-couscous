@@ -1,9 +1,3 @@
-import {
-  InstagramColoredIcon,
-  LinkedInColoredIcon,
-  TwitterXIcon,
-} from "@b/_icons";
-
 import { SoftwareEngineericon } from "@b/_icons";
 import AboutMeTile from "@broot/AboutMeTile";
 import MyMusicTile from "@broot/MyMusicTile";
@@ -16,7 +10,7 @@ export default function Home() {
         <h1 className="font-bold text-2xl">I&apos;m a</h1>
         <SoftwareEngineericon className="w-full" />
       </main>
-      <section className="md:snap-start container mx-auto p-4 h-dvh flex items-center">
+      <section className="md:snap-start container mx-auto p-4 sm:h-dvh flex items-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           <div className="md:col-span-2 col-span-1  p-4 shadow rounded-xl bg-muted transform transition duration-300 ease-in-out sm:hover:scale-105">
             <AboutMeTile />
