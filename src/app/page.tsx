@@ -4,55 +4,40 @@ import {
   TwitterXIcon,
 } from "@b/_icons";
 
+import { SoftwareEngineericon } from "@b/_icons";
+import AboutMeTile from "@broot/AboutMeTile";
+import MyMusicTile from "@broot/MyMusicTile";
+import SocialAccountTile from "@broot/SocialAccountTile";
+
 export default function Home() {
   return (
-    <main className="text-accent-foreground xl:mx-36 lg:mx-16 md:mx-8 sm:mx-5 mx-4 h-[70vh] flex flex-col justify-center">
-      <h1 className={"md:text-7xl sm:text-6xl text-4xl font-extrabold mb-10"}>
-        I&apos;m <br />
-        Balaji Udayagiri
-      </h1>
-      <p className={`text-justify text-[.9rem] leading-5`}>
-        Welcome to my digital playground! I&apos;m a{" "}
-        <span className="dark:text-cyan-500 text-cyan-600 font-bold text-xl">
-          Software Engineer
-        </span>{" "}
-        passionate about crafting awesome digital experiences.
-      </p>
-      <p className={`text-justify text-[.9rem] leading-5`}>
-        With expertise in React.js, HTML5, CSS3, MUI, Mantine UI, and more, I
-        transform ideas into beautiful, functional websites and applications.
-        Let&apos;s turn your vision into reality!
-      </p>
-      <p className={`text-justify text-[.9rem] leading-5`}>
-        I&apos;m all about growth and creativity. Join me on this journey of endless
-        learning and innovation. Together, we&apos;ll build something amazing.
-      </p>
-      <p className="text-lg mt-6 font-semibold dark:text-cyan-500 text-cyan-600">
-        #SoftwareEngineering #ProductDevelopment
-      </p>
-      <div className="flex gap-6 mt-3">
-        <a
-          href="https://www.instagram.com/balaji.udy"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:scale-125 transition cursor-pointer ease-in-out duration-300">
-          <InstagramColoredIcon size={"30px"} />
-        </a>
-        <a
-          href="https://in.linkedin.com/in/balaji-udayagiri-228747243"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:scale-125 transition cursor-pointer ease-in-out duration-300">
-          <LinkedInColoredIcon size={"30px"} />
-        </a>
-        <a
-          href="https://www.twitter.com/balaji_udy"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:scale-125 transition cursor-pointer ease-in-out duration-300">
-          <TwitterXIcon size={"30px"} className="text-accent-foreground" />
-        </a>
-      </div>
-    </main>
+    <div className="scroll-behavior-smooth scroll-smooth snap-y snap-mandatory snap-center overflow-y-scroll h-screen">
+      <main className="md:snap-start text-accent-foreground xl:mx-36 lg:mx-16 md:mx-8 sm:mx-5 mx-4 sm:h-dvh h-[100vh] flex flex-col justify-center">
+        <h1 className="font-bold text-2xl">I'm a</h1>
+        <SoftwareEngineericon className="w-full" />
+      </main>
+      <section className="md:snap-start container mx-auto p-4 h-dvh flex items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="md:col-span-2 col-span-1  p-4 shadow rounded-xl bg-muted transform transition duration-300 ease-in-out sm:hover:scale-105">
+            <AboutMeTile />
+          </div>
+          <div className="shadow rounded-xl row-span-2 overflow-hidden transform transition duration-300 ease-in-out sm:hover:scale-105">
+            <MyMusicTile />
+          </div>
+          <div className="bg-muted p-4 shadow rounded-xl transform transition duration-300 ease-in-out sm:hover:scale-105 row-span-2">
+            Item 2
+          </div>
+          <div className="shadow rounded-xl transform transition duration-300 ease-in-out sm:hover:scale-105">
+            <SocialAccountTile />
+          </div>
+          <div className="bg-muted p-4 shadow rounded-xl transform transition duration-300 ease-in-out sm:hover:scale-105">
+            Item 5
+          </div>
+          <div className="bg-muted p-4 shadow rounded-xl transform transition duration-300 ease-in-out sm:hover:scale-105">
+            Item 6
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

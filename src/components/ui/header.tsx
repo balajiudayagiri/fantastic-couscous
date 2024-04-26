@@ -4,7 +4,13 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@components/avatar";
 import { Sheet, SheetContent, SheetTrigger } from "./sheet";
-
+import { Dancing_Script } from "next/font/google";
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-dancingScript",
+  weight: ["400", "500", "600", "700"],
+});
 function Header() {
   const navLinks = [
     { href: "/", label: "Home" },
@@ -14,7 +20,11 @@ function Header() {
   ];
 
   return (
-    <div className="xl:mx-36 lg:mx-16 md:mx-8 sm:mx-5 pt-6  sticky top-0 z-50">
+    <div className="xl:px-36 lg:px-16 md:px-8 sm:px-5 px-4 pt-6  fixed w-full justify-between top-0 z-50 flex items-center backdrop-blur-sm">
+      <h1
+        className={`${dancingScript.className} font-thin md:text-3xl text-nowrap flex items-center gap-3 text-2xl`}>
+        Balaji <span className="sm:block hidden">Udayagiri</span>
+      </h1>
       <header className="mx-3 py-2 w-fit ml-auto mr-1  backdrop-blur-sm dark:bg-black/80 bg-white/80 border border-solid rounded-full">
         <div
           className={
@@ -68,7 +78,7 @@ function Header() {
               ))}
             </nav>
 
-            <div className="hidden sm:block">
+            <div className="hidden sm:block h-[20px]">
               {/* Mode toggle */}
               <ModeToggle />
             </div>

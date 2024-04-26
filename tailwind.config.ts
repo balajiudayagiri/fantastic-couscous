@@ -23,6 +23,10 @@ const config = {
       },
     },
     extend: {
+      scrollBehavior: ["smooth"],
+      scrollSnapType: {
+        y: 'mandatory',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

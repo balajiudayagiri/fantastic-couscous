@@ -44,6 +44,8 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    --hero-gradiant: radial-gradient(circle at 10% 20%, #ffd143 0%, #ff9153 90%);
   }
 
   .dark {
@@ -85,4 +87,24 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Universal scrollbar settings */
+* {
+  scrollbar-width: none;
+  /* Firefox: Set the scrollbar width */
+  scrollbar-color: #888 #f1f1f1;
+  /* Firefox: Set the thumb and track color */
+}
+
+/* Webkit browsers like Chrome, Safari, Edge */
+*::-webkit-scrollbar {
+  width: 0px;
+  /* Width of the vertical scrollbar */
+  height: 0px;
+  /* Height of the horizontal scrollbar */
+}
+
+.snap-mandatory {
+  scroll-snap-type: y mandatory;
 }
