@@ -7,7 +7,7 @@ import React from "react";
 
 function SocialAccountTile() {
   return (
-    <div className="relative group cursor-pointer group overflow-hidden text-gray-50 h-60 w-full  rounded-2xl hover:duration-700 duration-700">
+    <div className="relative group cursor-pointer group overflow-hidden text-gray-50 h-[235px] w-full  rounded-2xl hover:duration-700 duration-700">
       <div className="w-full h-72 bg-lime-400 text-center pt-[80px] font-black text-gray-600 text-3xl">
         Socials
       </div>

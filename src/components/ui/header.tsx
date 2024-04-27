@@ -4,12 +4,12 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@components/avatar";
 import { Sheet, SheetContent, SheetTrigger } from "./sheet";
-import { Dancing_Script } from "next/font/google";
-const dancingScript = Dancing_Script({
+import { Dancing_Script, Marck_Script, Sacramento } from "next/font/google";
+const marckScript = Sacramento({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-dancingScript",
-  weight: ["400", "500", "600", "700"],
+  weight: ["400"],
 });
 function Header() {
   const navLinks = [
@@ -22,7 +22,7 @@ function Header() {
   return (
     <div className="xl:px-36 lg:px-16 md:px-8 sm:px-5 px-4 pt-6  fixed w-full justify-between top-0 z-50 flex items-center backdrop-blur-sm">
       <h1
-        className={`${dancingScript.className} font-thin md:text-3xl text-nowrap flex items-center gap-3 text-2xl`}>
+        className={`${marckScript.className} font-thin md:text-3xl text-nowrap flex items-center gap-3 text-2xl`}>
         Balaji <span className="sm:block hidden">Udayagiri</span>
       </h1>
       <header className="mx-3 py-2 w-fit ml-auto mr-1  backdrop-blur-sm dark:bg-black/80 bg-white/80 border border-solid rounded-full">
@@ -35,7 +35,7 @@ function Header() {
             href="/"
             className="hover:scale-125 transition cursor-pointer border-solid border-2 rounded-full outline outline-2 ">
             <Avatar>
-              <AvatarImage src={"/images/balaji.png"} alt="BU" />
+              <AvatarImage src={"/images/balaji.jpg"} alt="BU" />
               <AvatarFallback>BU</AvatarFallback>
             </Avatar>
             {/* <img src={pic} alt="BU" height={45} width={45} /> */}
