@@ -4,7 +4,8 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@components/avatar";
 import { Sheet, SheetContent, SheetTrigger } from "./sheet";
-import { Dancing_Script, Marck_Script, Sacramento } from "next/font/google";
+import { Sacramento } from "next/font/google";
+import Clock from "@b/app/Clock";
 const marckScript = Sacramento({
   subsets: ["latin"],
   display: "swap",
@@ -25,6 +26,9 @@ function Header() {
         className={`${marckScript.className} font-thin md:text-3xl text-nowrap flex items-center gap-3 text-2xl`}>
         Balaji <span className="sm:block hidden">Udayagiri</span>
       </h1>
+      <span className="md:block hidden text-yellow-500 font-semibold text-sm">
+        <Clock />
+      </span>
       <header className="mx-3 py-2 w-fit ml-auto mr-1  backdrop-blur-sm dark:bg-black/80 bg-white/80 border border-solid rounded-full">
         <div
           className={

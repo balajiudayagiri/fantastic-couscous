@@ -7,11 +7,11 @@ import React from "react";
 
 function SocialAccountTile() {
   return (
-    <div className="relative group cursor-pointer group overflow-hidden text-gray-50 h-[235px] w-full  rounded-2xl hover:duration-700 duration-700">
-      <div className="w-full h-72 bg-lime-400 text-center pt-[80px] font-black text-gray-600 text-3xl">
+    <div className="relative group cursor-pointer group overflow-hidden h-[inherit] w-full  rounded-2xl hover:duration-700 duration-700">
+      <div className="w-full h-72 text-center pt-[80px] font-black text-3xl">
         Socials
       </div>
-      <div className="absolute bg-gray-50 -bottom-24 w-full p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
+      <div className="absolute bg-gray-300 -bottom-24 w-full p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
         <p className="text-black font-bold">Follow me on</p>
         <div className="flex gap-6 mt-3">
           <a

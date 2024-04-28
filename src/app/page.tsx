@@ -2,6 +2,8 @@ import { SoftwareEngineericon } from "@b/_icons";
 import AboutMeTile from "@broot/AboutMeTile";
 import MyMusicTile from "@broot/MyMusicTile";
 import SocialAccountTile from "@broot/SocialAccountTile";
+import NodeModuleTile from "@b/app/NodeModule";
+import Galary from "./Galary";
 
 export default function Home() {
   return (
@@ -18,19 +20,16 @@ export default function Home() {
           <div className="shadow rounded-xl row-span-2 overflow-hidden transform transition duration-300 ease-in-out sm:hover:scale-105 h-fit">
             <MyMusicTile />
           </div>
-          <div className="bg-muted p-4 shadow rounded-xl transform transition duration-300 ease-in-out sm:hover:scale-105 row-span-2">
-            Item 2
+          <div className="bg-muted overflow-hidden shadow rounded-xl transform transition duration-300 ease-in-out sm:hover:scale-105 row-span-2">
+            <NodeModuleTile />
           </div>
-          <div className="rounded-xl transform transition duration-300 ease-in-out sm:hover:scale-105">
+          <div className="bg-muted rounded-xl transform transition duration-300 ease-in-out sm:hover:scale-105">
             <SocialAccountTile />
           </div>
-          <div className="bg-muted p-4 shadow rounded-xl transform transition duration-300 ease-in-out sm:hover:scale-105">
-            Item 5
-          </div>
-          <div className="bg-muted p-4 shadow rounded-xl transform transition duration-300 ease-in-out sm:hover:scale-105">
-            Item 6
-          </div>
         </div>
+      </section>
+      <section className="lg:snap-start container mx-auto p-4 sm:h-dvh flex items-center w-full justify-center">
+        <Galary />
       </section>
     </div>
   );
