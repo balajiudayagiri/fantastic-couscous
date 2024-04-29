@@ -5,10 +5,11 @@ import React, { useEffect, useState } from "react";
 
 export const InfiniteMovingCards = ({
   items,
-  direction = "left",
+  direction = "right",
   speed = "fast",
   pauseOnHover = true,
   className,
+  gradiant,
 }: {
   items: {
     quote?: string;
@@ -20,6 +21,7 @@ export const InfiniteMovingCards = ({
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
   className?: string;
+  gradiant?: boolean;
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
@@ -74,7 +76,10 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20  max-w-7xl overflow-hidden  sm:[mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        `scroller relative z-20  min-w-full overflow-hidden  ${
+          gradiant &&
+          "sm:[mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]"
+        }`,
         className
       )}>
       <ul
@@ -86,7 +91,7 @@ export const InfiniteMovingCards = ({
         )}>
         {items.map((item) => (
           <li
-            className="max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 w-[400px] sm:w-[450px] h-[500px]"
+            className="max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 w-[250px] h-[250px] sm:w-[320px]"
             style={{
               background: `url(${item.image})`,
               objectFit: "cover",

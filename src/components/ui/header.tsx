@@ -6,7 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@components/avatar";
 import { Sheet, SheetContent, SheetTrigger } from "./sheet";
 import { Sacramento } from "next/font/google";
 import Clock from "@b/app/Clock";
-const marckScript = Sacramento({
+const sacramento = Sacramento({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-dancingScript",
@@ -23,7 +23,7 @@ function Header() {
   return (
     <div className="xl:px-36 lg:px-16 md:px-8 sm:px-5 px-4 pt-6  fixed w-full justify-between top-0 z-50 flex items-center backdrop-blur-sm">
       <h1
-        className={`${marckScript.className} font-thin md:text-3xl text-nowrap flex items-center gap-3 text-2xl`}>
+        className={`${sacramento.className} font-thin md:text-3xl text-nowrap flex items-center gap-3 text-2xl`}>
         Balaji <span className="sm:block hidden">Udayagiri</span>
       </h1>
       <span className="md:block hidden text-yellow-500 font-semibold text-sm">

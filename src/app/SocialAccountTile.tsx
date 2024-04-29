@@ -7,35 +7,24 @@ import React from "react";
 
 function SocialAccountTile() {
   return (
-    <div className="relative group cursor-pointer group overflow-hidden h-[inherit] w-full  rounded-2xl hover:duration-700 duration-700">
-      <div className="w-full h-72 text-center pt-[80px] font-black text-3xl">
-        Socials
-      </div>
-      <div className="absolute bg-gray-300 -bottom-24 w-full p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
-        <p className="text-black font-bold">Follow me on</p>
-        <div className="flex gap-6 mt-3">
-          <a
-            href="https://www.instagram.com/balaji.udy"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:scale-125 transition cursor-pointer ease-in-out duration-300">
-            <InstagramColoredIcon size={"30px"} />
-          </a>
-          <a
-            href="https://in.linkedin.com/in/balaji-udayagiri-228747243"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:scale-125 transition cursor-pointer ease-in-out duration-300">
-            <LinkedInColoredIcon size={"30px"} />
-          </a>
-          <a
-            href="https://www.twitter.com/balaji_udy"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:scale-125 transition cursor-pointer ease-in-out duration-300">
-            <TwitterXIcon size={"30px"} className="text-black" />
-          </a>
-        </div>
+    <div className="cursor-pointer h-[inherit] w-full rounded-2xl hover:duration-700 duration-700 flex items-center px-6 py-2">
+      <div className="text-center font-black pr-7">Follow me on</div>
+      <div className="flex gap-2">
+        <a
+          href="https://www.instagram.com/balaji.udy"
+          className="p-2 flex justify-center items-center overflow-hidden transition duration-300 transform rounded-xl border-2 border-solid hover:border-[#9639a5]/60 hover:bg-[#9639a5]/20 border-transparent">
+          <InstagramColoredIcon size={"30px"} />
+        </a>
+        <a
+          href="https://in.linkedin.com/in/balaji-udayagiri-228747243"
+          className="p-2 flex justify-center items-center overflow-hidden transition duration-300 transform rounded-xl border-2 border-solid hover:border-[#0b66c2]/60 hover:bg-[#0b66c2]/20 border-transparent">
+          <LinkedInColoredIcon size={"30px"} />
+        </a>
+        <a
+          href="https://www.twitter.com/balaji_udy"
+          className="p-2 flex justify-center items-center overflow-hidden transition duration-300 transform rounded-xl border-2 border-solid hover:border-foreground/60 hover:bg-foreground/20 border-transparent">
+          <TwitterXIcon size={"30px"} className="" />
+        </a>
       </div>
     </div>
   );
