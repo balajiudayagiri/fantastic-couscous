@@ -91,11 +91,14 @@ const ScrollAnimationWrapper: React.FC<ScrollAnimationWrapperProps> = ({
     };
   }, [animationClass]);
 
-  return React.createElement(Component, {
-    ref: ref,
-    className: cn(className, "opacity-0"),
-    children: children,
-  });
+  return React.createElement(
+    Component,
+    {
+      ref: ref,
+      className: cn(className, "opacity-0"),
+    },
+    children
+  );
 };
 
 export default ScrollAnimationWrapper;
