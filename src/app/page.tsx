@@ -3,6 +3,7 @@ import ScrollAnimationWrapper from "@b/components/ui/ScrollAnimationWrapper";
 import Galary from "@broot//Galary";
 
 import TilesSection from "@broot/TilesSection";
+import About from "@broot/About";
 export default function Home() {
   return (
     <div className="scroll-behavior-smooth scroll-smooth snap-y snap-mandatory snap-center overflow-y-scroll h-screen transition-transform duration-300 ease-in-out">
@@ -12,6 +13,9 @@ export default function Home() {
           <SoftwareEngineericon className="w-full" />
         </ScrollAnimationWrapper>
       </main>
+      <section className="lg:snap-start container mx-auto p-4 sm:h-dvh flex items-center justify-center">
+        <About />
+      </section>
       <section className="lg:snap-start container mx-auto p-4 sm:h-dvh flex items-center">
         <TilesSection />
       </section>

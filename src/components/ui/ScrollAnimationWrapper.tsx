@@ -75,7 +75,7 @@ const ScrollAnimationWrapper: React.FC<ScrollAnimationWrapperProps> = ({
         });
       },
       {
-        threshold: 0.5, // Adjust this value based on when you want the animation to trigger
+        threshold: 0.2, // Adjust this value based on when you want the animation to trigger
       }
     );
 

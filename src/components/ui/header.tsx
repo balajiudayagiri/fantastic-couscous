@@ -14,22 +14,22 @@ const sacramento = Sacramento({
 });
 function Header() {
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
     { href: "/articles", label: "Articles" },
     { href: "/contact", label: "Contact Me" },
   ];
 
   return (
-    <div className="xl:px-36 lg:px-16 md:px-8 sm:px-5 px-4 pt-6  fixed w-full justify-between top-0 z-50 flex items-center backdrop-blur-sm">
-      <h1
-        className={`${sacramento.className} font-thin md:text-3xl text-nowrap flex items-center gap-3 text-2xl`}>
-        Balaji <span className="sm:block hidden">Udayagiri</span>
-      </h1>
+    <div className="xl:px-36 lg:px-16 md:px-8 sm:px-5 px-4 h-20 py-3 fixed w-full justify-between top-0 z-50 flex items-center backdrop-blur-sm dark:bg-black/80 bg-white/60">
+      <Link href="/">
+        <h1
+          className={`${sacramento.className} font-thin md:text-3xl text-nowrap flex items-center gap-3 text-2xl`}>
+          Balaji <span className="sm:block hidden">Udayagiri</span>
+        </h1>
+      </Link>
       <span className="md:block hidden text-yellow-500 font-semibold text-sm">
         <Clock />
       </span>
-      <header className="mx-3 py-2 w-fit ml-auto mr-1  backdrop-blur-sm dark:bg-black/80 bg-white/80 border border-solid rounded-full">
+      <header className="mx-3 py-2 w-fit ml-auto mr-1">
         <div
           className={
             "container mx-auto flex items-center gap-6 sm:pr-6 pr-3 pl-4"
