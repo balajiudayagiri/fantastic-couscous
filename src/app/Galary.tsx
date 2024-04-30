@@ -47,6 +47,36 @@ const testimonials = [
     name: "",
     image: "/images/templetree.JPG",
   },
+  {
+    quote: "",
+    name: "",
+    image: "/images/beach.PNG",
+  },
+  {
+    quote: "",
+    name: "",
+    image: "/images/bigmoon.PNG",
+  },
+  {
+    quote: "",
+    name: "",
+    image: "/images/coconuttree.PNG",
+  },
+  {
+    quote: "",
+    name: "",
+    image: "/images/nightcloud.PNG",
+  },
+  {
+    quote: "",
+    name: "",
+    image: "/images/road.PNG",
+  },
+  {
+    quote: "",
+    name: "",
+    image: "/images/tirupatitree.PNG",
+  },
 ];
 
 function Galary() {
