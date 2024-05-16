@@ -1,5 +1,6 @@
 import { InfiniteMovingCards } from "@b/components/ui/infinite-moving-cards";
-import React from "react";
+import React, { Suspense } from "react";
+import Loading from "./loading";
 
 const testimonials = [
   {
@@ -81,23 +82,25 @@ const testimonials = [
 
 function Galary() {
   return (
-    <div className="w-[100vw]">
-      <h1 className="font-black text-center text-6xl mb-10">Gallery</h1>
-      <InfiniteMovingCards
-        pauseOnHover={false}
-        items={testimonials.filter((_, i) => i % 2 === 0)}
-        direction="left"
-        speed="slow"
-        gradiant={false}
-      />
-      <InfiniteMovingCards
-        pauseOnHover={false}
-        items={testimonials.filter((_, i) => i % 2 !== 0)}
-        direction="right"
-        speed="slow"
-        gradiant={false}
-      />
-    </div>
+    <Suspense fallback={<Loading />}>
+      <div className="w-[100vw]">
+        <h1 className="font-black text-center text-6xl mb-10">Gallery</h1>
+        <InfiniteMovingCards
+          pauseOnHover={false}
+          items={testimonials.filter((_, i) => i % 2 === 0)}
+          direction="left"
+          speed="slow"
+          gradiant={false}
+        />
+        <InfiniteMovingCards
+          pauseOnHover={false}
+          items={testimonials.filter((_, i) => i % 2 !== 0)}
+          direction="right"
+          speed="slow"
+          gradiant={false}
+        />
+      </div>
+    </Suspense>
   );
 }
 

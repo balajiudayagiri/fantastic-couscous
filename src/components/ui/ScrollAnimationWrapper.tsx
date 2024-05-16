@@ -95,7 +95,7 @@ const ScrollAnimationWrapper: React.FC<ScrollAnimationWrapperProps> = ({
     Component,
     {
       ref: ref,
-      className: cn(className, "opacity-0"),
+      className: cn("opacity-0", className),
     },
     children
   );
