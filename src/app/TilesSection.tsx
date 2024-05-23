@@ -2,7 +2,7 @@ import React from "react";
 import AboutMeTile from "@broot/AboutMeTile";
 import MyMusicTile from "@broot/MyMusicTile";
 import SocialAccountTile from "@broot/SocialAccountTile";
-import NodeModuleTile from "@b/app/NodeModule";
+import ProjectsTile from "@b/app/NodeModule";
 import ToolsTile from "@broot//ToolsTile";
 import ScrollAnimationWrapper from "@b/components/ui/ScrollAnimationWrapper";
 
@@ -25,7 +25,7 @@ function TilesSection() {
         element={"div"}
         animationClass="slideRight"
         className="bg-muted overflow-hidden shadow rounded-xl transform transition duration-300 ease-in-out sm:hover:scale-105 row-span-2">
-        <NodeModuleTile />
+        <ProjectsTile />
       </ScrollAnimationWrapper>
       <ScrollAnimationWrapper
         element={"div"}

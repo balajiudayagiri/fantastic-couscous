@@ -15,6 +15,7 @@ const sacramento = Sacramento({
 function Header() {
   const navLinks = [
     { href: "/articles", label: "Articles" },
+    { href: "/projects", label: "Projects" },
     { href: "/contact", label: "Contact Me" },
   ];
 
