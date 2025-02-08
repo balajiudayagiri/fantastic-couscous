@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code", // Add Google verification code
+    google: "E7ho_vNUknF8hItDFVg17XuZlAHgVZBnI3R8LsGy35Y", // Add Google verification code
     yandex: "your-yandex-verification-code", // Add Yandex verification code
     yahoo: "your-yahoo-verification-code", // Add Yahoo verification code
   },
