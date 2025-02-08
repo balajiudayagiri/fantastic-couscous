@@ -1,10 +1,18 @@
-import { Button } from "@b/components/ui/button";
+import { AboutSection } from "@b/_customComponents/_app/AboutSection";
+import { ExperienceSection } from "@b/_customComponents/_app/ExperienceSection";
+import { ProjectsSection } from "@b/_customComponents/_app/ProjectsSection";
+import { HeroContent } from "@commonComponents";
+import { ScrollArea } from "@components/scroll-area";
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="scroll-behavior-smooth scroll-smooth snap-y snap-mandatory snap-center overflow-y-scroll h-screen transition-transform duration-300 ease-in-out">
-      root
-      <Button>click</Button>
-    </div>
+    <ScrollArea className="h-screen">
+      <main className="relative">
+        <HeroContent />
+        <AboutSection />
+        <ExperienceSection />
+        <ProjectsSection />
+      </main>
+    </ScrollArea>
   );
 }
