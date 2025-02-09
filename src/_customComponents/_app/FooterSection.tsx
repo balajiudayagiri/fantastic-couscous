@@ -58,10 +58,10 @@ export function FooterSection() {
     {
       title: "Resources",
       links: [
-        { name: "Documentation", url: "#" },
-        { name: "Blog", url: "#" },
-        { name: "Privacy Policy", url: "#" },
-        { name: "Terms of Service", url: "#" },
+        { name: "Documentation", url: "/docs" },
+        { name: "Blog", url: "/blogs" },
+        { name: "Privacy Policy", url: "/terms" },
+        // { name: "Terms of Service", url: "#" },
       ],
     },
   ];
