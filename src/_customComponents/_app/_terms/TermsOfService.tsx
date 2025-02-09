@@ -132,10 +132,9 @@ export function TermsOfService() {
           <div className="flex justify-center mb-6">
             <Scale className="w-16 h-16 text-primary/60" />
           </div>
-          <TextGenerateEffect
-            words="Terms of Service"
-            className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent"
-          />
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+            Terms of Service
+          </h1>
           <p className="text-muted-foreground">
             Last updated:{" "}
             {new Date().toLocaleDateString("en-US", {

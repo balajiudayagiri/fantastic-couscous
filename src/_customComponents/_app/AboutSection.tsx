@@ -1,6 +1,4 @@
 "use client";
-import { GrainyGradient } from "@b/components/GrainyGradient";
-import { TextGenerateEffect } from "@components/text-generate-effect";
 import { motion } from "framer-motion";
 import { Code, Rocket, User2 } from "lucide-react";
 
@@ -135,10 +133,9 @@ export function AboutSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}>
               <div className="mb-8">
-                <TextGenerateEffect
-                  words="Engineering Digital Experiences"
-                  className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-[#4ECDC4] to-[#6C5CE7] bg-clip-text text-transparent"
-                />
+                <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-[#4ECDC4] to-[#6C5CE7] bg-clip-text text-transparent">
+                  Engineering Digital Experiences
+                </h1>
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -212,9 +209,9 @@ export function AboutSection() {
                           backdrop-blur-sm transition-all duration-300
                           hover:translate-y-[-2px] hover:shadow-lg">
                           {skill.name}
-                          <span className="ml-2 text-xs text-primary/60">
+                          {/* <span className="ml-2 text-xs text-primary/60">
                             {skill.years}y
-                          </span>
+                          </span> */}
                         </div>
                       </motion.div>
                     ))}

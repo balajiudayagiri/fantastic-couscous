@@ -72,13 +72,15 @@ export function FooterSection() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand Section */}
           <div className="space-y-4">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-              Balaji Udayagiri
-            </motion.div>
+            <Link href="/" className="flex items-center gap-2">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                Balaji Udayagiri
+              </motion.div>
+            </Link>
             <p className="text-sm text-muted-foreground">
               Building exceptional digital experiences with modern web
               technologies.

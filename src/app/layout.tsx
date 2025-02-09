@@ -13,9 +13,14 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Balaji Udayagiri - Front-End Lead Engineer & AI Integration Expert",
+  metadataBase: new URL("https://balajiudayagiri.vercel.app"),
+  title: {
+    template: "%s | Balaji Udayagiri",
+    default:
+      "Balaji Udayagiri - Front-End Lead Engineer & AI Integration Expert",
+  },
   description:
-    "Front-End Lead Engineer at PureCode Software, pioneering AI-powered web solutions with expertise in React, Next.js, and TypeScript. Transforming digital experiences through innovative development.",
+    "Front-End Lead Engineer at PureCode Software, pioneering AI-powered web solutions with expertise in React, Next.js, and TypeScript.",
   keywords: [
     "Front-End Engineer",
     "Lead Developer",
@@ -26,43 +31,10 @@ export const metadata: Metadata = {
     "Web Development",
     "UI/UX Engineer",
     "Full Stack Developer",
-    "JavaScript Expert",
-    "Balaji Udayagiri",
   ],
   authors: [{ name: "Balaji Udayagiri" }],
   creator: "Balaji Udayagiri",
   publisher: "Balaji Udayagiri",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL("https://balajiudayagiri.dev"),
-  openGraph: {
-    title: "Balaji Udayagiri - Front-End Lead Engineer & AI Integration Expert",
-    description:
-      "Revolutionizing web development with AI-powered solutions and cutting-edge technologies",
-    url: "https://balajiudayagiri.dev",
-    siteName: "Balaji Udayagiri Portfolio",
-    locale: "en_US",
-    type: "website",
-    images: [
-      {
-        url: "/og-image.png", // Add your OG image
-        width: 1200,
-        height: 630,
-        alt: "Balaji Udayagiri - Front-End Lead Engineer",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Balaji Udayagiri - Front-End Lead Engineer",
-    description:
-      "Transforming web development with AI integration and modern technologies",
-    creator: "@yourtwitterhandle", // Add your Twitter handle
-    images: ["/twitter-image.png"], // Add your Twitter card image
-  },
   robots: {
     index: true,
     follow: true,
@@ -74,20 +46,60 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://balajiudayagiri.vercel.app",
+    siteName: "Balaji Udayagiri",
+    title: "Balaji Udayagiri - Front-End Lead Engineer & AI Integration Expert",
+    description:
+      "Front-End Lead Engineer at PureCode Software, pioneering AI-powered web solutions with expertise in React, Next.js, and TypeScript.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Balaji Udayagiri",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@yourtwitterhandle",
+    creator: "@yourtwitterhandle",
+    title: "Balaji Udayagiri - Front-End Lead Engineer & AI Integration Expert",
+    description:
+      "Front-End Lead Engineer at PureCode Software, pioneering AI-powered web solutions with expertise in React, Next.js, and TypeScript.",
+    images: ["/twitter-image.png"],
+  },
   verification: {
-    google: "E7ho_vNUknF8hItDFVg17XuZlAHgVZBnI3R8LsGy35Y", // Add Google verification code
-    yandex: "your-yandex-verification-code", // Add Yandex verification code
-    yahoo: "your-yahoo-verification-code", // Add Yahoo verification code
+    google: "E7ho_vNUknF8hItDFVg17XuZlAHgVZBnI3R8LsGy35Y",
+    yandex: "your-yandex-verification-code",
+    yahoo: "your-yahoo-verification-code",
   },
   alternates: {
-    canonical: "https://balajiudayagiri.dev",
+    canonical: "https://balajiudayagiri.vercel.app",
   },
-  manifest: "/site.webmanifest", // Add your web manifest file
   icons: {
-    icon: [{ url: "/favicon.ico" }, { url: "/icon.png", type: "image/png" }],
-    apple: [{ url: "/apple-touch-icon.png" }],
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+    other: [
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        url: "/favicon-32x32.png",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        url: "/favicon-16x16.png",
+      },
+    ],
   },
-  category: "technology",
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({

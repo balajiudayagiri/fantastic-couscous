@@ -79,10 +79,9 @@ export function BlogSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-4">
-          <TextGenerateEffect
-            words="Latest Articles"
-            className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent"
-          />
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#6C5CE7] to-[#a363f5] bg-clip-text text-transparent">
+            Latest Articles
+          </h1>
           <p className="text-lg text-muted-foreground">
             Thoughts on development, design, and technology
           </p>
