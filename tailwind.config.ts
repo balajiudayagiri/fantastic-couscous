@@ -90,10 +90,25 @@ const config = {
             transform: "translate(calc(-50% - 0.5rem))",
           },
         },
+        gradient: {
+          "0%, 100%": {
+            "background-size": "200% 200%",
+            "background-position": "0% 50%",
+            "backdrop-filter": "blur(20px)",
+          },
+          "50%": {
+            "background-size": "200% 200%",
+            "background-position": "100% 50%",
+            "backdrop-filter": "blur(15px)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        gradient: "gradient 15s ease infinite",
+        "spin-slow": "spin 25s linear infinite",
+        "pulse-slow": "pulse 10s ease-in-out infinite",
         shimmer: "shimmer 2s linear infinite",
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",

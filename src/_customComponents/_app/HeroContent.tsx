@@ -26,7 +26,7 @@ export function HeroContent() {
         <div className="h-full max-lg:hidden lg:w-1/2 overflow-visible">
           <TechStacksSpinner />
         </div>
-        <div className="relative sm:h-full h-2/3 lg:w-1/2 bg-[url('/images/myphoto.jpg')] bg-cover bg-center bg-no-repeat bg-transparent">
+        <div className="relative sm:h-full h-2/3 lg:w-1/2 bg-[url('/images/myphoto.jpg')] bg-cover bg-center bg-no-repeat bg-transparent brightness-75">
           <div className="sm:hidden absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent z-20" />
         </div>
       </div>
