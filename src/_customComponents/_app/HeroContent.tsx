@@ -71,8 +71,7 @@ export function HeroContent() {
               </p>
 
               <p className="mt-2 text-sm md:text-md max-w-xl md:mx-auto lg:mx-0">
-                Transforming Figma designs into production-ready code with
-                AI-powered solutions
+                Production-ready code with AI-powered solutions
               </p>
             </span>
           </motion.div>

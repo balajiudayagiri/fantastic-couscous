@@ -82,7 +82,7 @@ export function AboutSection() {
     },
     {
       label: "Products Enhanced",
-      value: "10+",
+      value: "5+",
       icon: Rocket,
       description: "Enterprise-scale solutions delivered",
     },
@@ -118,7 +118,7 @@ export function AboutSection() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center p-6 md:p-12 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center sm:p-6 px-2 md:p-12 overflow-hidden">
       <motion.div
         className="relative z-10 max-w-7xl w-full bg-black/90 backdrop-blur-2xl rounded-3xl p-8 md:p-16 border border-primary/10 shadow-2xl"
         initial={{ opacity: 0, y: 20 }}

@@ -1,9 +1,12 @@
 "use client";
 
+import { createSlug } from "@b/utilities/createSlug";
 import { Card, CardHeader, CardContent } from "@components/card";
 import { motion } from "framer-motion";
-import { TextGenerateEffect } from "@components/text-generate-effect";
-import { Briefcase, Building, CalendarDays } from "lucide-react";
+import { link } from "fs";
+import { Briefcase, Building, CalendarDays, ExternalLink } from "lucide-react";
+import Link from "next/link";
+import { UrlObject } from "url";
 
 export function ExperienceSection() {
   const experiences = [
@@ -12,12 +15,13 @@ export function ExperienceSection() {
       company: "PureCode AI",
       period: "October 2024 - Present",
       responsibilities: [
-        "Lead development of AI-powered platform converting Figma designs to production code",
+        "Lead development of AI-powered platform A simple Prompt  to production code",
         "Guide team in React.js, Next.js, TypeScript, and Tailwind CSS implementation",
         "Drive technical architecture and best practices",
         "Mentor team members and foster collaborative environment",
       ],
       gradient: "from-[#FF6B6B] to-[#4ECDC4]",
+      link: "/work",
     },
     {
       title: "Software Engineer",
@@ -29,6 +33,7 @@ export function ExperienceSection() {
         "Collaborated on AI integration features",
       ],
       gradient: "from-[#A8E6CF] to-[#3D84A8]",
+      link: "/work",
     },
     {
       title: "Associate Application Developer",
@@ -40,6 +45,7 @@ export function ExperienceSection() {
         "Contributed to application architecture and development",
       ],
       gradient: "from-[#FFD93D] to-[#FF6B6B]",
+      link: "/work",
     },
   ];
 
@@ -63,11 +69,12 @@ export function ExperienceSection() {
           {experiences.map((exp, index) => (
             <motion.div
               key={exp.title}
+              id={index.toString()}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}>
-              <Card className="group relative overflow-hidden border border-primary/10 bg-background/60 backdrop-blur-sm">
+              <Card className="group  group/link cursor-pointer relative overflow-hidden border border-primary/10 bg-background/60 backdrop-blur-sm">
                 <div
                   className={`absolute inset-0 bg-gradient-to-r ${exp.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
                 />
@@ -75,9 +82,12 @@ export function ExperienceSection() {
                 <CardHeader className="relative z-10">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                     <div className="space-y-1">
-                      <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                      <Link
+                        href={`/work?section=${createSlug(exp.title)}`}
+                        className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent inline-flex items-center gap-2">
                         {exp.title}
-                      </h3>
+                        <ExternalLink className="w-5 h-5 text-white hover:text-blue-400 opacity-0 -translate-y-1 group-hover/link:opacity-100 group-hover/link:translate-y-0 transition-all duration-200 ease-out" />
+                      </Link>
                       <div className="flex items-center gap-2 text-muted-foreground">
                         <Building className="w-4 h-4" />
                         <span>{exp.company}</span>

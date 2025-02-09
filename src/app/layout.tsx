@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { FooterSection } from "@b/_customComponents/_app/FooterSection";
 import { ScrollArea } from "@b/components/ui/scroll-area";
+import Header from "@b/customComponents/Header/Header";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -110,17 +111,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} relative `}>
-        <ScrollArea className="h-screen">
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange>
-            {/* <Header /> */}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange>
+          <Header />
+          <ScrollArea className="h-screen">
             {children}
             <FooterSection />
-          </ThemeProvider>
-        </ScrollArea>
+          </ScrollArea>
+        </ThemeProvider>
       </body>
     </html>
   );
