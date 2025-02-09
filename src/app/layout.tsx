@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@b/components/theme-provider";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { FooterSection } from "@b/_customComponents/_app/FooterSection";
+import { ScrollArea } from "@b/components/ui/scroll-area";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -96,14 +98,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} relative `}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange>
-          {/* <Header /> */}
-          {children}
-        </ThemeProvider>
+        <ScrollArea className="h-screen">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange>
+            {/* <Header /> */}
+            {children}
+            <FooterSection />
+          </ThemeProvider>
+        </ScrollArea>
       </body>
     </html>
   );

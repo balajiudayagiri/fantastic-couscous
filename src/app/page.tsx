@@ -6,13 +6,11 @@ import { ScrollArea } from "@components/scroll-area";
 
 export default function Page() {
   return (
-    <ScrollArea className="h-screen">
-      <main className="relative">
-        <HeroContent />
-        <AboutSection />
-        <ExperienceSection />
-        <ProjectsSection />
-      </main>
-    </ScrollArea>
+    <main className="relative">
+      <HeroContent />
+      <AboutSection />
+      <ExperienceSection />
+      <ProjectsSection />
+    </main>
   );
 }

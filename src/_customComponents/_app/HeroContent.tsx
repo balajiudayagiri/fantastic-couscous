@@ -13,10 +13,27 @@ const fadeIn = {
 };
 
 const socialLinks = [
-  { icon: Linkedin, href: "https://linkedin.com/in/yourusername" },
-  { icon: Instagram, href: "https://linkedin.com/in/yourusername" },
-  { icon: Twitter, href: "https://linkedin.com/in/yourusername" },
-  { icon: Mail, href: "https://linkedin.com/in/yourusername" },
+  {
+    icon: Linkedin,
+    href: process.env.LINKEDIN_URL,
+    label: "LinkedIn Profile",
+  },
+  {
+    icon: Instagram,
+    href: process.env.INSTAGRAM_URL,
+    label: "Instagram Profile",
+  },
+  {
+    icon: Twitter,
+    href: process.env.TWITTER_URL,
+    label: "Twitter Profile",
+  },
+  {
+    icon: Mail,
+    href: `mailto:${process.env.EMAIL}`,
+    label: "Send Email",
+    isEmail: true,
+  },
 ];
 
 export function HeroContent() {
