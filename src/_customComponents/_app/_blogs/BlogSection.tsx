@@ -97,7 +97,7 @@ export function BlogSection() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               className="group">
-              <Link
+              <a
                 href={blog.link}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -142,7 +142,7 @@ export function BlogSection() {
                     </div>
                   </div>
                 </div>
-              </Link>
+              </a>
             </motion.article>
           ))}
         </div>

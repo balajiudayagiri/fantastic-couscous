@@ -101,13 +101,13 @@ export function ProjectsSection() {
                 </CardContent>
 
                 <CardFooter className="relative z-10">
-                  <Link
+                  <a
                     href={project.link}
                     target="_blank"
                     className="flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors">
                     <ExternalLink className="w-4 h-4" />
                     <span>View Project</span>
-                  </Link>
+                  </a>
                 </CardFooter>
               </Card>
             </motion.div>

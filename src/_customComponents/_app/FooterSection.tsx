@@ -88,14 +88,14 @@ export function FooterSection() {
             {/* Social Links */}
             <div className="flex gap-4 pt-4">
               {socialLinks.map((social) => (
-                <Link
+                <a
                   key={social.name}
                   href={social.url || "#"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors">
                   <social.icon className="w-5 h-5" />
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -109,11 +109,11 @@ export function FooterSection() {
               <ul className="space-y-3">
                 {section.links.map((link) => (
                   <li key={link.name}>
-                    <Link
+                    <a
                       href={link.url}
                       className="text-sm text-muted-foreground hover:text-primary transition-colors">
                       {link.name}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>
