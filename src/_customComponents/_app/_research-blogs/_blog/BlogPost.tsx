@@ -13,16 +13,16 @@ export default function BlogPost({ slug }: { slug: string }) {
   }
 
   return (
-    <div className="min-h-screen bg-background py-20 px-6">
+    <div className="min-h-screen bg-background py-20 px-6 max-md:pt-36">
       <motion.article
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="max-w-4xl mx-auto space-y-8">
         {/* Header */}
         <div className="space-y-4">
-          <div className="flex items-center gap-2 text-muted-foreground">
+          <div className="flex md:items-center max-md:flex-col gap-2 text-muted-foreground">
             <span className="text-primary">{blog.category}</span>
-            <span>•</span>
+            <span className="hidden md:inline">•</span>
             <div className="flex items-center gap-1">
               <CalendarDays className="w-4 h-4" />
               {new Date(blog.publishedAt).toLocaleDateString("en-US", {
@@ -31,7 +31,7 @@ export default function BlogPost({ slug }: { slug: string }) {
                 year: "numeric",
               })}
             </div>
-            <span>•</span>
+            <span className="hidden md:inline">•</span>
             <div className="flex items-center gap-1">
               <Clock className="w-4 h-4" />
               {blog.readTime}

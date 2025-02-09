@@ -117,10 +117,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange>
           <Header />
-          <ScrollArea className="h-screen">
-            {children}
-            <FooterSection />
-          </ScrollArea>
+          {/* <ScrollArea className="h-screen"> */}
+          {children}
+          <FooterSection />
+          {/* </ScrollArea> */}
         </ThemeProvider>
       </body>
     </html>
