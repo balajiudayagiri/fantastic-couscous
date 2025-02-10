@@ -82,6 +82,7 @@ export default function ProjectsPage() {
                     {/* External Links */}
                     <div className="flex items-center gap-4">
                       <Link
+                        aria-label={`Live Demo of ${project.title}`}
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"

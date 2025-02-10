@@ -75,7 +75,10 @@ export function FooterSection() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand Section */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2">
+            <Link
+              aria-label={"home"}
+              href="/"
+              className="flex items-center gap-2">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -130,6 +133,7 @@ export function FooterSection() {
               Have a project in mind? Let&apos;s work together.
             </p>
             <Link
+              aria-label="Contact Me"
               href={`mailto:${process.env.EMAIL}`}
               className="inline-block px-4 py-2 text-sm font-medium text-primary border border-primary/10 rounded-full hover:bg-primary/5 transition-colors">
               Contact Me

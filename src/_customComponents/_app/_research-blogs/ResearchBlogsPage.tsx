@@ -39,7 +39,9 @@ export default function ResearchBlogsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}>
-              <Link href={`/research-blogs/${blog.id}`}>
+              <Link
+                aria-label={`Research Blogs ${blog.id}`}
+                href={`/research-blogs/${blog.id}`}>
                 <Card className="hover:shadow-lg transition-all duration-300 hover:border-primary/50">
                   <CardHeader>
                     <div className="flex justify-between items-start">

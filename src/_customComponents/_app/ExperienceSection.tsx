@@ -57,9 +57,9 @@ export function ExperienceSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#FF6B6B] to-[#4ECDC4] bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#FF6B6B] to-[#4ECDC4] bg-clip-text text-transparent">
             Professional Journey
-          </h1>
+          </h2>
           <p className="text-lg text-muted-foreground">
             Building innovative solutions and leading development teams
           </p>
@@ -83,6 +83,7 @@ export function ExperienceSection() {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                     <div className="space-y-1">
                       <Link
+                        aria-label={exp.title}
                         href={`/work?section=${createSlug(exp.title)}`}
                         className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent inline-flex items-center gap-2">
                         {exp.title}

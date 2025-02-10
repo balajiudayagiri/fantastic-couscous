@@ -133,9 +133,9 @@ export function AboutSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}>
               <div className="mb-8">
-                <h1 className="text-3xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-[#4ECDC4] to-[#6C5CE7] bg-clip-text text-transparent">
+                <h2 className="text-3xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-[#4ECDC4] to-[#6C5CE7] bg-clip-text text-transparent">
                   Engineering Digital Experiences
-                </h1>
+                </h2>
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}

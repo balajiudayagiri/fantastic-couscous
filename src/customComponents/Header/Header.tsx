@@ -29,56 +29,55 @@ function Header() {
           "flex items-center justify-between sm:px-8 px-4 py-4",
           "bg-background/40 backdrop-blur-sm border-b"
         )}>
-        <nav className="w-full">
-          <ul className="flex gap-6 text-sm font-medium justify-between">
-            <div className="flex gap-6 items-center">
-              {pathname === "/" ? null : (
-                <li>
-                  <ArrowLeft onClick={() => router.back()} />
-                </li>
-              )}
-              <li>
-                <Link
-                  href="/"
-                  className="font-bold text-xl sm:text-2xl text-gray-300 hover:text-white transition-colors">
-                  <Home className="size-5" />
-                </Link>
-              </li>
-            </div>
-            <div className="flex md:gap-6 gap-2 ml-auto">
-              <li>
-                <Link
-                  href="/work"
-                  className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
-                  Work
-                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/projects"
-                  className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
-                  Projects
-                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/research-blogs"
-                  className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
-                  Research
-                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blogs"
-                  className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
-                  Blogs
-                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
-                </Link>
-              </li>
-            </div>
+        <nav className="w-full flex items-center justify-between">
+          <span className="flex items-center gap-4">
+            {pathname === "/" ? null : (
+              <ArrowLeft onClick={() => router.back()} />
+            )}
+            <Link
+              aria-label="Home"
+              href="/"
+              className="font-bold text-xl sm:text-2xl text-gray-300 hover:text-white transition-colors">
+              <Home className="size-5" />
+            </Link>
+          </span>
+          <ul className="flex gap-6 text-sm font-medium items-center justify-between">
+            <li>
+              <Link
+                aria-label="Work"
+                href="/work"
+                className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                Work
+                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+              </Link>
+            </li>
+            <li>
+              <Link
+                aria-label="Projects"
+                href="/projects"
+                className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                Projects
+                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+              </Link>
+            </li>
+            <li>
+              <Link
+                aria-label="Research"
+                href="/research-blogs"
+                className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                Research
+                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+              </Link>
+            </li>
+            <li>
+              <Link
+                aria-label="Blogs"
+                href="/blogs"
+                className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                Blogs
+                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>

@@ -55,9 +55,9 @@ export function ProjectsSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#FFD93D] to-[#FF6B6B]  bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#FFD93D] to-[#FF6B6B]  bg-clip-text text-transparent">
             Featured Projects
-          </h1>
+          </h2>
           <p className="text-lg text-muted-foreground">
             Showcasing innovative solutions and technical expertise
           </p>
