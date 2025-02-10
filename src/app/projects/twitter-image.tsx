@@ -42,6 +42,8 @@ export default async function Image() {
           <p
             style={{
               padding: "0px 10%",
+              marginLeft: "auto",
+              marginRight: "auto",
               marginTop: "1.5rem",
               fontSize: "1.25rem",
               color: "white",
