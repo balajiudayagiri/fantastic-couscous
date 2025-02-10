@@ -1,40 +1,14 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Instagram, Linkedin, Mail, Twitter } from "lucide-react";
-import { Button } from "@b/components/ui/button";
-import { TwitterXIcon } from "@b/_icons";
 import TechStacksSpinner from "@b/_icons/TechStacksSpinner";
+import { _socialLinks } from "./HomePageConstants";
 
 // FadeIn animation variants
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
-
-const socialLinks = [
-  {
-    icon: Linkedin,
-    href: process.env.LINKEDIN_URL,
-    label: "LinkedIn Profile",
-  },
-  {
-    icon: Instagram,
-    href: process.env.INSTAGRAM_URL,
-    label: "Instagram Profile",
-  },
-  {
-    icon: Twitter,
-    href: process.env.TWITTER_URL,
-    label: "Twitter Profile",
-  },
-  {
-    icon: Mail,
-    href: `mailto:${process.env.EMAIL}`,
-    label: "Send Email",
-    isEmail: true,
-  },
-];
 
 export function HeroContent() {
   return (
@@ -97,7 +71,7 @@ export function HeroContent() {
           <motion.div
             variants={fadeIn}
             className="mt-8 flex gap-6 justify-start md:justify-center lg:justify-start text-white">
-            {socialLinks.map((social, index) => (
+            {_socialLinks.map((social, index) => (
               <motion.a
                 key={index}
                 href={social.href}

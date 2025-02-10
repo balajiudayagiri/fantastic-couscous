@@ -1,74 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Instagram, Linkedin, Mail, Twitter } from "lucide-react";
 import Link from "next/link";
+import { footerLinks, socialLinks } from "./HomePageConstants";
 
 export function FooterSection() {
-  const socialLinks = [
-    // {
-    //   name: "GitHub",
-    //   url: "https://github.com/yourusername",
-    //   icon: Github,
-    // },
-    {
-      name: "LinkedIn",
-      url: process.env.LINKEDIN_URL,
-      icon: Linkedin,
-    },
-    {
-      name: "Twitter",
-      url: process.env.TWITTER_URL,
-      icon: Twitter,
-    },
-    {
-      name: "Instagram Profile",
-      url: process.env.INSTAGRAM_URL,
-      icon: Instagram,
-    },
-    {
-      name: "Email",
-      url: `mailto:${process.env.EMAIL}`,
-      icon: Mail,
-    },
-  ];
-
-  const footerLinks = [
-    {
-      title: "Projects",
-      links: [
-        {
-          name: "README Generator",
-          url: "https://empyreanui-core.vercel.app/readme",
-        },
-        {
-          name: "AI README",
-          url: "https://empyreanui-core.vercel.app/readme-ai",
-        },
-        {
-          name: "AIJsDocs",
-          url: "https://empyreanui-core.vercel.app/jsdoc-ai",
-        },
-        {
-          name: "EmpyreanUI Blogs",
-          url: "https://empyreanui-core.vercel.app/blogs",
-        },
-      ],
-    },
-    {
-      title: "Resources",
-      links: [
-        { name: "Documentation", url: "/docs" },
-        { name: "Blog", url: "/blogs" },
-        { name: "Privacy Policy", url: "/terms" },
-        { name: "Projects", url: "/projects" },
-        { name: "Research Blogs", url: "/research-blogs" },
-
-        // { name: "Terms of Service", url: "#" },
-      ],
-    },
-  ];
-
   return (
     <footer className="relative mt-20 border-t border-primary/10">
       <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">

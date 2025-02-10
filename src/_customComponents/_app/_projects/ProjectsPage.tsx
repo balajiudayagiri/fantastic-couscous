@@ -9,7 +9,7 @@ import {
   ChevronDown,
   ChevronUp,
 } from "lucide-react";
-import { projects } from "../constants/project-page";
+import { projects } from "./constant";
 import Link from "next/link";
 import { useState } from "react";
 import {

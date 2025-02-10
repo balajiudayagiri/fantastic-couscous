@@ -6,47 +6,9 @@ import { TextGenerateEffect } from "@components/text-generate-effect";
 
 import Link from "next/link";
 import { BookOpen, Brain, Code, ExternalLink, Newspaper } from "lucide-react";
+import { projects } from "./HomePageConstants";
 
 export function ProjectsSection() {
-  const projects = [
-    {
-      title: "README Generator",
-      description:
-        "Create stunning README files effortlessly with our powerful generator. Transform your project documentation into professional and eye-catching presentations.",
-      tech: ["Next.js", "TypeScript", "Tailwind CSS", "AI Integration"],
-      link: "https://empyreanui-core.vercel.app/readme",
-      icon: BookOpen,
-      gradient: "from-[#FF6B6B] to-[#4ECDC4]",
-    },
-    {
-      title: "AI README Generator",
-      description:
-        "Leverage the power of AI to generate professional README files in seconds. Streamline your documentation process with intelligent content generation.",
-      tech: ["OpenAI", "Next.js", "React", "TailwindCSS"],
-      link: "https://empyreanui-core.vercel.app/readme-ai",
-      icon: Brain,
-      gradient: "from-[#A8E6CF] to-[#3D84A8]",
-    },
-    {
-      title: "AIJsDocs Generator",
-      description:
-        "Generate professional JSDoc documentation for your code instantly using AI. Enhance code maintainability with automated documentation.",
-      tech: ["AI", "JavaScript", "Documentation", "Automation"],
-      link: "https://empyreanui-core.vercel.app/jsdoc-ai",
-      icon: Code,
-      gradient: "from-[#FFD93D] to-[#FF6B6B]",
-    },
-    {
-      title: "EmpyreanUI Blogs",
-      description:
-        "Discover the latest news, tips, and insights from our experts. A platform for sharing knowledge and staying updated with the newest trends.",
-      tech: ["Next.js", "MDX", "Content Management", "SEO"],
-      link: "https://empyreanui-core.vercel.app/blogs",
-      icon: Newspaper,
-      gradient: "from-[#6C5CE7] to-[#a363f5]",
-    },
-  ];
-
   return (
     <section className="relative min-h-screen flex items-center justify-center p-6 md:p-12">
       <div className="max-w-7xl w-full space-y-16">

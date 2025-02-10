@@ -3,52 +3,11 @@
 import { createSlug } from "@b/utilities/createSlug";
 import { Card, CardHeader, CardContent } from "@components/card";
 import { motion } from "framer-motion";
-import { link } from "fs";
 import { Briefcase, Building, CalendarDays, ExternalLink } from "lucide-react";
 import Link from "next/link";
-import { UrlObject } from "url";
+import { experiences } from "./HomePageConstants";
 
 export function ExperienceSection() {
-  const experiences = [
-    {
-      title: "Front End Lead Engineer",
-      company: "PureCode AI",
-      period: "October 2024 - Present",
-      responsibilities: [
-        "Lead development of AI-powered platform A simple Prompt  to production code",
-        "Guide team in React.js, Next.js, TypeScript, and Tailwind CSS implementation",
-        "Drive technical architecture and best practices",
-        "Mentor team members and foster collaborative environment",
-      ],
-      gradient: "from-[#FF6B6B] to-[#4ECDC4]",
-      link: "/work",
-    },
-    {
-      title: "Software Engineer",
-      company: "PureCode AI",
-      period: "April 2023 - October 2024",
-      responsibilities: [
-        "Developed core features of web application platform",
-        "Implemented modern front-end technologies",
-        "Collaborated on AI integration features",
-      ],
-      gradient: "from-[#A8E6CF] to-[#3D84A8]",
-      link: "/work",
-    },
-    {
-      title: "Associate Application Developer",
-      company: "Armorize Technology Solutions",
-      period: "November 2020 - April 2023",
-      responsibilities: [
-        "Built responsive web applications",
-        "Worked with Java and modern CSS technologies",
-        "Contributed to application architecture and development",
-      ],
-      gradient: "from-[#FFD93D] to-[#FF6B6B]",
-      link: "/work",
-    },
-  ];
-
   return (
     <section className="relative min-h-screen flex items-center justify-center p-6 md:p-12">
       <div className="max-w-7xl w-full space-y-16">
