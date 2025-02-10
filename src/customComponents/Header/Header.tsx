@@ -34,11 +34,6 @@ function Header() {
             <div className="flex gap-6 items-center">
               {pathname === "/" ? null : (
                 <li>
-                  {/* <button
-                  onClick={() => router.back()}
-                  className="font-bold text-xl sm:text-2xl text-gray-300 hover:text-white transition-colors">
-                  Back
-                  </button> */}
                   <ArrowLeft onClick={() => router.back()} />
                 </li>
               )}
@@ -72,6 +67,14 @@ function Header() {
                   href="/research-blogs"
                   className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
                   Research
+                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blogs"
+                  className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                  Blogs
                   <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
                 </Link>
               </li>

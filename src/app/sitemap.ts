@@ -9,10 +9,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: "https://balajiudayagiri.vercel.app/blogs",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
       url: "https://balajiudayagiri.vercel.app/docs",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
+    },
+    {
+      url: "https://balajiudayagiri.vercel.app/projects",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: "https://balajiudayagiri.vercel.app/research-blogs",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
     },
     {
       url: "https://balajiudayagiri.vercel.app/terms",
@@ -21,10 +39,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: "https://balajiudayagiri.vercel.app/blogs",
+      url: "https://balajiudayagiri.vercel.app/work",
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
+      changeFrequency: "monthly",
+      priority: 0.75,
     },
   ];
 }

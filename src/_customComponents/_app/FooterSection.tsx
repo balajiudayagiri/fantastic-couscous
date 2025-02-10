@@ -61,6 +61,9 @@ export function FooterSection() {
         { name: "Documentation", url: "/docs" },
         { name: "Blog", url: "/blogs" },
         { name: "Privacy Policy", url: "/terms" },
+        { name: "Projects", url: "/projects" },
+        { name: "Research Blogs", url: "/research-blogs" },
+
         // { name: "Terms of Service", url: "#" },
       ],
     },

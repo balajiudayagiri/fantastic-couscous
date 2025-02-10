@@ -23,7 +23,7 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ["@b/components"],
-    serverActions: true,
+    // serverActions: true,
     typedRoutes: true,
     webVitalsAttribution: ["CLS", "LCP", "FCP", "FID", "TTFB"],
   },
