@@ -13,17 +13,46 @@ export default async function Image() {
       <div
         style={{
           fontSize: 48,
-          background: "#1DA1F2",
-          color: "#ffffff",
+          background: "black",
           width: "100%",
           height: "100%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          textAlign: "center",
-          padding: "0 2rem",
         }}>
-        Blogs
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            textAlign: "center",
+            height: "auto",
+            width: "100%",
+          }}>
+          <h1
+            style={{
+              fontSize: "100%",
+              margin: "0px auto",
+              fontWeight: 800,
+              color: "white",
+              textShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
+              lineHeight: 1.2,
+            }}>
+            Blogs
+          </h1>
+          <p
+            style={{
+              padding: "0px 10%",
+              marginLeft: "auto",
+              marginRight: "auto",
+              marginTop: "1.5rem",
+              fontSize: "1.25rem",
+              color: "white",
+              opacity: 0.85,
+              fontWeight: 500,
+            }}>
+            Thoughts on development, design, and technology
+          </p>
+        </div>
       </div>
     ),
     size

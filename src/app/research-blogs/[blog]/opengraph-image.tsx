@@ -13,17 +13,24 @@ export default async function Image({ params }: { params: { blog: string } }) {
       <div
         style={{
           fontSize: 48,
-          background: "white",
+          background: "black",
           width: "100%",
           height: "100%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          padding: "0 2rem",
-          textAlign: "center",
-          textTransform: "uppercase",
         }}>
-        {params.blog}
+        <h1
+          style={{
+            fontSize: "100%",
+            margin: "0px auto",
+            fontWeight: 800,
+            color: "white",
+            textShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
+            lineHeight: 1.2,
+          }}>
+          {params.blog}
+        </h1>
       </div>
     ),
     size
