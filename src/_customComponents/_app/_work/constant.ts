@@ -3,6 +3,8 @@ export const experiences = [
     title: "Front End Lead Engineer",
     company: "PureCode AI",
     period: "October 2024 - Present",
+    description:
+      "Leading the development of an AI-powered platform that transforms simple prompts into production-ready code, optimizing performance and scalability.",
     location: "Hyderabad, India",
     responsibilities: [
       "Lead development of AI-powered platform A simple Prompt  to production code",
@@ -43,6 +45,8 @@ export const experiences = [
     title: "Software Engineer",
     company: "PureCode AI",
     period: "April 2023 - October 2024",
+    description:
+      "Developed and optimized core features for an AI-powered web platform, focusing on seamless user experience and frontend performance.",
     location: "Hyderabad, India",
     responsibilities: [
       "Developed core features of web application platform",
@@ -82,6 +86,8 @@ export const experiences = [
     title: "Associate Application Developer",
     company: "Armorize Technology Solutions",
     period: "November 2020 - April 2023",
+    description:
+      "Developed scalable and responsive web applications, optimizing UI/UX while ensuring cross-browser compatibility.",
     location: "Hyderabad, India",
     responsibilities: [
       "Built responsive web applications",

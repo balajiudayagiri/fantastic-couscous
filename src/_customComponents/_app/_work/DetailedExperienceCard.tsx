@@ -11,6 +11,7 @@ import {
   Gift,
   GraduationCap,
   Trophy,
+  Workflow,
 } from "lucide-react";
 import { createSlug } from "@b/utilities/createSlug";
 import { useSearchParams } from "next/navigation";
@@ -51,7 +52,7 @@ export function DetailedExperienceCard() {
             <div className="space-y-6 relative z-10">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                 <div className="space-y-2">
-                  <h2 className="text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                  <h2 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
                     {exp.title}
                   </h2>
                   <div className="flex flex-wrap gap-4">
@@ -66,7 +67,15 @@ export function DetailedExperienceCard() {
                   </div>
                 </div>
               </div>
-
+              <div
+                className="flex items-start gap-2 text-muted-foreground text-sm"
+                style={{
+                  marginTop: "10px",
+                }}>
+                <Workflow className="w-4 h-4" />
+                <span>{exp.description}</span>
+              </div>
+              <hr className="mx-4" />
               {/* Technologies */}
               <div className="space-y-3">
                 <h3 className="text-xl font-semibold flex items-center gap-2">

@@ -41,7 +41,8 @@ export function HeroContent() {
             </span>
             <span className="text-white/80">
               <p className="mt-2 sm:mt-6 text-sm sm:text-md md:text-xl  font-medium">
-                Front-End Lead Engineer
+                Frontend Lead Engineer | AI-Powered UI Architect | Next.js
+                Expert
               </p>
 
               <p className="mt-2 text-sm md:text-md max-w-xl md:mx-auto lg:mx-0">

@@ -77,8 +77,17 @@ export function FooterSection() {
           </div>
         </div>
 
+        {/* Sitemap link */}
+        <div className="mt-8 text-end">
+          <a
+            href="/sitemap.xml"
+            className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            Sitemap
+          </a>
+        </div>
+
         {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-primary/10">
+        <div className="mt-1 pt-8 border-t border-primary/10">
           <p className="text-center text-sm text-muted-foreground">
             © {new Date().getFullYear()} Balaji Udayagiri. All rights reserved.
           </p>
