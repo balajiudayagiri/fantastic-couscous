@@ -7,7 +7,8 @@ export type ResearchCategory =
   | "Developer Experience"
   | "UI/UX"
   | "Testing"
-  | "DevOps";
+  | "DevOps"
+  | "UI Development";
 
 export type TechStack = {
   name: string;
