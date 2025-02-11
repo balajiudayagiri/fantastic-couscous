@@ -160,7 +160,7 @@ export default function RootLayout({
           type="image/png"
         />
         <meta name="portfolio" content="Balaji Udayagiri Portfolio" />
-        <meta name="google-site-verification" content="82b34b73d8e2d162" />
+        {/* <meta name="google-site-verification" content="82b34b73d8e2d162" /> */}
       </head>
       <body className={`${poppins.className} relative `}>
         <ThemeProvider
