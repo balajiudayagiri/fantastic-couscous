@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@b/components/theme-provider";
 import { Poppins } from "next/font/google";
-import "./globals.css";
 import { FooterSection } from "@b/_customComponents/_app/FooterSection";
-import { ScrollArea } from "@b/components/ui/scroll-area";
-import Header from "@b/customComponents/Header/Header";
+import Header from "@b/_customComponents/_app/Header";
+import "./globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,15 +22,33 @@ export const metadata: Metadata = {
   description:
     "Front-End Lead Engineer at PureCode Software, pioneering AI-powered web solutions with expertise in React, Next.js, and TypeScript.",
   keywords: [
-    "Front-End Engineer",
-    "Lead Developer",
-    "AI Integration",
-    "React Expert",
-    "Next.js Developer",
-    "TypeScript Specialist",
-    "Web Development",
-    "UI/UX Engineer",
-    "Full Stack Developer",
+    "portfolio",
+    "Balaji Udayagiri",
+    "Balaji Udayagiri portfolio",
+    "front-end engineer",
+    "web developer portfolio",
+    "React expert",
+    "Next.js developer",
+    "TypeScript specialist",
+    "UI/UX design",
+    "software engineer",
+    "AI integration",
+    "modern web development",
+    "front end development",
+    "JavaScript programmer",
+    "responsive design",
+    "innovative web solutions",
+    "digital transformation",
+    "accessible web design",
+    "SEO friendly design",
+    "machine learning",
+    "deep learning",
+    "Node.js developer",
+    "performance optimization",
+    "user interface design",
+    "cutting edge technology",
+    "creative portfolio",
+    "tech leader",
   ],
   authors: [{ name: "Balaji Udayagiri" }],
   creator: "Balaji Udayagiri",
@@ -142,6 +159,7 @@ export default function RootLayout({
           sizes="512x512"
           type="image/png"
         />
+        <meta name="portfolio" content="Balaji Udayagiri Portfolio" />
       </head>
       <body className={`${poppins.className} relative `}>
         <ThemeProvider
@@ -150,10 +168,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange>
           <Header />
-          {/* <ScrollArea className="h-screen"> */}
           {children}
           <FooterSection />
-          {/* </ScrollArea> */}
         </ThemeProvider>
       </body>
     </html>

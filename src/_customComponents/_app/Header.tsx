@@ -3,7 +3,6 @@
 import clsx from "clsx";
 import React from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { Roboto_Condensed } from "next/font/google";
 import Link from "next/link";
 import { ArrowLeft, Home, Menu } from "lucide-react";
 import {
@@ -17,20 +16,13 @@ import {
   DrawerFooter,
 } from "../../components/ui/drawer";
 
-// const roboto_condensed = Roboto_Condensed({
-//   subsets: ["latin"],
-//   display: "swap",
-//   variable: "--font-poppins",
-//   weight: ["300", "400", "700"],
-// });
-
 function Header() {
   const pathname = usePathname();
   const router = useRouter();
 
   const navLinks = (
     <>
-      <li>
+      <li title="Work">
         <Link
           aria-label="Work"
           href="/work"
@@ -39,7 +31,7 @@ function Header() {
           <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
         </Link>
       </li>
-      <li>
+      <li title="Projects">
         <Link
           aria-label="Projects"
           href="/projects"
@@ -48,7 +40,7 @@ function Header() {
           <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
         </Link>
       </li>
-      <li>
+      <li title="Research">
         <Link
           aria-label="Research"
           href="/research-blogs"
@@ -57,7 +49,7 @@ function Header() {
           <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
         </Link>
       </li>
-      <li>
+      <li title="Blogs">
         <Link
           aria-label="Blogs"
           href="/blogs"
@@ -87,6 +79,7 @@ function Header() {
               <ArrowLeft onClick={() => router.back()} />
             )}
             <Link
+              title="Home"
               aria-label="Home"
               href="/"
               className="font-bold text-xl sm:text-2xl text-gray-300 hover:text-white transition-colors">
@@ -104,6 +97,7 @@ function Header() {
             <Drawer>
               <DrawerTrigger asChild>
                 <button
+                  title="Open menu"
                   aria-label="Open menu"
                   className="text-gray-300 hover:text-white transition-colors">
                   <Menu />
@@ -119,6 +113,7 @@ function Header() {
                 <div className="p-4">
                   <DrawerClose className="block w-full">
                     <ul
+                      aria-label="Main Navigation"
                       className={clsx(
                         "flex flex-col gap-4 text-base font-medium",
                         "[&>li]:px-3 [&>li]:py-2 [&>li]:w-full" //stules added to its children
