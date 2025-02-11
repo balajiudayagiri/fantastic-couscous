@@ -78,9 +78,9 @@ export function TermsOfService() {
           <p className="text-muted-foreground">
             If you have any questions about these Terms, please contact me at{" "}
             <a
-              href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
+              href={`mailto:${process.env.EMAIL}`}
               className="text-primary hover:underline">
-              {process.env.NEXT_PUBLIC_EMAIL}
+              {process.env.EMAIL}
             </a>
           </p>
         </motion.div>
