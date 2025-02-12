@@ -165,7 +165,7 @@ export default function RootLayout({
           name="google-site-verification"
           content="IufNjx1CiqN11ZuMQiWU7aitWu_JW5SZ7UN5AY5z9eg"
         />
-        <title>Balaji Udayagiri</title>
+        {/* <title>Balaji Udayagiri</title>
         <meta
           name="description"
           content="Front-End Lead Engineer at PureCode Software, pioneering AI-powered web solutions with expertise in React, Next.js, and TypeScript."
@@ -181,7 +181,7 @@ export default function RootLayout({
         <meta property="og:url" content="https://balajiudayagiri.vercel.app" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Balaji Udayagiri" />
-        <meta property="og:image" content="/og-image.png" />
+        <meta property="og:image" content="/og-image.png" /> */}
       </head>
       <body className={`${poppins.className} relative `}>
         <ThemeProvider
