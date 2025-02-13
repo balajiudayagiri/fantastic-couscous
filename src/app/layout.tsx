@@ -165,23 +165,22 @@ export default function RootLayout({
           name="google-site-verification"
           content="IufNjx1CiqN11ZuMQiWU7aitWu_JW5SZ7UN5AY5z9eg"
         />
-        {/* <title>Balaji Udayagiri</title>
-        <meta
-          name="description"
-          content="Front-End Lead Engineer at PureCode Software, pioneering AI-powered web solutions with expertise in React, Next.js, and TypeScript."
-        />
-        <meta
-          property="og:title"
-          content="Balaji Udayagiri - Front-End Lead Engineer & AI Integration Expert"
-        />
-        <meta
-          property="og:description"
-          content="Front-End Lead Engineer at PureCode Software, pioneering AI-powered web solutions with expertise in React, Next.js, and TypeScript."
-        />
-        <meta property="og:url" content="https://balajiudayagiri.vercel.app" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Balaji Udayagiri" />
-        <meta property="og:image" content="/og-image.png" /> */}
+
+        {/* Add Structured Data (JSON-LD) */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "http://schema.org",
+              "@type": "Person",
+              "name": "Balaji Udayagiri",
+              "url": "https://balajiudayagiri.vercel.app",
+              "sameAs": [
+                "https://www.linkedin.com/in/balajiudayagiri",
+                "https://twitter.com/yourtwitterhandle"
+              ]
+            }
+          `}
+        </script>
       </head>
       <body className={`${poppins.className} relative `}>
         <ThemeProvider
