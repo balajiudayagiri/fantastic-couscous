@@ -175,8 +175,8 @@ export default function RootLayout({
               "name": "Balaji Udayagiri",
               "url": "https://balajiudayagiri.vercel.app",
               "sameAs": [
-                "https://www.linkedin.com/in/balajiudayagiri",
-                "https://twitter.com/yourtwitterhandle"
+                "https://www.linkedin.com/in/balaji-udayagiri-228747243/",
+                "https://www.twitter.com/balaji_udy"
               ]
             }
           `}
