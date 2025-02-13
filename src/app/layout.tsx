@@ -169,17 +169,18 @@ export default function RootLayout({
         {/* Add Structured Data (JSON-LD) */}
         <script type="application/ld+json">
           {`
-            {
-              "@context": "http://schema.org",
-              "@type": "Person",
-              "name": "Balaji Udayagiri",
-              "url": "https://balajiudayagiri.vercel.app",
-              "sameAs": [
-                "https://www.linkedin.com/in/balaji-udayagiri-228747243/",
-                "https://www.twitter.com/balaji_udy"
-              ]
-            }
-          `}
+  {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "name": "Balaji Udayagiri",
+    "image": "https://balajiudayagiri.vercel.app/images/myphoto.jpg",
+    "url": "https://balajiudayagiri.vercel.app",
+    "sameAs": [
+      "https://www.linkedin.com/in/balaji-udayagiri-228747243/",
+      "https://www.twitter.com/balaji_udy"
+    ]
+  }
+`}
         </script>
       </head>
       <body className={`${poppins.className} relative `}>
