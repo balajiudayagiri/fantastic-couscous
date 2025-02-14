@@ -28,8 +28,8 @@ This repository is solely for showcasing my personal portfolio. It is not open f
 
 Feel free to reach out for inquiries or just to say hi!  
 📩 Email: [balajiudayagiri06@gmail.com](mailto:balajiudayagiri06@gmail.com)  
-🐦 Twitter: [@yourhandle](https://www.twitter.com/balaji_udy)  
-💼 LinkedIn: [Your Name](https://www.linkedin.com/in/balaji-udayagiri-228747243/)
+🐦 Twitter: [@Balaji_udy](https://www.twitter.com/balaji_udy)  
+💼 LinkedIn: [Balaji Udayagiri](https://www.linkedin.com/in/balaji-udayagiri-228747243/)
 
 ---
 
