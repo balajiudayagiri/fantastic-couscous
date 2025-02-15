@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "Balaji Udayagiri - Front-End Lead Engineer & AI Integration Expert",
   },
   description:
-    "Front-End Lead Engineer at PureCode Software, pioneering AI-powered web solutions with expertise in React, Next.js, and TypeScript.",
+    "Front-End Lead Engineer, pioneering AI-powered web solutions with expertise in React, Next.js, and TypeScript.",
   keywords: [
     "portfolio",
     "Balaji Udayagiri",
