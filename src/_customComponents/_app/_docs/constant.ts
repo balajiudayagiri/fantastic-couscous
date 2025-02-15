@@ -1,45 +1,61 @@
 export const docs = [
   {
-    title: "Getting Started",
+    title: "Introduction",
     sections: [
       {
-        heading: "Project Overview",
+        heading: "About Me",
         content:
-          "EmpyreanUI is a modern web application built with Next.js 14, featuring AI-powered tools for developers.",
+          "I'm Balaji Udayagiri, a Frontend Engineer with expertise in building scalable web applications using modern frameworks like Next.js and React.",
       },
       {
         heading: "Tech Stack",
         content:
-          "Built with Next.js, TypeScript, Tailwind CSS, and various modern web technologies.",
+          "Proficient in Next.js, React, TypeScript, Tailwind CSS, and other cutting-edge web technologies.",
       },
     ],
   },
   {
-    title: "Core Features",
+    title: "Projects",
     sections: [
       {
-        heading: "README Generator",
+        heading: "AI Component Generator",
         content:
-          "Create professional README files with our intuitive generator.",
+          "Developed an AI-driven tool that generates React components based on user prompts, streamlining UI development.",
       },
       {
-        heading: "AI Integration",
+        heading: "Theme Editor",
         content:
-          "Leverage AI capabilities for automated documentation generation.",
+          "Built a powerful theme editor that allows users to preview and customize UI components dynamically.",
+      },
+      {
+        heading: "Low-Code Platform Enhancements",
+        content:
+          "Contributed to a low-code platform by developing a DSL transpiler to convert UI structures into multiple frameworks.",
       },
     ],
   },
   {
-    title: "Components",
+    title: "Experience",
     sections: [
       {
-        heading: "UI Components",
+        heading: "Frontend Engineering",
         content:
-          "Discover our collection of reusable, accessible UI components.",
+          "Over 4 years of experience in frontend development, specializing in UI/UX, performance optimization, and SEO best practices.",
       },
       {
-        heading: "Custom Hooks",
-        content: "Explore our custom React hooks for common functionality.",
+        heading: "Mentorship & Leadership",
+        content:
+          "Managed and mentored interns, fostering a culture of growth and technical excellence.",
+      },
+    ],
+  },
+  {
+    title: "Contact",
+    sections: [
+      {
+        heading: "Get in Touch",
+        content:
+          "Interested in collaborating? Feel free to reach out via email or connect with me on LinkedIn.",
       },
     ],
   },

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { docs } from "./constant";
+import { _socialLinks } from "../HomePageConstants";
 
 export function Documentation() {
   return (
@@ -38,12 +39,34 @@ export function Documentation() {
                   <div
                     key={subsection.heading}
                     className="p-6 rounded-2xl border border-primary/10 bg-primary/5 backdrop-blur-sm">
-                    <h3 className="text-lg font-medium text-primary mb-2">
-                      {subsection.heading}
-                    </h3>
-                    <p className="text-muted-foreground">
-                      {subsection.content}
-                    </p>
+                    <div>
+                      <h3 className="text-lg font-medium text-primary mb-2">
+                        {subsection.heading}
+                      </h3>
+                      <p className="text-muted-foreground">
+                        {subsection.content}
+                      </p>
+                    </div>
+                    <div className="flex gap-4 mt-4">
+                      {section.title === "Contact" ? (
+                        <>
+                          {_socialLinks.map((social, index) => (
+                            <motion.a
+                              key={index}
+                              href={social.href}
+                              title={social.label}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-muted-foreground hover:text-primary transition-colors"
+                              whileHover={{ scale: 1.1 }}
+                              whileTap={{ scale: 0.95 }}
+                              aria-label={`Visit my ${social.label} profile`}>
+                              <social.icon className="h-7 w-7" />
+                            </motion.a>
+                          ))}
+                        </>
+                      ) : null}
+                    </div>
                   </div>
                 ))}
               </div>
