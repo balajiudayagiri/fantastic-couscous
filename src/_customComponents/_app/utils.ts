@@ -11,4 +11,9 @@ export function calculateExperience(startDate: Date): string {
   return months >= 6 ? `${years}.5+` : `${years}+`;
 }
 
-
+export const getDeviceType = () => {
+  if (typeof window !== "undefined") {
+    return window.innerWidth <= 768 ? "mobile" : "desktop";
+  }
+  return "desktop"; // Default to desktop if window is not defined (e.g., during SSR)
+};

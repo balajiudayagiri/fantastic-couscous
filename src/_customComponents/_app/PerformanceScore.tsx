@@ -1,7 +1,8 @@
 "use client";
-import React, { useState, memo } from "react";
+import React, { useState, useEffect, memo } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { getDeviceType } from "./utils";
 
 type ProgressCircleProps = {
   value: number;
@@ -69,6 +70,13 @@ const ProgressCircle: React.FC<ProgressCircleProps> = memo(
 const PerformanceScore: React.FC = () => {
   const [activeTab, setActiveTab] = useState<"mobile" | "desktop">("mobile");
   const strokWidth = "7";
+  const [deviceType, setDeviceType] = useState<"mobile" | "desktop">("mobile");
+
+  // Detect device type on component mount
+  useEffect(() => {
+    setDeviceType(getDeviceType());
+  }, []);
+
   // Scores for mobile and desktop
   const mobileScores = {
     performance: 92,
@@ -84,7 +92,7 @@ const PerformanceScore: React.FC = () => {
     seo: 100,
   };
 
-  const scores = activeTab === "mobile" ? mobileScores : desktopScores;
+  const scores = deviceType === "mobile" ? mobileScores : desktopScores;
 
   return (
     <div className="p-6 max-w-screen-lg mx-auto">
@@ -93,16 +101,16 @@ const PerformanceScore: React.FC = () => {
         <div className="relative">
           <button
             className={`px-4 py-2 w-28 font-semibold ${
-              activeTab === "mobile" ? "text-blue-400" : "text-white/70"
+              deviceType === "mobile" ? "text-blue-400" : "text-white/70"
             }`}
-            onClick={() => setActiveTab("mobile")}>
+            onClick={() => setDeviceType("mobile")}>
             Mobile
           </button>
           <button
             className={`px-4 py-2 w-28 font-semibold ${
-              activeTab === "desktop" ? "text-blue-400" : "text-white/70"
+              deviceType === "desktop" ? "text-blue-400" : "text-white/70"
             }`}
-            onClick={() => setActiveTab("desktop")}>
+            onClick={() => setDeviceType("desktop")}>
             Desktop
           </button>
 
@@ -110,7 +118,7 @@ const PerformanceScore: React.FC = () => {
           <motion.div
             className="absolute bottom-0 left-0 w-1/2 h-0.5 bg-blue-500 rounded-tl-lg rounded-tr-lg"
             animate={{
-              left: activeTab === "mobile" ? "0%" : "50%",
+              left: deviceType === "mobile" ? "0%" : "50%",
             }}
             transition={{ duration: 0.3 }}
           />
