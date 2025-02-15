@@ -7,4 +7,5 @@ export default async function Page({
 }) {
   const slug = (await params).blog;
   return <BlogPost slug={slug} />;
+ 
 }

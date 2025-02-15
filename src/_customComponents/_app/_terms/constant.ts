@@ -98,18 +98,18 @@ export const sections: Section[] = [
     conclusion:
       "Any significant changes to these terms will be reflected in the 'Last Updated' date shown above.",
   },
-  {
-    title: "Disclaimer",
-    introduction:
-      "While I strive to maintain accurate and up-to-date information:",
-    points: [
-      "All content is provided 'as is' without warranties",
-      "Project demonstrations may not reflect current versions",
-      "Technical implementations may need adaptation for specific use cases",
-      "Performance may vary based on user environment and conditions",
-      "Success with demonstrated techniques cannot be guaranteed",
-    ],
-    conclusion:
-      "Always perform your own testing and validation before implementing any solutions in production environments.",
-  },
+  // {
+  //   title: "Disclaimer",
+  //   introduction:
+  //     "While I strive to maintain accurate and up-to-date information:",
+  //   points: [
+  //     "All content is provided 'as is' without warranties",
+  //     "Project demonstrations may not reflect current versions",
+  //     "Technical implementations may need adaptation for specific use cases",
+  //     "Performance may vary based on user environment and conditions",
+  //     "Success with demonstrated techniques cannot be guaranteed",
+  //   ],
+  //   conclusion:
+  //     "Always perform your own testing and validation before implementing any solutions in production environments.",
+  // },
 ];

@@ -1,192 +1,94 @@
-# Code Citations
+# Portfolio Website Terms & Conditions
 
-## License: Apache-2.0
+Welcome to my portfolio website! This site serves as a professional showcase of my work, skills, and expertise in software development. By accessing this portfolio, you agree to the following terms and conditions outlined below.
 
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
+## 1. Portfolio Usage & Access
 
-```
--full dark
-```
+This portfolio is designed to display my work and skills. By using this site, you agree to the following:
 
-## License: Apache-2.0
+- Use the content for personal, non-commercial reference.
+- Do not attempt to reverse engineer or copy the demonstrated projects.
+- Respect the intellectual property rights of all content presented.
+- Do not use any automated systems or bots to access the portfolio.
 
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
+## 2. Intellectual Property Rights
 
-```
--full dark:bg-black
-```
+All content within this portfolio is protected by intellectual property laws and remains my exclusive property. This includes:
 
-## License: Apache-2.0
+- Source code and programming examples
+- Project demonstrations and implementations
+- Design elements and visual assets
+- Written content and documentation
+- Personal branding and logos
 
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
+You may reference or cite this work with proper attribution, but reproduction or commercial use requires explicit written permission.
 
-```
--full dark:bg-black bg-white
-```
+## 3. Project Demonstrations & Code Samples
 
-## License: Apache-2.0
+The projects and code samples showcased here demonstrate my technical capabilities and development approach. Please note the following:
 
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
+- All demonstrations are provided for illustrative purposes only.
+- Projects may use third-party services, APIs, and dependencies.
+- Some features may be limited in demo versions.
+- Code samples are intended for educational purposes.
+- Implementation details may vary in production environments.
 
-```
--full dark:bg-black bg-white dark:bg-gri
-```
+While you're welcome to learn from these examples, they are not intended for direct reproduction or commercial use without permission.
 
-## License: Apache-2.0
+## 4. External Links & Resources
 
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
+This portfolio contains links to external platforms and resources, including:
 
-```
--full dark:bg-black bg-white dark:bg-grid-white/
-```
+- Professional social media profiles (LinkedIn, Twitter)
+- Code repositories on GitHub
+- Blog posts on various platforms
+- Project demonstrations and live examples
+- Third-party tools and services used in projects
 
-## License: Apache-2.0
+While these external resources are carefully selected, I cannot be responsible for their content or availability.
 
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
+## 5. Professional Communication
 
-```
--full dark:bg-black bg-white dark:bg-grid-white/[0.2
-```
+When reaching out for professional inquiries through this portfolio, please ensure the following:
 
-## License: Apache-2.0
+- Provide accurate and relevant information.
+- Maintain professional and respectful communication.
+- Use the provided contact methods for legitimate business purposes.
+- Expect reasonable response times during business hours.
+- Respect confidentiality in our communications.
 
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
+## 6. Data & Privacy Considerations
 
-```
--full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-gri
-```
+When interacting with this portfolio website, I take your privacy seriously:
 
-## License: Apache-2.0
+- Only necessary cookies and technical data are collected.
+- No personal information is stored without explicit consent.
+- Analytics may be used to improve the user experience.
+- Your data is never sold or shared with third parties.
+- You can request information about your data at any time.
 
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
+Your privacy is important, and any collected information is handled with care in accordance with standard privacy practices.
 
-```
--full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black
-```
+## 7. Updates & Modifications
 
-## License: Apache-2.0
+I reserve the right to update or modify this portfolio and its terms over time. Changes may include:
 
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
+- Updates to portfolio content and project demonstrations.
+- Modifications to these terms to reflect new features or requirements.
+- Adding or removing projects and code samples.
+- Improvements to site functionality and user experience.
+- Changing or discontinuing any aspect of the portfolio.
 
-```
--full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.
-```
+Any significant changes to these terms will be reflected in the "Last Updated" date shown above.
+<!-- 
+## 8. Disclaimer
 
-## License: Apache-2.0
+While I strive to maintain accurate and up-to-date information, please note the following:
 
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
+- All content is provided "as is" without warranties.
+- Project demonstrations may not reflect the latest versions.
+- Technical implementations may need adaptation for specific use cases.
+- Performance may vary based on user environment and conditions.
+- Success with demonstrated techniques cannot be guaranteed.
 
-```
--full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2]">
-
-```
-
-## License: Apache-2.0
-
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
-
-```
--full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2]">
-        <div className="absolute
-```
-
-## License: Apache-2.0
-
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
-
-```
--full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2]">
-        <div className="absolute pointer-events-none
-```
-
-## License: Apache-2.0
-
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
-
-```
--full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2]">
-        <div className="absolute pointer-events-none inset-0
-```
-
-## License: Apache-2.0
-
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
-
-```
--full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2]">
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-
-```
-
-## License: Apache-2.0
-
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
-
-```
--full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2]">
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black
-```
-
-## License: Apache-2.0
-
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
-
-```
--full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2]">
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [
-```
-
-## License: Apache-2.0
-
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
-
-```
--full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2]">
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:ra
-```
-
-## License: Apache-2.0
-
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
-
-```
--full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2]">
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(
-```
-
-## License: Apache-2.0
-
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
-
-```
--full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2]">
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,
-```
-
-## License: Apache-2.0
-
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
-
-```
--full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2]">
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black
-```
-
-## License: Apache-2.0
-
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
-
-```
--full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2]">
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-
-```
-
-## License: Apache-2.0
-
-https://github.com/gridaco/grida/blob/416108a7d222afe5dc809b32cc06824bb6800e99/apps/forms/theme/backgrounds/grid/index.tsx
-
-```
--full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2]">
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-      </div>
-```
+Always perform your own testing and validation before implementing any solutions in production environments. -->

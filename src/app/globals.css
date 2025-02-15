@@ -100,16 +100,16 @@
   scroll-snap-type: y mandatory;
 }
 
-/* Apply yellow highlight color for text selection */
+/* Apply --primary as highlight color for text selection */
 ::selection {
-  background-color: hsla(48, 96%, 53%, 0.773);
+  background-color: hsla(var(--primary));
   color: black;
   /* Ensure the text color remains readable */
 }
 
 /* For compatibility with Firefox */
 ::-moz-selection {
-  background-color: hsl(47.9 95.8% 53.1%);
+  background-color: hsla(var(--primary));
   color: black;
   /* Ensure the text color remains readable */
 }
