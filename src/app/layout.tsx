@@ -17,11 +17,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://balajiudayagiri.vercel.app"),
   title: {
     template: "%s | Balaji Udayagiri",
-    default:
-      "Balaji Udayagiri - Front-End Lead Engineer & AI Integration Expert",
+    default: "Balaji Udayagiri",
   },
   description:
-    "Front-End Lead Engineer, pioneering AI-powered web solutions with expertise in React, Next.js, and TypeScript.",
+    "Front-End Lead Engineer & AI Integration Expert, pioneering AI-powered web solutions with expertise in React, Next.js, and TypeScript.",
   keywords: [
     "portfolio",
     "Balaji Udayagiri",
@@ -70,9 +69,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://balajiudayagiri.vercel.app",
     siteName: "Balaji Udayagiri",
-    title: "Balaji Udayagiri - Front-End Lead Engineer & AI Integration Expert",
+    title: "Balaji Udayagiri",
     description:
-      "Front-End Lead Engineer at PureCode Software, pioneering AI-powered web solutions with expertise in React, Next.js, and TypeScript.",
+      "Front-End Lead Engineer & AI Integration Expert, pioneering AI-powered web solutions with expertise in React, Next.js, and TypeScript.",
     images: [
       {
         url: "/og-image.png",
@@ -120,8 +119,6 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
 };
-
-
 
 export default function RootLayout({
   children,
