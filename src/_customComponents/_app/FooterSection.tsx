@@ -31,6 +31,7 @@ export function FooterSection() {
             <div className="flex gap-4 pt-4">
               {socialLinks.map((social) => (
                 <a
+                  title={social.name}
                   key={social.name}
                   href={social.url || "#"}
                   target="_blank"

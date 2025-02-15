@@ -24,7 +24,7 @@ function Header() {
     <>
       <li title="Work">
         <Link
-          aria-label="Work"
+          aria-label="Navigate to Work section"
           href="/work"
           className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
           Work
@@ -33,7 +33,7 @@ function Header() {
       </li>
       <li title="Projects">
         <Link
-          aria-label="Projects"
+          aria-label="Navigate to Projects section"
           href="/projects"
           className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
           Projects
@@ -42,7 +42,7 @@ function Header() {
       </li>
       <li title="Research">
         <Link
-          aria-label="Research"
+          aria-label="Navigate to Research Blogs section"
           href="/research-blogs"
           className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
           Research
@@ -51,7 +51,7 @@ function Header() {
       </li>
       <li title="Blogs">
         <Link
-          aria-label="Blogs"
+          aria-label="Navigate to Blogs section"
           href="/blogs"
           className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
           Blogs
@@ -76,7 +76,13 @@ function Header() {
         <nav className="w-full flex items-center justify-between">
           <span className="flex items-center gap-4">
             {pathname === "/" ? null : (
-              <ArrowLeft onClick={() => router.back()} />
+              <ArrowLeft
+                aria-label="Go back"
+                role="button"
+                tabIndex={0}
+                className="text-gray-300 hover:text-white transition-colors"
+                onClick={() => router.back()}
+              />
             )}
             <Link
               title="Home"

@@ -3,6 +3,7 @@ import {
   BookOpen,
   Brain,
   Code,
+  Github,
   Instagram,
   Linkedin,
   Mail,
@@ -164,15 +165,15 @@ export const experiences = [
 ];
 
 export const socialLinks = [
-  // {
-  //   name: "GitHub",
-  //   url: "https://github.com/yourusername",
-  //   icon: Github,
-  // },
   {
     name: "LinkedIn",
     url: process.env.LINKEDIN_URL,
     icon: Linkedin,
+  },
+  {
+    name: "GitHub",
+    url: "https://github.com/balajiudayagiri",
+    icon: Github,
   },
   {
     name: "Twitter",
@@ -232,6 +233,12 @@ export const _socialLinks = [
     icon: Linkedin,
     href: process.env.LINKEDIN_URL,
     label: "LinkedIn Profile",
+  },
+  {
+    icon: Github,
+    href: `${process.env.GITHUB}`,
+    label: "GitHub Profile",
+    isEmail: true,
   },
   {
     icon: Instagram,
