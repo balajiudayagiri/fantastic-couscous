@@ -20,46 +20,7 @@ function Header() {
   const pathname = usePathname();
   const router = useRouter();
 
-  const navLinks = (
-    <>
-      <li title="Work">
-        <Link
-          aria-label="Navigate to Work section"
-          href="/work"
-          className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
-          Work
-          <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
-        </Link>
-      </li>
-      <li title="Projects">
-        <Link
-          aria-label="Navigate to Projects section"
-          href="/projects"
-          className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
-          Projects
-          <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
-        </Link>
-      </li>
-      <li title="Research">
-        <Link
-          aria-label="Navigate to Research Blogs section"
-          href="/research-blogs"
-          className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
-          Research
-          <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
-        </Link>
-      </li>
-      <li title="Blogs">
-        <Link
-          aria-label="Navigate to Blogs section"
-          href="/blogs"
-          className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
-          Blogs
-          <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
-        </Link>
-      </li>
-    </>
-  );
+  const navLinks = <></>;
 
   return (
     <header
@@ -95,7 +56,42 @@ function Header() {
 
           {/* Desktop Navigation */}
           <ul className="hidden sm:flex gap-6 text-sm font-medium items-center">
-            {navLinks}
+            <li title="Work">
+              <Link
+                aria-label="Navigate to Work section"
+                href="/work"
+                className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                Work
+                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+              </Link>
+            </li>
+            <li title="Projects">
+              <Link
+                aria-label="Navigate to Projects section"
+                href="/projects"
+                className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                Projects
+                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+              </Link>
+            </li>
+            <li title="Research">
+              <Link
+                aria-label="Navigate to Research Blogs section"
+                href="/research-blogs"
+                className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                Research
+                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+              </Link>
+            </li>
+            <li title="Blogs">
+              <Link
+                aria-label="Navigate to Blogs section"
+                href="/blogs"
+                className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                Blogs
+                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+              </Link>
+            </li>
           </ul>
 
           {/* Mobile Navigation using Drawer */}
@@ -117,16 +113,57 @@ function Header() {
                   </DrawerDescription>
                 </DrawerHeader>
                 <div className="p-4">
-                  <DrawerClose className="block w-full">
-                    <ul
-                      aria-label="Main Navigation"
-                      className={clsx(
-                        "flex flex-col gap-4 text-base font-medium",
-                        "[&>li]:px-3 [&>li]:py-2 [&>li]:w-full" //stules added to its children
-                      )}>
-                      {navLinks}
-                    </ul>
-                  </DrawerClose>
+                  <ul
+                    aria-label="Main Navigation"
+                    className={clsx(
+                      "flex flex-col gap-4 text-base font-medium",
+                      "[&>li]:px-3 [&>li]:py-2 [&>li]:w-full" //stules added to its children
+                    )}>
+                    <Link
+                      aria-label="Navigate to Work section"
+                      href="/work"
+                      className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                      <DrawerClose className="block w-full">
+                        <li title="Work" className="w-full">
+                          Work
+                          <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                        </li>
+                      </DrawerClose>
+                    </Link>
+                    <Link
+                      aria-label="Navigate to Projects section"
+                      href="/projects"
+                      className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                      <DrawerClose className="block w-full">
+                        <li title="Projects" className="w-full">
+                          Projects
+                          <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                        </li>
+                      </DrawerClose>
+                    </Link>
+                    <Link
+                      aria-label="Navigate to Research Blogs section"
+                      href="/research-blogs"
+                      className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                      <DrawerClose className="block w-full">
+                        <li title="Research" className="w-full">
+                          Research
+                          <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                        </li>
+                      </DrawerClose>
+                    </Link>
+                    <Link
+                      aria-label="Navigate to Blogs section"
+                      href="/blogs"
+                      className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                      <DrawerClose className="block w-full">
+                        <li title="Blogs" className="w-full">
+                          Blogs
+                          <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                        </li>
+                      </DrawerClose>
+                    </Link>
+                  </ul>
                 </div>
                 <DrawerFooter>
                   <DrawerClose className="block w-full">
