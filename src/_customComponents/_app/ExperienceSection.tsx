@@ -83,7 +83,7 @@ export function ExperienceSection() {
                       <motion.div
                         animate={{ rotate: isExpanded ? 180 : 0 }}
                         transition={{ duration: 0.3 }}>
-                        <ChevronDown className="w-5 h-5 text-muted-foreground" />
+                        <ChevronDown className="w-5 h-5 text-muted-foreground max-md:hidden" />
                       </motion.div>
                     </div>
                   </CardHeader>
