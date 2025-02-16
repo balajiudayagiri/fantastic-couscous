@@ -51,7 +51,7 @@ export function HeroContent() {
               Balaji Udayagiri
             </h1>
 
-            <span className="text-white/80">
+            <span className="">
               <p
                 className="mt-2 sm:mt-6 text-sm sm:text-md md:text-xl font-medium"
                 aria-label="Job Title and Expertise">

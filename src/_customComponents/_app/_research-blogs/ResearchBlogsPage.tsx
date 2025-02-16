@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from "@b/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@b/components/ui/avatar";
-import { CalendarDays, Clock, Eye, Heart, Share2 } from "lucide-react";
+import { CalendarDays, Clock } from "lucide-react";
 import Link from "next/link";
 import { researchBlogs } from "./researchBlogs";
 
@@ -42,7 +42,7 @@ export default function ResearchBlogsPage() {
               <Link
                 aria-label={`Research Blogs ${blog.id}`}
                 href={`/research-blogs/${blog.id}`}>
-                <Card className="hover:shadow-lg transition-all duration-300 hover:border-primary/50">
+                <Card className="hover:shadow-lg transition-all duration-300 hover:border-primary/50 h-full">
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <div>{blog.category}</div>

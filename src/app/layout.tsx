@@ -5,6 +5,7 @@ import { FooterSection } from "@b/_customComponents/_app/FooterSection";
 import Header from "@b/_customComponents/_app/Header";
 import "./globals.css";
 import Script from "next/script";
+import CustomCursor from "@b/components/CustomCursor";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -197,6 +198,7 @@ export default function RootLayout({
         {/* <!-- End Google Tag Manager --> */}
       </head>
       <body className={`${poppins.className} relative `}>
+        <CustomCursor />
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
