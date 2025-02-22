@@ -2,6 +2,80 @@ import { ResearchBlog } from "./types";
 
 export const researchBlogs: ResearchBlog[] = [
   {
+    id: "enterkeyhint-attribute",
+    title:
+      "Understanding the enterkeyhint Attribute in HTML: Enhancing Virtual Keyboard UX",
+    description:
+      "Learn how the enterkeyhint attribute customizes the Enter key label in virtual keyboards, improving user experience across different input fields.",
+    publishedAt: "February 22, 2025",
+    updatedAt: "February 22, 2025",
+    author: {
+      name: "Balaji Udayagiri",
+      avatar: "https://your-avatar-url.com/balaji.jpg",
+      role: "Front End Lead Engineer",
+    },
+    category: "Frontend Development",
+    readTime: "6 min",
+    techStacks: [
+      {
+        name: "HTML",
+        description: "Markup language used for structuring web content.",
+        link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+      },
+      {
+        name: "JavaScript",
+        description:
+          "Programming language for adding interactivity to web pages.",
+        link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      },
+    ],
+    content: {
+      summary:
+        "The enterkeyhint attribute in HTML customizes the Enter key label on virtual keyboards based on user intent. It enhances accessibility and user experience, particularly for mobile and touch devices.",
+      keyPoints: [
+        "The enterkeyhint attribute provides a hint for virtual keyboard Enter key behavior.",
+        "It improves usability by displaying context-appropriate labels/icons.",
+        "Supports predefined values like 'enter', 'done', 'go', 'next', 'previous', 'search', and 'send'.",
+        "Works best when combined with inputmode for better UX.",
+        "Browser support varies; testing is essential.",
+      ],
+      codeExamples: [
+        {
+          title: "Basic Example: Using enterkeyhint in an Input Field",
+          code: `<input type="text" enterkeyhint="send" placeholder="Type a message...">`,
+          language: "html",
+        },
+        {
+          title: "Using enterkeyhint with a Textarea",
+          code: `<textarea enterkeyhint="next" placeholder="Write your comment..."></textarea>`,
+          language: "html",
+        },
+      ],
+    },
+    references: [
+      {
+        title: "MDN Web Docs - enterkeyhint",
+        url: "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/enterkeyhint",
+      },
+      {
+        title: "HTML Specification - enterkeyhint",
+        url: "https://html.spec.whatwg.org/multipage/interaction.html#attr-enterkeyhint",
+      },
+    ],
+    relatedTopics: [
+      "HTML Attributes",
+      "Virtual Keyboards",
+      "Accessibility",
+      "User Experience (UX)",
+    ],
+    status: "published",
+    metrics: {
+      views: 1200,
+      likes: 350,
+      shares: 120,
+    },
+  },
+  {
     id: "custom-element-details-web-component",
     title: "Creating a Reusable Web Component: <element-details>",
     description:
