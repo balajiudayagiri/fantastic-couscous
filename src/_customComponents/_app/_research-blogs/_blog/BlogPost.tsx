@@ -116,7 +116,7 @@ export default function BlogPost({ slug }: { slug: string }) {
               {blog.references.map((ref, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-2 hover:text-blue-500 hover:underline">
+                  className="flex w-fit items-center gap-2 hover:text-blue-500 hover:underline">
                   <a
                     href={ref.url}
                     target="_blank"
