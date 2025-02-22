@@ -8,11 +8,13 @@ interface CodeBlockProps {
 
 export function CodeBlock({ code, language }: CodeBlockProps) {
   return (
-    <SyntaxHighlighter
-      language={language}
-      style={oneDark}
-      customStyle={{ padding: "1rem", borderRadius: "0.5rem" }}>
-      {code.trim()}
-    </SyntaxHighlighter>
+    <samp>
+      <SyntaxHighlighter
+        language={language}
+        style={oneDark}
+        customStyle={{ padding: "1rem", borderRadius: "0.5rem" }}>
+        {code.trim()}
+      </SyntaxHighlighter>
+    </samp>
   );
 }

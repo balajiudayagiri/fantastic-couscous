@@ -1,6 +1,146 @@
 import { ResearchBlog } from "./types";
 
 export const researchBlogs: ResearchBlog[] = [
+  {
+    id: "custom-element-details-web-component",
+    title: "Creating a Reusable Web Component: <element-details>",
+    description:
+      "Web Components provide a way to create reusable UI elements. This article covers the implementation of the <element-details> component using the Shadow DOM and HTML templates.",
+    publishedAt: "2025-02-22",
+    updatedAt: "2025-02-22",
+    author: {
+      name: "Balaji",
+      avatar: "/images/avatar-balaji.png",
+      role: "Frontend Engineer",
+    },
+    category: "UI Development",
+    readTime: "10 min",
+    techStacks: [
+      {
+        name: "Web Components",
+        version: "1.0",
+        description:
+          "A standard for creating reusable and encapsulated components in modern web development.",
+        link: "https://developer.mozilla.org/en-US/docs/Web/Web_Components",
+      },
+    ],
+    content: {
+      summary:
+        "This guide walks you through building a custom Web Component called <element-details> using the Shadow DOM and an HTML template. Learn how to encapsulate styles and structure your reusable component effectively.",
+      keyPoints: [
+        "Using HTML Templates for reusable structures",
+        "Encapsulating styles with Shadow DOM",
+        "Dynamically populating component attributes",
+        "Registering custom elements with JavaScript",
+        "Best practices for Web Components",
+        "Why use Web Components? They provide encapsulation and reusability.",
+        "The <element-details> component allows consistent documentation for custom elements across projects.",
+        "Using the Shadow DOM prevents style conflicts and ensures component integrity.",
+        "Web Components can be shared across different frameworks like React, Vue, and Angular without modification.",
+        "This component can be extended to display additional metadata like accessibility attributes.",
+      ],
+      codeExamples: [
+        {
+          title: "ElementDetails Web Component",
+          code: `<template id="element-details-template">
+  <style>
+    details {
+      font-family: 'Open Sans Light', Helvetica, Arial, sans-serif;
+    }
+    .name {
+      font-weight: bold;
+      color: #217ac0;
+      font-size: 120%;
+    }
+    h4 {
+      margin: 10px 0 -8px 0;
+      background: #217ac0;
+      color: white;
+      padding: 2px 6px;
+      border: 1px solid #cee9f9;
+      border-radius: 4px;
+    }
+    .attributes {
+      margin-left: 22px;
+      font-size: 90%;
+    }
+    .attributes p {
+      margin-left: 16px;
+      font-style: italic;
+    }
+  </style>
+  <details>
+    <summary>
+      <code class="name">
+        &lt;<slot name="element-name">NEED NAME</slot>&gt;
+      </code>
+      <span class="desc"><slot name="description">NEED DESCRIPTION</slot></span>
+    </summary>
+    <div class="attributes">
+      <h4>Attributes</h4>
+      <slot name="attributes"><p>None</p></slot>
+    </div>
+  </details>
+  <hr />
+</template>`,
+          language: "html",
+        },
+        {
+          title: "ElementDetails JavaScript Class",
+          code: `class ElementDetails extends HTMLElement {
+  constructor() {
+    super();
+    const template = document.getElementById("element-details-template").content;
+    this.attachShadow({ mode: "open" }).appendChild(template.cloneNode(true));
+  }
+
+  connectedCallback() {
+    const elementName = this.getAttribute("element-name") || "Unknown";
+    this.shadowRoot.querySelector("slot[name=element-name]").textContent = elementName;
+
+    const description = this.getAttribute("description") || "No description available.";
+    this.shadowRoot.querySelector("slot[name=description]").textContent = description;
+
+    const attributesData = this.getAttribute("attributes");
+    const attributesList = this.shadowRoot.querySelector("slot[name=attributes]");
+
+    if (attributesData) {
+      try {
+        const attributes = JSON.parse(attributesData);
+        attributesList.innerHTML = attributes
+          .map(attr => \`<p>\${attr.name}="\${attr.value}"</p>\`)
+          .join("");
+      } catch (error) {
+        console.error("Invalid attributes JSON:", error);
+      }
+    }
+  }
+}
+
+customElements.define("element-details", ElementDetails);`,
+          language: "javascript",
+        },
+      ],
+    },
+    references: [
+      {
+        title: "MDN Web Components Guide",
+        url: "https://developer.mozilla.org/en-US/docs/Web/Web_Components",
+      },
+    ],
+    relatedTopics: [
+      "Shadow DOM",
+      "HTML Templates",
+      "JavaScript Custom Elements",
+    ],
+    status: "published",
+    metrics: {
+      views: 1500,
+      likes: 200,
+      shares: 75,
+    },
+  },
+
   // 1. HTML5
   {
     id: "html5-the-foundation-of-modern-web-development",
