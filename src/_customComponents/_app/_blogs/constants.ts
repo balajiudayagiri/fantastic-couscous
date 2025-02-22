@@ -77,4 +77,21 @@ export const blogs: Blog[] = [
       "Front-End Development",
     ],
   },
+  {
+    title: "Creating a Reusable Web Component with Templates and Shadow DOM",
+    description:
+      "Learn how to build a custom <element-details> web component using the Shadow DOM and Template API for encapsulated, reusable UI elements.",
+    date: "February 22, 2025",
+    readTime: "6 min",
+    platform: "LinkedIn",
+    link: "https://www.linkedin.com/pulse/creating-reusable-web-component-templates-shadow-dom-balaji-udayagiri-v1mdc",
+    topics: [
+      "Web Components",
+      "Shadow DOM",
+      "HTML Templates",
+      "Custom Elements",
+      "JavaScript",
+      "Front-End Development",
+    ],
+  },
 ];
