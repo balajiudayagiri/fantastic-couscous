@@ -55,7 +55,7 @@ export function HeroContent() {
               <p
                 className="mt-2 sm:mt-6 text-sm sm:text-md md:text-xl font-medium"
                 aria-label="Job Title and Expertise">
-                Frontend Lead Engineer | AI-Powered UI Architect | Next.js
+                Frontend Lead Engineer | AI-Powered UI Engineer | Next.js
                 Expert
               </p>
 
