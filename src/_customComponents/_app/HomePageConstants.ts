@@ -32,11 +32,11 @@ export const skills = [
 
   // Animation & UI
   { name: "Framer Motion", years: 2 },
-  { name: "GSAP", years: 2 },
+  // { name: "GSAP", years: 2 },
 
   // Testing
-  { name: "Jest", years: 3 },
-  { name: "Cypress", years: 2 },
+  // { name: "Jest", years: 3 },
+  // { name: "Cypress", years: 2 },
 
   // Build Tools
   { name: "Webpack", years: 3 },
@@ -45,7 +45,7 @@ export const skills = [
   // Architecture & Design
   { name: "Design Systems", years: 2 },
   { name: "System Design", years: 2 },
-  { name: "Module Federation", years: 2 },
+  // { name: "Module Federation", years: 2 },
   { name: "Micro-Frontends", years: 2 },
 
   // Performance & Optimization
