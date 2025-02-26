@@ -99,6 +99,9 @@ export default function BlogPost({ slug }: { slug: string }) {
                 {blog.content.codeExamples.map((example, index) => (
                   <div key={index} className="space-y-2">
                     <h3 className="text-lg font-medium">{example.title}</h3>
+                    <p className="italic text-sm text-muted-foreground">
+                      {example.description}
+                    </p>
                     <CodeBlock
                       code={example.code}
                       language={example.language}

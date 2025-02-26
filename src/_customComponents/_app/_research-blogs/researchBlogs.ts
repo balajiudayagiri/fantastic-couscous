@@ -2,6 +2,466 @@ import { ResearchBlog } from "./types";
 
 export const researchBlogs: ResearchBlog[] = [
   {
+    id: "ultimate-guide-typescript",
+    title: "📌 The Complete Guide to TypeScript 🚀",
+    description:
+      "A deep dive into TypeScript types, interfaces, generics, utility types, OOP, decorators, and more.",
+    publishedAt: "2024-02-27",
+    updatedAt: "2024-02-27",
+    author: {
+      name: "John Doe",
+      avatar: "https://example.com/avatar.jpg",
+      role: "Senior TypeScript Developer",
+    },
+    category: "Developer Experience",
+    readTime: "20 min",
+    techStacks: [
+      {
+        name: "TypeScript",
+        version: "5.x",
+        description: "A strongly-typed superset of JavaScript.",
+        link: "https://www.typescriptlang.org/",
+      },
+      {
+        name: "JavaScript",
+        version: "ES6+",
+        description: "Dynamic programming language for web development.",
+        link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      },
+    ],
+    content: {
+      summary:
+        "This guide covers everything you need to master TypeScript, from primitive types and interfaces to advanced concepts like generics, decorators, and utility types.",
+      keyPoints: [
+        "Understand TypeScript’s type system.",
+        "Learn interfaces, type aliases, and records.",
+        "Explore utility types like Partial, Record, and Readonly.",
+        "Master generics, mapped types, and conditional types.",
+        "Learn about TypeScript’s object-oriented programming (OOP) features.",
+        "Implement decorators and metaprogramming techniques.",
+      ],
+      codeExamples: [
+        {
+          title: "📌 Primitive Types in TypeScript",
+          code: `let isDone: boolean = true;
+let age: number = 25;
+let userName: string = "Alice";
+let bigIntValue: bigint = 9007199254740991n;
+let uniqueId: symbol = Symbol("id");`,
+          language: "typescript",
+          description:
+            "TypeScript provides static typing for primitive types such as `boolean`, `number`, `string`, `bigint`, and `symbol`.",
+        },
+        {
+          title: "📌 Arrays & Tuples",
+          code: `let numbers: number[] = [1, 2, 3, 4];
+let names: string[] = ["Alice", "Bob"];
+
+let person: [string, number] = ["Alice", 30];`,
+          language: "typescript",
+          description:
+            "TypeScript supports typed arrays and tuples, which have a fixed number of elements with specific types.",
+        },
+        {
+          title: "📌 Interfaces vs Type Aliases",
+          code: `interface Person {
+    name: string;
+    age: number;
+}
+
+type Employee = {
+    name: string;
+    role: string;
+};`,
+          language: "typescript",
+          description:
+            "Interfaces and type aliases define object structures, but interfaces can be extended, whereas type aliases allow unions and intersections.",
+        },
+        {
+          title: "📌 Utility Types (Partial, Readonly, Record)",
+          code: `type User = { name: string; age: number };
+
+let partialUser: Partial<User> = { name: "Alice" };
+let readonlyUser: Readonly<User> = { name: "Alice", age: 30 };
+
+type UserRoles = Record<string, string>;
+
+const roles: UserRoles = {
+    admin: "Full Access",
+    editor: "Edit Content",
+};`,
+          language: "typescript",
+          description:
+            "TypeScript offers utility types like `Partial`, `Readonly`, and `Record` to modify object properties dynamically.",
+        },
+        {
+          title: "📌 Advanced Types (Mapped & Conditional Types)",
+          code: `type Optional<T> = { [P in keyof T]?: T[P] };
+type IsString<T> = T extends string ? "Yes" : "No";`,
+          language: "typescript",
+          description:
+            "Mapped types dynamically transform object structures, and conditional types allow type-based decisions.",
+        },
+        {
+          title: "📌 Generics in Functions & Classes",
+          code: `function identity<T>(arg: T): T {
+    return arg;
+}
+
+class Box<T> {
+    content: T;
+    constructor(value: T) {
+        this.content = value;
+    }
+}`,
+          language: "typescript",
+          description:
+            "Generics enable reusable, type-safe functions and classes, making code more flexible and scalable.",
+        },
+        {
+          title: "📌 OOP in TypeScript: Classes & Inheritance",
+          code: `class Animal {
+    name: string;
+    constructor(name: string) {
+        this.name = name;
+    }
+}
+
+class Dog extends Animal {
+    bark() {
+        console.log("Woof!");
+    }
+}`,
+          language: "typescript",
+          description:
+            "TypeScript supports object-oriented programming with classes, inheritance, access modifiers, and abstract classes.",
+        },
+        {
+          title: "📌 Type Guards & Type Assertions",
+          code: `function printId(id: string | number) {
+    if (typeof id === "string") {
+        console.log(id.toUpperCase());
+    } else {
+        console.log(id);
+    }
+}`,
+          language: "typescript",
+          description:
+            "Type guards help narrow down types at runtime, while type assertions force TypeScript to treat a variable as a specific type.",
+        },
+        {
+          title: "📌 Decorators & Metaprogramming",
+          code: `function Log(target: any, key: string, descriptor: PropertyDescriptor) {
+    console.log(\`Logging: \${key}\`);
+}
+
+class Car {
+    @Log
+    start(): void {
+        console.log("Car started");
+    }
+}`,
+          language: "typescript",
+          description:
+            "Decorators in TypeScript allow runtime modifications to classes, methods, and properties, commonly used in frameworks like Angular and NestJS.",
+        },
+      ],
+    },
+    references: [
+      {
+        title: "TypeScript Official Documentation",
+        url: "https://www.typescriptlang.org/docs/",
+      },
+      {
+        title: "MDN TypeScript Guide",
+        url: "https://developer.mozilla.org/en-US/docs/Web/TypeScript",
+      },
+    ],
+    relatedTopics: [
+      "JavaScript",
+      "TypeScript",
+      "Functional Programming",
+      "OOP in TypeScript",
+      "Decorators",
+    ],
+    status: "published",
+    metrics: {
+      views: 25000,
+      likes: 3000,
+      shares: 1200,
+    },
+  },
+  {
+    id: "ultimate-guide-functions-js-ts",
+    title: "📌 The Ultimate Guide to Functions in JavaScript & TypeScript 🚀",
+    description:
+      "A Deep Dive into Function Types, Overloading, Callbacks, Performance Optimization, and Best Practices.",
+    publishedAt: "2024-02-27",
+    updatedAt: "2024-02-27",
+    author: {
+      name: "Balaji Udayagiri",
+      avatar: "https://example.com/avatar.jpg",
+      role: "Frontend Lead Engineer",
+    },
+    category: "Backend Development",
+    readTime: "15 min",
+    techStacks: [
+      {
+        name: "JavaScript",
+        version: "ES6+",
+        description: "Dynamic programming language for web development.",
+        link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      },
+      {
+        name: "TypeScript",
+        version: "5.x",
+        description: "Typed superset of JavaScript.",
+        link: "https://www.typescriptlang.org/",
+      },
+    ],
+    content: {
+      summary:
+        "Functions are the backbone of JavaScript & TypeScript. This guide explores every function type, best practices, and advanced concepts like higher-order functions, memoization, and decorators.",
+      keyPoints: [
+        "Understand function types: Regular, Arrow, Async, and more.",
+        "Learn function overloading and higher-order functions.",
+        "Optimize performance using memoization and throttling.",
+        "Explore function decorators and metaprogramming.",
+      ],
+      codeExamples: [
+        {
+          title: "📌 Function Declaration",
+          code: `function greet(name: string): string {
+    return \`Hello, \${name}!\`;
+}
+
+console.log(greet("Alice")); // ✅ Works`,
+          language: "typescript",
+          description:
+            "Function declarations are hoisted, meaning they can be called before they are defined. They are useful for defining helper functions that can be reused throughout a program.",
+        },
+        {
+          title: "📌 Function Expression",
+          code: `const greet = function(name: string): string {
+    return \`Hello, \${name}!\`;
+};
+
+console.log(greet("Alice")); // ✅ Works`,
+          language: "typescript",
+          description:
+            "Function expressions are not hoisted and must be defined before use. They are useful for creating anonymous functions, assigning functions to variables, and passing functions as arguments.",
+        },
+        {
+          title: "📌 Arrow Function",
+          code: `const greet = (name: string): string => \`Hello, \${name}!\`;
+
+console.log(greet("Alice")); // ✅ Works`,
+          language: "typescript",
+          description:
+            "Arrow functions provide a concise syntax and do not bind their own `this`. They are commonly used for callbacks and functional programming.",
+        },
+        {
+          title: "📌 Immediately Invoked Function Expression (IIFE)",
+          code: `(function() {
+    console.log("This function runs immediately!");
+})();`,
+          language: "typescript",
+          description:
+            "IIFE functions execute immediately after they are defined. They are used to avoid polluting the global scope and are often used in modular programming.",
+        },
+        {
+          title: "📌 Generator Function",
+          code: `function* counter() {
+    yield 1;
+    yield 2;
+    yield 3;
+}
+
+const gen = counter();
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 2
+console.log(gen.next().value); // 3`,
+          language: "typescript",
+          description:
+            "Generator functions allow functions to pause and resume execution using the `yield` keyword. They are useful for handling large datasets and implementing iterators.",
+        },
+        {
+          title: "📌 Async Function",
+          code: `async function fetchData(): Promise<string> {
+    return new Promise(resolve => setTimeout(() => resolve("Data loaded"), 1000));
+}
+
+async function main() {
+    const data = await fetchData();
+    console.log(data);
+}
+
+main();`,
+          language: "typescript",
+          description:
+            "Async functions make it easier to work with Promises using the `await` keyword. They simplify asynchronous code and improve readability.",
+        },
+        {
+          title: "📌 Constructor Function",
+          code: `function Person(name: string) {
+    this.name = name;
+}
+
+const user = new (Person as any)("Alice");
+console.log(user.name); // Alice`,
+          language: "typescript",
+          description:
+            "Constructor functions create object instances using the `new` keyword. They were widely used before the introduction of ES6 classes.",
+        },
+        {
+          title: "📌 Callback Function",
+          code: `function processUser(id: number, callback: (name: string) => void): void {
+    const name = "Alice";
+    callback(name);
+}
+
+processUser(1, (userName) => {
+    console.log(\`Processed user: \${userName}\`);
+});`,
+          language: "typescript",
+          description:
+            "Callbacks are functions passed as arguments to other functions. They are commonly used in asynchronous programming and event handling.",
+        },
+        {
+          title: "📌 Higher-Order Function",
+          code: `function multiplier(factor: number) {
+    return (value: number) => value * factor;
+}
+
+const double = multiplier(2);
+console.log(double(10)); // 20`,
+          language: "typescript",
+          description:
+            "Higher-order functions are functions that take other functions as arguments or return functions. They are widely used in functional programming.",
+        },
+        {
+          title: "📌 Recursive Function",
+          code: `function factorial(n: number): number {
+    return n === 0 ? 1 : n * factorial(n - 1);
+}
+
+console.log(factorial(5)); // 120`,
+          language: "typescript",
+          description:
+            "A recursive function calls itself until a base condition is met. Recursion is commonly used for solving problems like tree traversal and factorial calculations.",
+        },
+        {
+          title: "📌 Currying Function",
+          code: `const add = (a: number) => (b: number) => a + b;
+
+console.log(add(2)(3)); // 5`,
+          language: "typescript",
+          description:
+            "Currying transforms a function with multiple arguments into a sequence of functions, each taking a single argument. It enhances code reusability and modularity.",
+        },
+        {
+          title: "📌 Memoization Function",
+          code: `function memoize(fn: Function) {
+    let cache: Record<string, any> = {};
+    return function (...args: any[]) {
+        let key = JSON.stringify(args);
+        return cache[key] || (cache[key] = fn(...args));
+    };
+}`,
+          language: "typescript",
+          description:
+            "Memoization is a caching technique that stores the results of function calls to avoid redundant calculations. It improves performance in computation-heavy applications.",
+        },
+        {
+          title: "📌 Debounce Function",
+          code: `function debounce(fn: Function, delay: number) {
+    let timer: any;
+    return function (...args: any[]) {
+        clearTimeout(timer);
+        timer = setTimeout(() => fn(...args), delay);
+    };
+}`,
+          language: "typescript",
+          description:
+            "Debounce delays the execution of a function until a specified time has passed since the last time it was called. It is useful for optimizing event handling, such as search inputs.",
+        },
+        {
+          title: "📌 Throttle Function",
+          code: `function throttle(fn: Function, limit: number) {
+    let inThrottle: boolean;
+    return function (...args: any[]) {
+        if (!inThrottle) {
+            fn(...args);
+            inThrottle = true;
+            setTimeout(() => (inThrottle = false), limit);
+        }
+    };
+}`,
+          language: "typescript",
+          description:
+            "Throttle ensures that a function is executed at most once within a specified time interval. It is commonly used for optimizing scroll and resize events.",
+        },
+        {
+          title: "📌 Proxy Function",
+          code: `const handler = {
+    apply: function(target: Function, thisArg: any, argumentsList: any) {
+        console.log(\`Calling function with arguments: \${argumentsList}\`);
+        return target(...argumentsList);
+    }
+};
+
+function sum(a: number, b: number): number {
+    return a + b;
+}
+
+const proxiedSum = new Proxy(sum, handler);
+
+console.log(proxiedSum(5, 10)); // Logs function call and result`,
+          language: "typescript",
+          description:
+            "Proxy functions allow interception of function calls to modify their behavior. They are used in logging, validation, and middleware systems.",
+        },
+        {
+          title: "📌 Function Decorator",
+          code: `function Log(target: any, key: string, descriptor: PropertyDescriptor) {
+    const original = descriptor.value;
+    descriptor.value = function (...args: any[]) {
+        console.log(\`Calling \${key} with\`, args);
+        return original.apply(this, args);
+    };
+}`,
+          language: "typescript",
+          description:
+            "Function decorators allow for metaprogramming, modifying the behavior of functions at runtime. They are commonly used in TypeScript, Angular, and NestJS.",
+        },
+      ],
+    },
+    references: [
+      {
+        title: "MDN JavaScript Functions",
+        url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions",
+      },
+      {
+        title: "TypeScript Functions",
+        url: "https://www.typescriptlang.org/docs/handbook/functions.html",
+      },
+    ],
+    relatedTopics: [
+      "JavaScript",
+      "TypeScript",
+      "Functional Programming",
+      "Async/Await",
+      "Decorators",
+    ],
+    status: "published",
+    metrics: {
+      views: 15000,
+      likes: 1200,
+      shares: 500,
+    },
+  },
+
+  {
     id: "enterkeyhint-attribute",
     title:
       "Understanding the enterkeyhint Attribute in HTML: Enhancing Virtual Keyboard UX",

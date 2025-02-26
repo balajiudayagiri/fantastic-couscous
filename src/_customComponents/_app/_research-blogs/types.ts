@@ -38,6 +38,7 @@ export type ResearchBlog = {
       title: string;
       code: string;
       language: string;
+      description?: string;
     }[];
   };
   references: {
