@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import TechStacksSpinner from "@b/_icons/TechStacksSpinner";
 import { _socialLinks } from "./HomePageConstants";
+import Link from "next/link";
 
 // FadeIn animation variants
 const fadeIn = {
@@ -55,8 +56,7 @@ export function HeroContent() {
               <p
                 className="mt-2 sm:mt-6 text-sm sm:text-md md:text-xl font-medium"
                 aria-label="Job Title and Expertise">
-                Frontend Lead Engineer | AI-Powered UI Engineer | Next.js
-                Expert
+                Frontend Lead Engineer | AI-Powered UI Engineer | Next.js Expert
               </p>
 
               <p
@@ -85,6 +85,13 @@ export function HeroContent() {
                 <social.icon className="h-7 w-7" />
               </motion.a>
             ))}
+            <Link
+              aria-label="Contact Me"
+              // href={`mailto:${process.env.EMAIL}`}
+              href={"/contact-me"}
+              className="inline-block px-4 py-2 text-sm font-medium text-primary border border-primary/40 rounded-full hover:bg-primary/5 transition-colors">
+              Contact Me
+            </Link>
           </motion.div>
         </div>
       </motion.div>

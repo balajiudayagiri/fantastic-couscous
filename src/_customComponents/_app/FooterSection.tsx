@@ -71,7 +71,8 @@ export function FooterSection() {
             </p>
             <Link
               aria-label="Contact Me"
-              href={`mailto:${process.env.EMAIL}`}
+              // href={`mailto:${process.env.EMAIL}`}
+              href={"/contact-me"}
               className="inline-block px-4 py-2 text-sm font-medium text-primary border border-primary/10 rounded-full hover:bg-primary/5 transition-colors">
               Contact Me
             </Link>

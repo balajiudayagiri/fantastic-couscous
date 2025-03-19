@@ -222,6 +222,7 @@ export const footerLinks = [
       { name: "Privacy Policy", url: "/terms" },
       { name: "Projects", url: "/projects" },
       { name: "Research Blogs", url: "/research-blogs" },
+      { name: "Contact Me", url: "/contact-me" },
 
       // { name: "Terms of Service", url: "#" },
     ],
