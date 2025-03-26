@@ -166,21 +166,72 @@ export default function RootLayout({
           name="google-site-verification"
           content="IufNjx1CiqN11ZuMQiWU7aitWu_JW5SZ7UN5AY5z9eg"
         />
-
         {/* Add Structured Data (JSON-LD) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "http://schema.org",
-              "@type": "Person",
+              "@type": "WebSite",
+              "@id": "https://balajiudayagiri.vercel.app/#website",
               name: "Balaji Udayagiri",
-              image: "https://balajiudayagiri.vercel.app/images/myphoto.jpg",
               url: "https://balajiudayagiri.vercel.app",
-              sameAs: [
-                "https://www.linkedin.com/in/balaji-udayagiri-228747243/",
-                "https://www.twitter.com/balaji_udy",
-              ],
+              author: {
+                "@type": "Person",
+                name: "Balaji Udayagiri",
+                image: "https://balajiudayagiri.vercel.app/images/myphoto.jpg",
+                sameAs: [
+                  "https://www.linkedin.com/in/balaji-udayagiri-228747243/",
+                  "https://www.twitter.com/balaji_udy",
+                ],
+              },
+              potentialAction: {
+                "@type": "SearchAction",
+                target:
+                  "https://balajiudayagiri.vercel.app/search?q={search_term_string}",
+                "query-input": "required name=search_term_string",
+              },
+              mainEntity: {
+                "@type": "ItemList",
+                itemListElement: [
+                  {
+                    "@type": "SiteNavigationElement",
+                    position: 1,
+                    name: "Work",
+                    description: "Professional work experience and portfolio",
+                    url: "https://balajiudayagiri.vercel.app/work",
+                  },
+                  {
+                    "@type": "SiteNavigationElement",
+                    position: 2,
+                    name: "Projects",
+                    description:
+                      "Showcase of personal and professional projects",
+                    url: "https://balajiudayagiri.vercel.app/projects",
+                  },
+                  {
+                    "@type": "SiteNavigationElement",
+                    position: 3,
+                    name: "Research",
+                    description: "Research articles and technical insights",
+                    url: "https://balajiudayagiri.vercel.app/research-blogs",
+                  },
+                  {
+                    "@type": "SiteNavigationElement",
+                    position: 4,
+                    name: "Blogs",
+                    description: "Articles and insights on web development",
+                    url: "https://balajiudayagiri.vercel.app/blogs",
+                  },
+                  {
+                    "@type": "SiteNavigationElement",
+                    position: 5,
+                    name: "Contact",
+                    description: "Get in touch",
+                    url: "https://balajiudayagiri.vercel.app/contact-me",
+                  },
+                ],
+              },
             }),
           }}
         />

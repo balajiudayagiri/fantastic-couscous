@@ -1,9 +1,17 @@
 "use client";
 
 import { Button } from "@b/components/ui/button";
-import { Loader, Send, CheckCircle, AlertCircle } from "lucide-react";
+import {
+  Loader,
+  Send,
+  CheckCircle,
+  AlertCircle,
+  Contact,
+  Contact2,
+} from "lucide-react";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation"; // Import useRouter
+import TechStacksSpinner from "@b/_icons/TechStacksSpinner";
 
 function ContactMeForm() {
   const [formData, setFormData] = useState({
@@ -59,15 +67,37 @@ function ContactMeForm() {
   };
 
   return (
-    <div className="w-full lg:w-1/2 mx-auto">
+    <div className="w-full lg:w-4/5 mx-auto flex items-center max-md:flex-col max-md:justify-center max-md:p-2">
+      <div className="absolute inset-0 flex max-lg:flex-col">
+        <div className="h-full lg:w-1/2 overflow-visible">
+          <TechStacksSpinner />
+        </div>
+      </div>
+      <div className="md:w-1/2 w-full p-8 max-md:pb-0">
+        <h1 className="font-bold text-2xl md:text-5xl md:mb-4 text-center flex items-center gap-3">
+          {/* <Contact2 className="size-16" /> */}
+          <span>Let&apos;s Talk</span>
+        </h1>
+        <div className="">
+          <p className="md:text-sm text-xs md:mb-4">
+            Have a project in mind or need some guidance? Don&apos;t hesitate to
+            reach out! Let&apos;s chat about how I can bring your vision to
+            life. Get in touch today, and let&apos;s start transforming your
+            ideas into a stunning reality within just 24 hours. I&apos;m here to
+            make sure your project is a success — no delays, just results. ✨
+          </p>
+        </div>
+      </div>
       <form
         onSubmit={handleSubmit}
-        className={`shadow-lg rounded-lg p-8 w-full transition-all duration-500 ${
+        className={`shadow-lg rounded-lg p-8 max-md:mt-5 md:w-1/2 w-full transition-all border border-solid border-muted bg-white/10 backdrop-blur-sm duration-500 ${
           isSubmitted ? "h-32 flex items-center justify-center" : "h-auto"
         }`}>
         {!isSubmitted && !isError ? (
           <>
-            <h2 className="text-2xl font-bold mb-6 text-center">Contact Me</h2>
+            <h2 className="text-2xl font-bold md:mb-6 mb-3 text-center">
+              Contact Me
+            </h2>
             <div className="mb-4">
               <label className="block text-sm font-medium mb-2" htmlFor="name">
                 Name<span className="text-red-400">*</span>
@@ -78,7 +108,7 @@ function ContactMeForm() {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2"
+                className="w-full border border-gray-500 md:rounded-lg rounded-sm md:p-3 p-1.5 max-md:px-3 bg-background max-md:text-xs focus:ring-2"
                 placeholder="Enter your name"
                 required
               />
@@ -93,7 +123,7 @@ function ContactMeForm() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2"
+                className="w-full border border-gray-500 md:rounded-lg rounded-sm md:p-3 p-1.5 max-md:px-3 bg-background max-md:text-xs focus:ring-2"
                 placeholder="Enter your email"
                 required
               />
@@ -109,7 +139,7 @@ function ContactMeForm() {
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 px-3"
+                className="w-full border border-gray-500 md:rounded-lg rounded-sm md:p-3 p-1.5 max-md:px-3 bg-background max-md:text-xs focus:ring-2 px-3"
                 required>
                 <option value="" disabled>
                   Select a subject
@@ -135,7 +165,7 @@ function ContactMeForm() {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2"
+                className="w-full border border-gray-500 md:rounded-lg rounded-sm md:p-3 p-1.5 max-md:px-3 bg-background max-md:text-xs focus:ring-2 resize-none"
                 rows={5}
                 placeholder="Write your message here..."
                 autoComplete="on"
