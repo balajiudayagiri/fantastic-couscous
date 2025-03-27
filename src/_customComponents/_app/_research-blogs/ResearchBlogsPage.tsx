@@ -42,7 +42,7 @@ export default function ResearchBlogsPage() {
               <Link
                 aria-label={`Research Blogs ${blog.id}`}
                 href={`/research-blogs/${blog.id}`}>
-                <Card className="hover:shadow-lg transition-all duration-300 hover:border-primary/50 h-full">
+                <Card className="hover:shadow-lg transition-all duration-300 hover:border-primary/50 h-full flex flex-col justify-between">
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <div>{blog.category}</div>
