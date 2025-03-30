@@ -33,4 +33,14 @@ Feel free to reach out for inquiries or just to say hi!
 
 ---
 
+## License
+
+This portfolio website is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+© 2025 Balaji. All rights reserved.
+
+---
+
 💙 Made with passion & Next.js 🚀

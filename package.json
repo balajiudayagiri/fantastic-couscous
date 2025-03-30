@@ -2,6 +2,13 @@
   "name": "balaji-next-app",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "author": "Balaji",
+  "description": "Personal Portfolio Website built with Next.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/balajiudayagiri/fantastic-couscous"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
