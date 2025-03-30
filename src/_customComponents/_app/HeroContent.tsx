@@ -70,7 +70,7 @@ export function HeroContent() {
           {/* Social Links */}
           <motion.div
             variants={fadeIn}
-            className="mt-8 flex gap-6 justify-start md:justify-center lg:justify-start text-white">
+            className="mt-8 flex gap-6 justify-start md:justify-center lg:justify-start text-white flex-wrap">
             {_socialLinks.map((social, index) => (
               <motion.a
                 key={index}
