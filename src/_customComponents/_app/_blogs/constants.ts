@@ -10,6 +10,21 @@ export type Blog = {
 
 export const blogs: Blog[] = [
   {
+    title: "What is SEO and How It Engages Users to Your Website",
+    description:
+      "Learn about Search Engine Optimization (SEO), its key components, and how it engages users by improving website visibility and user experience.",
+    date: "March 31, 2025",
+    readTime: "5 min read",
+    platform: "LinkedIn",
+    link: "https://www.linkedin.com/pulse/what-seo-how-engages-users-your-website-balaji-udayagiri-cwjkc",
+    topics: [
+      "SEO",
+      "Digital Marketing",
+      "User Engagement",
+      "Website Optimization",
+    ],
+  },
+  {
     title: "Enhancing Performance with Web Workers in Next.js and React",
     description:
       "Learn how to leverage Web Workers for improved performance in React applications. Discover techniques for managing resource-intensive tasks without compromising user experience.",
@@ -77,21 +92,21 @@ export const blogs: Blog[] = [
       "Front-End Development",
     ],
   },
-  {
-    title: "Creating a Reusable Web Component with Templates and Shadow DOM",
-    description:
-      "Learn how to build a custom <element-details> web component using the Shadow DOM and Template API for encapsulated, reusable UI elements.",
-    date: "February 22, 2025",
-    readTime: "6 min",
-    platform: "LinkedIn",
-    link: "https://www.linkedin.com/pulse/creating-reusable-web-component-templates-shadow-dom-balaji-udayagiri-v1mdc",
-    topics: [
-      "Web Components",
-      "Shadow DOM",
-      "HTML Templates",
-      "Custom Elements",
-      "JavaScript",
-      "Front-End Development",
-    ],
-  },
+  // {
+  //   title: "Creating a Reusable Web Component with Templates and Shadow DOM",
+  //   description:
+  //     "Learn how to build a custom <element-details> web component using the Shadow DOM and Template API for encapsulated, reusable UI elements.",
+  //   date: "February 22, 2025",
+  //   readTime: "6 min",
+  //   platform: "LinkedIn",
+  //   link: "https://www.linkedin.com/pulse/creating-reusable-web-component-templates-shadow-dom-balaji-udayagiri-v1mdc",
+  //   topics: [
+  //     "Web Components",
+  //     "Shadow DOM",
+  //     "HTML Templates",
+  //     "Custom Elements",
+  //     "JavaScript",
+  //     "Front-End Development",
+  //   ],
+  // },
 ];
