@@ -1,258 +1,55 @@
-import type { MetadataRoute } from "next";
+import { MetadataRoute } from "next";
+import { researchBlogs } from "@b/_customComponents/_app/_research-blogs/researchBlogs";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+  // Static routes with custom configurations
+  const staticRoutes = [
     {
       url: "https://balajiudayagiri.vercel.app",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
+      lastModified: new Date().toISOString(),
+      changeFrequency: "daily" as const,
       priority: 1,
     },
     {
       url: "https://balajiudayagiri.vercel.app/blogs",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
+      lastModified: new Date().toISOString(),
+      changeFrequency: "weekly" as const,
       priority: 0.9,
     },
     {
-      url: "https://balajiudayagiri.vercel.app/docs",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
       url: "https://balajiudayagiri.vercel.app/projects",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
+      lastModified: new Date().toISOString(),
+      changeFrequency: "weekly" as const,
       priority: 0.85,
     },
     {
       url: "https://balajiudayagiri.vercel.app/research-blogs",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
+      lastModified: new Date().toISOString(),
+      changeFrequency: "daily" as const,
       priority: 0.9,
     },
     {
       url: "https://balajiudayagiri.vercel.app/terms",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
+      lastModified: new Date().toISOString(),
+      changeFrequency: "yearly" as const,
       priority: 0.7,
     },
     {
       url: "https://balajiudayagiri.vercel.app/work",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/html5-the-foundation-of-modern-web-development",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/css3-advanced-styling-and-responsive-design",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/javascript-dynamic-web-programming",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/typescript-enhancing-code-robustness",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/reactjs-building-interactive-ui-components",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/next-js-14-server-components-and-performance",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/tailwindcss-utility-first-rapid-ui-design",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/scss-advanced-css-preprocessing-for-modular-styles",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/state-and-animation-integrating-interactivity",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/redux-structured-state-management-for-large-apps",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/zustand-minimalistic-state-management-for-react",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/framer-motion-creating-fluid-animations-in-react",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/gsap-powerful-animations-for-web-experiences",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/modern-web-architecture-design-principles",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/jest-comprehensive-testing-framework-for-javascript",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/cypress-end-to-end-testing-for-web-applications",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/webpack-optimizing-bundles-for-modern-apps",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/vite-streamlined-build-tool-for-fast-development",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/design-systems-creating-consistent-ui-experiences",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/module-federation-distributed-code-sharing",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/micro-frontends-decentralizing-ui-development",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/modern-web-innovations-and-best-practices",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/web-vitals-measuring-user-experience-performance",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/performance-optimization-strategies-for-web",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/seo-strategies-for-improving-web-visibility",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/a11y-enhancing-accessibility-for-inclusive-web",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/server-components-revolutionizing-react-rendering",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/edge-runtime-distributed-computing-for-low-latency",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/streaming-ssr-delivering-faster-page-loads",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/pwa-offline-first-experience-for-web-apps",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/ci-cd-automated-workflows-for-continuous-delivery",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/web-workers-utilizing-multithreading-in-js",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/atomic-design-creating-scalable-ui-components",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/team-leadership-driving-innovation-and-collaboration",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
-      priority: 0.75,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs/ai-in-ui-development",
-      lastModified: "2023-10-01T00:00:00Z",
-      changeFrequency: "monthly",
+      lastModified: new Date().toISOString(),
+      changeFrequency: "monthly" as const,
       priority: 0.75,
     },
   ];
+
+  // Dynamic routes from research blogs
+  const blogRoutes = researchBlogs.map((blog) => ({
+    url: `https://balajiudayagiri.vercel.app/research-blogs/${blog.id}`,
+    lastModified:
+      blog.updatedAt || blog.publishedAt || new Date().toISOString(),
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  }));
+
+  return [...staticRoutes, ...blogRoutes];
 }

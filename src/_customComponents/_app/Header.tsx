@@ -34,7 +34,9 @@ function Header() {
           "flex items-center justify-between sm:px-8 px-4 py-4",
           "bg-background/40 backdrop-blur-sm border-b"
         )}>
-        <nav className="w-full flex items-center justify-between">
+        <nav
+          aria-label="Breadcrumb"
+          className="w-full flex items-center justify-between">
           <span className="flex items-center gap-4">
             {pathname === "/" ? null : (
               <ArrowLeft
