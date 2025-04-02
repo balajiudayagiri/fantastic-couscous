@@ -7,7 +7,7 @@ import { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "AI-Driven Frontend Engineer | Balaji Udayagiri",
+  title: "Balaji Udayagiri | AI-Driven Frontend Engineer",
   description:
     "Specializing in AI-driven UI systems, web performance optimization, and scalable design systems using Next.js, React, and Tailwind CSS.",
   alternates: {

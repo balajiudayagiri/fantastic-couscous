@@ -34,7 +34,7 @@ function Header() {
           "flex items-center justify-between sm:px-8 px-4 py-4",
           "bg-background/40 backdrop-blur-sm border-b"
         )}>
-        <nav
+        <div
           aria-label="Breadcrumb"
           className="w-full flex items-center justify-between">
           <span className="flex items-center gap-4">
@@ -57,54 +57,55 @@ function Header() {
           </span>
 
           {/* Desktop Navigation */}
-          <ul className="hidden sm:flex gap-6 text-sm font-medium items-center">
-            <li title="Work">
-              <Link
-                aria-label="Navigate to Work section"
-                href="/work"
-                className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
-                Work
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
-              </Link>
-            </li>
-            <li title="Projects">
-              <Link
-                aria-label="Navigate to Projects section"
-                href="/projects"
-                className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
-                Projects
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
-              </Link>
-            </li>
-            <li title="Research">
-              <Link
-                aria-label="Navigate to Research Blogs section"
-                href="/research-blogs"
-                className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
-                Research
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
-              </Link>
-            </li>
-            <li title="Blogs">
-              <Link
-                aria-label="Navigate to Blogs section"
-                href="/blogs"
-                className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
-                Blogs
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
-              </Link>
-            </li>
-            <li title="Contact Me">
-              <Link
-                aria-label="Navigate to Blogs section"
-                href="/contact-me"
-                className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
-                Contact Me
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
-              </Link>
-            </li>
-          </ul>
-
+          <nav aria-label="breadcrumb">
+            <ul className="hidden sm:flex gap-6 text-sm font-medium items-center">
+              <li title="Work">
+                <Link
+                  aria-label="Navigate to Work section"
+                  href="/work"
+                  className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                  Work
+                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                </Link>
+              </li>
+              <li title="Projects">
+                <Link
+                  aria-label="Navigate to Projects section"
+                  href="/projects"
+                  className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                  Projects
+                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                </Link>
+              </li>
+              <li title="Research">
+                <Link
+                  aria-label="Navigate to Research Blogs section"
+                  href="/research-blogs"
+                  className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                  Research
+                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                </Link>
+              </li>
+              <li title="Blogs">
+                <Link
+                  aria-label="Navigate to Blogs section"
+                  href="/blogs"
+                  className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                  Blogs
+                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                </Link>
+              </li>
+              <li title="Contact Me">
+                <Link
+                  aria-label="Navigate to Blogs section"
+                  href="/contact-me"
+                  className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                  Contact Me
+                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                </Link>
+              </li>
+            </ul>
+          </nav>
           {/* Mobile Navigation using Drawer */}
           <div className="sm:hidden">
             <Drawer>
@@ -197,7 +198,7 @@ function Header() {
               </DrawerContent>
             </Drawer>
           </div>
-        </nav>
+        </div>
       </div>
     </header>
   );

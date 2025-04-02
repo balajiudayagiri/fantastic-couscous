@@ -10,6 +10,5 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: "https://balajiudayagiri.vercel.app/sitemap.xml",
-    host: "https://balajiudayagiri.vercel.app",
   };
 }

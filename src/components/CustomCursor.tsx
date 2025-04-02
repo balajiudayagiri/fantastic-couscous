@@ -18,7 +18,7 @@ export default function CustomCursor() {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 z-[9999] h-6 w-6 rounded-full bg-primary mix-blend-difference pointer-events-none"
+      className="fixed top-0 sm:block hidden left-0 z-[9999] h-6 w-6 rounded-full bg-primary mix-blend-difference pointer-events-none"
       animate={{
         x: position.x - 12, // Center the cursor
         y: position.y - 12,
