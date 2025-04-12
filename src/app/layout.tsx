@@ -192,7 +192,7 @@ export default function RootLayout({
                 name: "Balaji Udayagiri",
                 image: "https://balajiudayagiri.vercel.app/images/myphoto.jpg",
                 sameAs: [
-                  "https://www.linkedin.com/in/balaji-udayagiri-228747243/",
+                  "https://www.linkedin.com/in/balajiudayagiri/",
                   "https://www.twitter.com/balaji_udy",
                 ],
               },

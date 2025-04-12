@@ -24,6 +24,28 @@ export const metadata: Metadata = {
         alt: "Balaji Udayagiri's Professional Experience",
       },
     ],
+    locale: "en_US",
+    siteName: "Balaji Udayagiri Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Work Experience | Frontend Lead Engineer - Balaji Udayagiri",
+    description:
+      "Frontend Lead Engineer specializing in AI integration and modern web technologies",
+    creator: "@YourTwitterHandle",
+  },
+  keywords:
+    "Frontend Lead Engineer, Work Experience, React.js, Next.js, TypeScript, AI Integration, Team Leadership",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 

@@ -25,6 +25,30 @@ export const metadata: Metadata = {
         alt: "Balaji Udayagiri - Frontend Engineer",
       },
     ],
+    type: "website",
+    locale: "en_US",
+    url: "https://balajiudayagiri.vercel.app",
+    siteName: "Balaji Udayagiri Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI-Driven Frontend Engineer | Balaji Udayagiri",
+    description:
+      "Expert in building AI-driven UI systems and optimizing web performance",
+    creator: "@YourTwitterHandle",
+  },
+  keywords:
+    "Frontend Engineer, AI Development, Next.js, React, Web Performance, UI Systems",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -35,40 +59,72 @@ export default function Page() {
         id="structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ProfessionalService",
-            name: "Balaji Udayagiri - Frontend Engineering Services",
-            description:
-              "Specializing in AI-driven UI systems and web performance optimization",
-            provider: {
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              name: "Balaji Udayagiri - Frontend Engineering Services",
+              description:
+                "Specializing in AI-driven UI systems and web performance optimization",
+              provider: {
+                "@type": "Person",
+                name: "Balaji Udayagiri",
+                jobTitle: "Frontend Lead Engineer",
+              },
+              serviceType: [
+                "Web Development",
+                "AI Integration",
+                "UI/UX Design",
+              ],
+              areaServed: "Worldwide",
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "Frontend Engineering Services",
+                itemListElement: [
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "AI-Driven UI Development",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Web Performance Optimization",
+                    },
+                  },
+                ],
+              },
+            },
+            {
+              "@context": "https://schema.org",
               "@type": "Person",
+              "@id": "https://balajiudayagiri.vercel.app/#person",
               name: "Balaji Udayagiri",
               jobTitle: "Frontend Lead Engineer",
-            },
-            serviceType: ["Web Development", "AI Integration", "UI/UX Design"],
-            areaServed: "Worldwide",
-            hasOfferCatalog: {
-              "@type": "OfferCatalog",
-              name: "Frontend Engineering Services",
-              itemListElement: [
-                {
-                  "@type": "Offer",
-                  itemOffered: {
-                    "@type": "Service",
-                    name: "AI-Driven UI Development",
-                  },
-                },
-                {
-                  "@type": "Offer",
-                  itemOffered: {
-                    "@type": "Service",
-                    name: "Web Performance Optimization",
-                  },
-                },
+              description:
+                "AI-Driven Frontend Engineer specializing in web performance optimization",
+              url: "https://balajiudayagiri.vercel.app",
+              knowsAbout: [
+                "Frontend Development",
+                "React",
+                "Next.js",
+                "AI Integration",
+                "Web Performance",
+                "UI/UX Design",
               ],
             },
-          }),
+            {
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Balaji Udayagiri Portfolio",
+              url: "https://balajiudayagiri.vercel.app",
+              description:
+                "Portfolio website of Balaji Udayagiri, Frontend Lead Engineer",
+            },
+          ]),
         }}
       />
       <main className="relative">
