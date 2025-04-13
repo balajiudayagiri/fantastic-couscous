@@ -7,7 +7,42 @@ export const size = {
 };
 export const contentType = "image/png";
 
+function capitalizeTitle(slug: string) {
+  // Special cases for words that should remain lowercase (if needed)
+  const lowercaseWords = [
+    "a",
+    "an",
+    "the",
+    "and",
+    "but",
+    "or",
+    "for",
+    "nor",
+    "in",
+    "to",
+    "on",
+    "at",
+    "by",
+    "of",
+  ];
+
+  return slug
+    .split("-")
+    .map((word, index) => {
+      // For first and last words, always capitalize
+      if (index === 0 || index === slug.split("-").length - 1) {
+        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+      }
+      // For other words, check if they should remain lowercase
+      return lowercaseWords.includes(word)
+        ? word.toLowerCase()
+        : word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    })
+    .join(" ");
+}
+
 export default async function Image({ params }: { params: { blog: string } }) {
+   const formattedTitle = capitalizeTitle(params.blog);
   return new ImageResponse(
     (
       <div
@@ -29,7 +64,7 @@ export default async function Image({ params }: { params: { blog: string } }) {
             textShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
             lineHeight: 1.2,
           }}>
-          {params.blog}
+          {formattedTitle}
         </h1>
       </div>
     ),
