@@ -18,7 +18,7 @@ export default function ResearchBlogsPage() {
     <div className="min-h-screen bg-background py-20 px-6">
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Header */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-4">
@@ -29,7 +29,7 @@ export default function ResearchBlogsPage() {
             Exploring the cutting edge of web development through in-depth
             research and technical analysis.
           </p>
-        </motion.div>
+        </motion.div> */}
 
         {/* Blog Grid */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">

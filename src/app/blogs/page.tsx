@@ -2,6 +2,7 @@ import React from "react";
 import { BlogSection } from "@b/_customComponents/_app/_blogs/BlogSection";
 import type { Metadata } from "next";
 import Script from "next/script";
+import BlogHeroSection from "@b/_customComponents/_app/_blogs/BlogHeroSection";
 
 export const metadata: Metadata = {
   title: "Technical Blog | Web Development Insights - Balaji Udayagiri",
@@ -88,11 +89,12 @@ export default function BlogsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <main
-        className="blog-page container mx-auto px-4 py-8"
-        itemScope
-        itemType="https://schema.org/Blog">
-        <BlogSection />
+      <main className="blog-page" itemScope itemType="https://schema.org/Blog">
+        <BlogHeroSection />
+        {/* Main Content */}
+        <div className="container mx-auto px-4">
+          <BlogSection />
+        </div>
       </main>
     </>
   );

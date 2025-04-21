@@ -12,7 +12,11 @@ export function CodeBlock({ code, language }: CodeBlockProps) {
       <SyntaxHighlighter
         language={language}
         style={oneDark}
-        customStyle={{ padding: "1rem", borderRadius: "0.5rem" }}>
+        customStyle={{
+          padding: "1rem",
+          borderRadius: "0.5rem",
+          marginTop: "0px",
+        }}>
         {code.trim()}
       </SyntaxHighlighter>
     </samp>

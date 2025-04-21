@@ -85,6 +85,15 @@ function Header() {
                   Research
                   <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
                 </Link>
+              </li>{" "}
+              <li title="Code Examples">
+                <Link
+                  aria-label="Navigate to Code Examples section"
+                  href="/code"
+                  className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                  Code Examples
+                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                </Link>
               </li>
               <li title="Blogs">
                 <Link
@@ -160,6 +169,17 @@ function Header() {
                       <DrawerClose className="block w-full">
                         <li title="Research" className="w-full">
                           Research
+                          <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                        </li>
+                      </DrawerClose>
+                    </Link>
+                    <Link
+                      aria-label="Navigate to Code Examples section"
+                      href="/code"
+                      className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                      <DrawerClose className="block w-full">
+                        <li title="Code Examples" className="w-full">
+                          Code Examples
                           <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
                         </li>
                       </DrawerClose>

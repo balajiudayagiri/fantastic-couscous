@@ -1,3 +1,4 @@
+import ResearchBlogsListPageHeroSection from "@b/_customComponents/_app/_research-blogs/ResearchBlogsListPageHeroSection";
 import ResearchBlogsPage from "@b/_customComponents/_app/_research-blogs/ResearchBlogsPage";
 import { Metadata } from "next";
 import Script from "next/script";
@@ -79,10 +80,13 @@ export default function ResearchBlogsListPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main
-        className="research-blogs-page container mx-auto px-4 py-8"
+        className="research-blogs-page"
         itemScope
         itemType="https://schema.org/Blog">
-        <ResearchBlogsPage />
+        <ResearchBlogsListPageHeroSection />
+        <div className="container mx-auto px-4">
+          <ResearchBlogsPage />
+        </div>
       </main>
     </>
   );

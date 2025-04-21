@@ -4,8 +4,46 @@ import {
   Code,
   Newspaper,
   Github,
-  ExternalLink,
+  LucideIcon,
 } from "lucide-react";
+
+export interface DetailedFeature {
+  title: string;
+  description: string;
+}
+
+export interface TechStack {
+  frontend: readonly string[];
+  backend: readonly string[];
+  devOps: readonly string[];
+}
+
+export interface ProjectMetrics {
+  performance?: string;
+  accessibility?: string;
+  seo?: string;
+  users?: string;
+  stars?: string;
+  accuracy?: string;
+  articles?: string;
+  readers?: string;
+}
+
+export interface ProjectInterface {
+  title: string;
+  summary: string;
+  description: string;
+  detailedFeatures: readonly DetailedFeature[];
+  techStack: TechStack;
+  metrics: ProjectMetrics;
+  tech: readonly string[];
+  link: string;
+  github: string;
+  documentation: string;
+  icon: LucideIcon;
+  gradient: string;
+  gallery: readonly string[];
+}
 
 export const projects = [
   {
@@ -229,4 +267,4 @@ export const projects = [
 ] as const;
 
 // Use [number] to create a union of all project types
-export type Project = (typeof projects)[number];
+export type Project = (typeof projects)[number] & ProjectInterface;

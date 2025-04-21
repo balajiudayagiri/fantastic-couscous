@@ -2,6 +2,7 @@ import React from "react";
 import ProjectsPage from "@b/_customComponents/_app/_projects/ProjectsPage";
 import type { Metadata } from "next";
 import Script from "next/script";
+import ProjectsHeroSection from "@b/_customComponents/_app/_projects/ProjectsHeroSection";
 
 export const metadata: Metadata = {
   title: "Featured Projects | Balaji Udayagiri",
@@ -75,10 +76,14 @@ export default function ProjectsListPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main
-        className="projects-page container mx-auto px-4 py-8"
+        className="projects-page"
         itemScope
         itemType="https://schema.org/CollectionPage">
-        <ProjectsPage />
+        <ProjectsHeroSection />
+        {/* Main Content */}
+        <div className="container mx-auto px-4 py-0">
+          <ProjectsPage />
+        </div>
       </main>
     </>
   );

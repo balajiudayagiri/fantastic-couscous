@@ -269,7 +269,7 @@ export default function RootLayout({
         {/* <!-- End Google Tag Manager --> */}
       </head>
       <body className={`${poppins.className} relative `}>
-        <CustomCursor />
+        {/* <CustomCursor /> */}
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

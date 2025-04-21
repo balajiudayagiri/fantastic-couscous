@@ -5,18 +5,28 @@ import { Card } from "@b/components/ui/card";
 import {
   Briefcase,
   Building,
-  CalendarDays,
-  CheckCircle2,
+  Calendar,
   Code2,
-  Gift,
-  GraduationCap,
-  Trophy,
   Workflow,
+  ExternalLink,
 } from "lucide-react";
 import { createSlug } from "@b/utilities/createSlug";
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { experiences } from "./constant";
+import { cn } from "@b/lib/utils";
+
+const TechBadge = ({ tech }: { tech: string }) => (
+  <span
+    className={cn(
+      "px-3 py-1 text-xs font-medium rounded-md",
+      "bg-zinc-100 text-zinc-700",
+      "dark:bg-zinc-800 dark:text-zinc-300",
+      "transition-all duration-300 hover:scale-105"
+    )}>
+    {tech}
+  </span>
+);
 
 export function DetailedExperienceCard() {
   const searchParams = useSearchParams();
@@ -33,8 +43,9 @@ export function DetailedExperienceCard() {
       }
     }
   }, [sectionId]);
+
   return (
-    <>
+    <div className="space-y-8">
       {experiences.map((exp, index) => (
         <motion.div
           id={createSlug(exp.title)}
@@ -42,64 +53,64 @@ export function DetailedExperienceCard() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: index * 0.2 }}>
-          <Card className="p-8 space-y-8 relative overflow-hidden border border-primary/10 bg-background/60 backdrop-blur-sm">
-            <div
-              className={`absolute inset-0 bg-gradient-to-r ${exp.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
-            />
-
-            {/* Header Section */}
-            <div className="space-y-6 relative z-10">
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-                <div className="space-y-2">
-                  <h2 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                    {exp.title}
-                  </h2>
-                  <div className="flex flex-wrap gap-4">
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <Building className="w-5 h-5" />
-                      <span className="text-lg">{exp.company}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <CalendarDays className="w-5 h-5" />
-                      <span>{exp.period}</span>
-                    </div>
-                  </div>
+          transition={{ delay: index * 0.2 }}
+          className="group">
+          <Card
+            className={cn(
+              "relative grid md:grid-cols-[300px,1fr] gap-6 p-6",
+              "bg-white dark:bg-zinc-900",
+              "border border-zinc-200 dark:border-zinc-800",
+              "rounded-xl overflow-hidden",
+              "transition-all duration-300",
+              "hover:shadow-lg hover:shadow-zinc-200/20 dark:hover:shadow-zinc-800/20"
+            )}>
+            {/* Left Section - Main Info */}
+            <div className="space-y-6">
+              <div>
+                <div className="flex items-center gap-2 text-sm text-zinc-500 mb-2">
+                  <Calendar className="w-4 h-4" />
+                  <span>{exp.period}</span>
+                </div>
+                <h3 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
+                  {exp.title}
+                </h3>
+                <div className="flex items-center gap-2 mt-2 text-zinc-600 dark:text-zinc-400">
+                  <Building className="w-4 h-4" />
+                  <span>{exp.company}</span>
                 </div>
               </div>
-              <div
-                className="flex items-start gap-2 text-muted-foreground text-sm"
-                style={{
-                  marginTop: "10px",
-                }}>
-                <Workflow className="w-4 h-4" />
-                <span>{exp.description}</span>
+
+              <div className="space-y-2">
+                <div className="flex items-start gap-2 text-zinc-600 dark:text-zinc-400">
+                  <Workflow className="w-4 h-4 mt-1 shrink-0" />
+                  <p className="text-sm">{exp.description}</p>
+                </div>
               </div>
-              <hr className="mx-4" />
-              {/* Technologies */}
-              <div className="space-y-3">
-                <h3 className="text-xl font-semibold flex items-center gap-2">
-                  <Code2 className="w-5 h-5 text-primary" />
-                  Technologies & Skills
-                </h3>
+
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-zinc-600 dark:text-zinc-400">
+                  <Code2 className="w-4 h-4" />
+                  <span className="text-sm font-medium">Technologies</span>
+                </div>
                 <div className="flex flex-wrap gap-2">
                   {exp.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="rounded-full bg-primary/10 px-3 py-1 text-primary text-sm">
-                      {tech}
-                    </span>
+                    <TechBadge key={tech} tech={tech} />
                   ))}
                 </div>
               </div>
+            </div>
 
+            {/* Right Section - Details */}
+            <div className="space-y-6">
               {/* Responsibilities */}
               <div className="space-y-3">
-                <h3 className="text-xl font-semibold flex items-center gap-2">
-                  <Briefcase className="w-5 h-5 text-primary" />
-                  Key Responsibilities
-                </h3>
-                <ul className="grid gap-3">
+                <div className="flex items-center gap-2 text-zinc-600 dark:text-zinc-400">
+                  <Briefcase className="w-4 h-4" />
+                  <span className="text-sm font-medium">
+                    Key Responsibilities
+                  </span>
+                </div>
+                <ul className="grid gap-2 text-sm text-zinc-600 dark:text-zinc-400">
                   {exp.responsibilities.map((resp, idx) => (
                     <motion.li
                       key={idx}
@@ -107,65 +118,51 @@ export function DetailedExperienceCard() {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.2 + idx * 0.1 }}
-                      className="flex items-start gap-3 text-muted-foreground">
-                      <CheckCircle2 className="w-5 h-5 text-primary/60 shrink-0 mt-1" />
+                      className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-zinc-300 dark:bg-zinc-700 mt-2" />
                       <span>{resp}</span>
                     </motion.li>
                   ))}
                 </ul>
               </div>
 
-              {/* Achievements */}
-              <div className="space-y-3">
-                <h3 className="text-xl font-semibold flex items-center gap-2">
-                  <Trophy className="w-5 h-5 text-primary" />
-                  Key Achievements
-                </h3>
-                <ul className="grid gap-3">
-                  {exp.achievements.map((achievement, idx) => (
-                    <motion.li
-                      key={idx}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.3 + idx * 0.1 }}
-                      className="flex items-start gap-3 text-muted-foreground">
-                      <Gift className="w-5 h-5 text-primary/60 shrink-0 mt-1" />
-                      <span>{achievement}</span>
-                    </motion.li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Projects */}
-              <div className="space-y-3">
-                <h3 className="text-xl font-semibold flex items-center gap-2">
-                  <GraduationCap className="w-5 h-5 text-primary" />
-                  Notable Projects
-                </h3>
-                <div className="grid gap-4">
-                  {exp.projects.map((project, idx) => (
-                    <motion.div
-                      key={idx}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.4 + idx * 0.1 }}
-                      className="space-y-1">
-                      <h4 className="font-medium text-primary">
-                        {project.name}
-                      </h4>
-                      <p className="text-muted-foreground">
-                        {project.description}
-                      </p>
-                    </motion.div>
-                  ))}
+              {/* Projects Section */}
+              {exp.projects.length > 0 && (
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2 text-zinc-600 dark:text-zinc-400">
+                    <ExternalLink className="w-4 h-4" />
+                    <span className="text-sm font-medium">
+                      Notable Projects
+                    </span>
+                  </div>
+                  <div className="grid gap-3">
+                    {exp.projects.map((project, idx) => (
+                      <motion.div
+                        key={idx}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3 + idx * 0.1 }}
+                        className={cn(
+                          "p-3 rounded-lg",
+                          "bg-zinc-50 dark:bg-zinc-800/50",
+                          "border border-zinc-200 dark:border-zinc-700"
+                        )}>
+                        <h4 className="font-medium text-zinc-900 dark:text-zinc-100 mb-1">
+                          {project.name}
+                        </h4>
+                        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                          {project.description}
+                        </p>
+                      </motion.div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </Card>
         </motion.div>
       ))}
-    </>
+    </div>
   );
 }

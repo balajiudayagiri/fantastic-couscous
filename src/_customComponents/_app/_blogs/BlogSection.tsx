@@ -6,10 +6,10 @@ import { blogs } from "./constants";
 
 export function BlogSection() {
   return (
-    <div className="min-h-screen bg-background py-20 px-6">
+    <div className="min-h-screen bg-background py-0 px-6">
       <div className="max-w-5xl mx-auto space-y-16">
         {/* Header */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-4">
@@ -19,7 +19,7 @@ export function BlogSection() {
           <p className="text-lg text-muted-foreground">
             Thoughts on development, design, and technology
           </p>
-        </motion.div>
+        </motion.div> */}
 
         {/* Blog Posts */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
