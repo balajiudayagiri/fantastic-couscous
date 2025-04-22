@@ -95,6 +95,15 @@ function Header() {
                   <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
                 </Link>
               </li>
+              <li title="Knowledge Base">
+                <Link
+                  aria-label="Navigate to Knowledge Base section"
+                  href="/study-notes"
+                  className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                  Knowledge Base
+                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                </Link>
+              </li>
               <li title="Blogs">
                 <Link
                   aria-label="Navigate to Blogs section"
@@ -180,6 +189,17 @@ function Header() {
                       <DrawerClose className="block w-full">
                         <li title="Code Examples" className="w-full">
                           Code Examples
+                          <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                        </li>
+                      </DrawerClose>
+                    </Link>{" "}
+                    <Link
+                      aria-label="Navigate to Knowledge Base section"
+                      href="/study-notes"
+                      className="text-gray-300 hover:text-white transition-colors duration-200 px-2 py-1 relative group">
+                      <DrawerClose className="block w-full">
+                        <li title="Knowledge Base" className="w-full">
+                          Knowledge Base
                           <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
                         </li>
                       </DrawerClose>
