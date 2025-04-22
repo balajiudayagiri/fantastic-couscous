@@ -58,7 +58,7 @@ function Header() {
 
           {/* Desktop Navigation */}
           <nav aria-label="breadcrumb">
-            <ul className="hidden sm:flex gap-6 text-sm font-medium items-center">
+            <ul className="hidden md:flex gap-6 text-sm font-medium items-center">
               <li title="Work">
                 <Link
                   aria-label="Navigate to Work section"
@@ -116,7 +116,7 @@ function Header() {
             </ul>
           </nav>
           {/* Mobile Navigation using Drawer */}
-          <div className="sm:hidden">
+          <div className="md:hidden">
             <Drawer>
               <DrawerTrigger asChild>
                 <button
