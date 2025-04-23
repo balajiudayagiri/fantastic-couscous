@@ -12,45 +12,152 @@ export default async function Image() {
     (
       <div
         style={{
-          fontSize: 48,
-          background: "black",
+          background:
+            "linear-gradient(to bottom, rgba(126, 34, 206, 0.2), rgb(5, 5, 5))",
+          backgroundColor: "#000",
           width: "100%",
           height: "100%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          position: "relative",
         }}>
+        {/* Background Blur Elements */}
+        <div
+          style={{
+            position: "absolute",
+            top: "0",
+            left: "25%",
+            width: "384px",
+            height: "384px",
+            background: "rgba(168, 85, 247, 0.1)",
+            borderRadius: "9999px",
+            filter: "blur(64px)",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            bottom: "0",
+            right: "25%",
+            width: "384px",
+            height: "384px",
+            background: "rgba(236, 72, 153, 0.1)",
+            borderRadius: "9999px",
+            filter: "blur(64px)",
+          }}
+        />
+
         <div
           style={{
             display: "flex",
             flexDirection: "column",
-            textAlign: "center",
-            height: "auto",
-            width: "100%",
+            alignItems: "center",
+            gap: "24px",
+            padding: "0 48px",
           }}>
-          <h1
+          {/* Stats Badge */}
+          <div
             style={{
-              fontSize: "100%",
-              margin: "0px auto",
-              fontWeight: 800,
-              color: "white",
-              textShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
-              lineHeight: 1.2,
+              display: "flex",
+              alignItems: "center",
+              gap: "16px",
+              background: "rgba(168, 85, 247, 0.1)",
+              padding: "8px 16px",
+              borderRadius: "9999px",
+              border: "1px solid rgba(168, 85, 247, 0.2)",
             }}>
-            Research & Insights
-          </h1>
-          <p
+            <span
+              style={{
+                fontSize: "16px",
+                color: "rgb(168, 85, 247)",
+                fontWeight: 500,
+                display: "flex",
+                alignItems: "center",
+                gap: "4px",
+              }}>
+              35+ Research Articles
+            </span>
+            <div
+              style={{
+                width: "1px",
+                height: "16px",
+                background: "rgba(168, 85, 247, 0.2)",
+              }}
+            />
+            <span
+              style={{
+                fontSize: "16px",
+                color: "rgb(168, 85, 247)",
+                fontWeight: 500,
+                display: "flex",
+                alignItems: "center",
+                gap: "4px",
+              }}>
+              1K+ Monthly Readers
+            </span>
+          </div>
+
+          {/* Title */}
+          <div
             style={{
-              padding: "0px 10%",
-              marginTop: "1.5rem",
-              fontSize: "1.25rem",
-              color: "white",
-              opacity: 0.85,
-              fontWeight: 500,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "8px",
             }}>
-            Exploring the cutting edge of web development through in-depth
-            research and technical analysis.
-          </p>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyItems: "center",
+                gap: "8px",
+              }}>
+              <h1
+                style={{
+                  fontSize: "72px",
+                  fontWeight: 800,
+                  background:
+                    "linear-gradient(to right, rgb(168, 85, 247), rgb(236, 72, 153), rgb(168, 85, 247))",
+                  backgroundClip: "text",
+                  color: "transparent",
+                  textWrap: "wrap",
+                  margin: 0,
+                  textAlign: "center",
+                  lineHeight: 1.1,
+                }}>
+                Technical Research &
+              </h1>
+              <h1
+                style={{
+                  fontSize: "72px",
+                  fontWeight: 800,
+                  background:
+                    "linear-gradient(to right, rgb(168, 85, 247), rgb(236, 72, 153), rgb(168, 85, 247))",
+                  backgroundClip: "text",
+                  color: "transparent",
+                  textWrap: "wrap",
+                  margin: 0,
+                  textAlign: "center",
+                  lineHeight: 1.1,
+                }}>
+                In-Depth Insights
+              </h1>
+            </div>
+
+            <p
+              style={{
+                fontSize: "24px",
+                color: "rgb(209, 213, 219)",
+                margin: 0,
+                textAlign: "center",
+                maxWidth: "700px",
+                lineHeight: 1.5,
+              }}>
+              Exploring cutting-edge web development concepts and innovative
+              solutions
+            </p>
+          </div>
         </div>
       </div>
     ),

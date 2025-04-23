@@ -38,11 +38,23 @@ export default async function Image() {
         <div
           style={{
             position: "absolute",
-            bottom: "-128px",
-            left: "-128px",
+            top: "50%",
+            left: "-192px",
             width: "384px",
             height: "384px",
             background: "rgba(236, 72, 153, 0.1)",
+            borderRadius: "9999px",
+            filter: "blur(64px)",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            bottom: "0",
+            left: "50%",
+            width: "384px",
+            height: "384px",
+            background: "rgba(59, 130, 246, 0.1)",
             borderRadius: "9999px",
             filter: "blur(64px)",
           }}
@@ -53,10 +65,8 @@ export default async function Image() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            justifyContent: "center",
             gap: "24px",
             padding: "0 48px",
-            textAlign: "center",
           }}>
           {/* Badge */}
           <div
@@ -69,41 +79,50 @@ export default async function Image() {
               borderRadius: "9999px",
               border: "1px solid rgba(168, 85, 247, 0.2)",
             }}>
+            <div
+              style={{
+                width: "8px",
+                height: "8px",
+                borderRadius: "9999px",
+                background: "rgb(168, 85, 247)",
+              }}
+            />
             <span
               style={{
                 fontSize: "16px",
                 color: "rgb(168, 85, 247)",
                 fontWeight: 500,
               }}>
-              Portfolio Showcase
+              Currently Frontend Lead Engineer
             </span>
           </div>
 
+          {/* Title */}
           <h1
             style={{
               fontSize: "72px",
-              fontWeight: 800,
+              fontWeight: "bolder",
               background:
-                "linear-gradient(to right, rgb(168, 85, 247), rgb(236, 72, 153))",
+                "linear-gradient(to right, rgb(168, 85, 247), rgb(236, 72, 153), rgb(168, 85, 247))",
               backgroundClip: "text",
               color: "transparent",
               margin: 0,
+              textAlign: "center",
               lineHeight: 1.2,
-              maxWidth: "900px",
             }}>
-            Featured Projects
+            Professional Journey
           </h1>
 
+          {/* Subtitle */}
           <p
             style={{
-              fontSize: "24px",
+              fontSize: "32px",
               color: "rgb(209, 213, 219)",
               margin: 0,
-              maxWidth: "700px",
-              lineHeight: 1.5,
+              textAlign: "center",
+              maxWidth: "800px",
             }}>
-            Explore my latest work and contributions to the development
-            community
+            Building the future of web experiences
           </p>
         </div>
       </div>

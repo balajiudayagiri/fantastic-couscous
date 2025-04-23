@@ -96,7 +96,7 @@ function BlogHeroSection() {
                   className="p-4 rounded-xl bg-white/5 backdrop-blur-sm 
                       border border-[#6C5CE7]/10 hover:border-[#6C5CE7]/30 
                       transition-all duration-300">
-                  <category.icon className="w-6 h-6 text-[#6C5CE7] mb-3" />
+                  <category.icon className="w-6 h-6 text-[#6C5CE7] mb-3 mx-auto" />
                   <h3 className="font-medium text-primary">{category.title}</h3>
                   <p className="text-sm text-muted-foreground">
                     {category.description}

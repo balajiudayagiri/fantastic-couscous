@@ -12,46 +12,98 @@ export default async function Image() {
     (
       <div
         style={{
-          fontSize: 48,
-          background: "black",
+          background:
+            "linear-gradient(to bottom, rgba(88, 28, 135, 0.2), rgb(5, 5, 5))",
+          backgroundColor: "#000",
           width: "100%",
           height: "100%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          position: "relative",
         }}>
+        {/* Background Blur Elements */}
+        <div
+          style={{
+            position: "absolute",
+            top: "-192px",
+            right: "0",
+            width: "384px",
+            height: "384px",
+            background: "rgba(168, 85, 247, 0.1)",
+            borderRadius: "9999px",
+            filter: "blur(64px)",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            bottom: "-128px",
+            left: "-128px",
+            width: "384px",
+            height: "384px",
+            background: "rgba(236, 72, 153, 0.1)",
+            borderRadius: "9999px",
+            filter: "blur(64px)",
+          }}
+        />
+
         <div
           style={{
             display: "flex",
             flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "24px",
+            padding: "0 48px",
             textAlign: "center",
-            height: "auto",
-            width: "100%",
           }}>
+          {/* Badge */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+              background: "rgba(168, 85, 247, 0.1)",
+              padding: "8px 16px",
+              borderRadius: "9999px",
+              border: "1px solid rgba(168, 85, 247, 0.2)",
+            }}>
+            <span
+              style={{
+                fontSize: "16px",
+                color: "rgb(168, 85, 247)",
+                fontWeight: 500,
+              }}>
+              Portfolio Showcase
+            </span>
+          </div>
+
           <h1
             style={{
-              fontSize: "100%",
-              margin: "0px auto",
+              fontSize: "72px",
               fontWeight: 800,
-              color: "white",
-              textShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
+              background:
+                "linear-gradient(to right, rgb(168, 85, 247), rgb(236, 72, 153))",
+              backgroundClip: "text",
+              color: "transparent",
+              margin: 0,
               lineHeight: 1.2,
+              maxWidth: "900px",
             }}>
             Featured Projects
           </h1>
+
           <p
             style={{
-              padding: "0px 10%",
-              marginLeft: "auto",
-              marginRight: "auto",
-              marginTop: "1.5rem",
-              fontSize: "1.25rem",
-              color: "white",
-              opacity: 0.85,
-              fontWeight: 500,
+              fontSize: "24px",
+              color: "rgb(209, 213, 219)",
+              margin: 0,
+              maxWidth: "700px",
+              lineHeight: 1.5,
             }}>
             Explore my latest work and contributions to the development
-            community.
+            community
           </p>
         </div>
       </div>

@@ -6,30 +6,29 @@ import { Book, Search, Filter, ArrowRight, Bookmark } from "lucide-react";
 import Link from "next/link";
 import { createSlug } from "@b/utilities/createSlug";
 
+export const formatTitle = (title: string) => {
+  const parts = title.split(/(`[^`]+`)/);
+
+  return parts.map((part, index) => {
+    if (part.startsWith("`") && part.endsWith("`")) {
+      return (
+        <motion.span
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="inline-flex items-center px-2.5 py-0.5 rounded-full text-sm font-mono 
+            bg-gradient-to-r from-violet-500/10 to-indigo-500/10 text-indigo-700 
+            dark:text-indigo-300 border border-indigo-500/20">
+          {part.slice(1, -1)}
+        </motion.span>
+      );
+    }
+    return part;
+  });
+};
 function StudyNotesList() {
-//   const [searchTerm, setSearchTerm] = useState("");
-//   const [selectedCategory, setSelectedCategory] = useState("all");
-
-  const formatTitle = (title: string) => {
-    const parts = title.split(/(`[^`]+`)/);
-
-    return parts.map((part, index) => {
-      if (part.startsWith("`") && part.endsWith("`")) {
-        return (
-          <motion.span
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center px-2.5 py-0.5 rounded-full text-sm font-mono 
-              bg-gradient-to-r from-violet-500/10 to-indigo-500/10 text-indigo-700 
-              dark:text-indigo-300 border border-indigo-500/20">
-            {part.slice(1, -1)}
-          </motion.span>
-        );
-      }
-      return part;
-    });
-  };
+  //   const [searchTerm, setSearchTerm] = useState("");
+  //   const [selectedCategory, setSelectedCategory] = useState("all");
 
   return (
     <div className="min-h-screen bg-gray-50/50 dark:bg-gray-900/50">
@@ -131,7 +130,7 @@ function StudyNotesList() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="group relative bg-white dark:bg-gray-800 rounded-2xl p-6 
+                  className="group h-full relative bg-white dark:bg-gray-800 rounded-2xl p-6 
                 shadow-lg hover:shadow-xl transition-all duration-300 border-2 
                 border-gray-200 dark:border-gray-700 hover:dark:border-indigo-500 hover:border-indigo-500">
                   {/* <div className="absolute top-4 right-4">
@@ -145,7 +144,7 @@ function StudyNotesList() {
                     </button>
                   </div> */}
 
-                  <div className="space-y-4">
+                  <div className="space-y-4 flex flex-col h-full justify-between">
                     <h2
                       className="text-lg font-semibold text-gray-900 dark:text-gray-100 
                   leading-relaxed pr-8">
