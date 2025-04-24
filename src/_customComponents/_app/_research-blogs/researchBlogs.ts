@@ -92,7 +92,7 @@ export const researchBlogs: ResearchBlog[] = [
     publishedAt: "2024-02-27",
     updatedAt: "2024-02-27",
     author: {
-      name: "John Doe",
+      name: "Balu",
       avatar: "https://example.com/avatar.jpg",
       role: "Senior TypeScript Developer",
     },
@@ -2825,7 +2825,7 @@ onmessage = function(e) {
     publishedAt: "2025-02-12",
     updatedAt: "2025-02-12",
     author: {
-      name: "John Smith",
+      name: "balaji",
       avatar: "/images/avatar-john.png",
       role: "UI/UX Designer",
     },

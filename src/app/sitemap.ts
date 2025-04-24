@@ -1,5 +1,7 @@
 import { MetadataRoute } from "next";
 import { researchBlogs } from "@b/_customComponents/_app/_research-blogs/researchBlogs";
+import { StudyNotesList } from "@b/_customComponents/_app/_study-notes/constant";
+import { createSlug } from "@b/utilities/createSlug";
 
 // Helper function to ensure valid date format
 function formatDate(date: string | Date | undefined): string {
@@ -65,6 +67,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
     priority: 0.75,
   }));
-
-  return [...staticRoutes, ...blogRoutes];
+  const studyRoutes = StudyNotesList.map((note) => ({
+    url: `https://balajiudayagiri.vercel.app/study-notes/${createSlug(
+      note.title
+    )}-${note.id}`,
+    lastModified: formatDate(new Date()),
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  }));
+  return [...staticRoutes, ...blogRoutes, ...studyRoutes];
 }
