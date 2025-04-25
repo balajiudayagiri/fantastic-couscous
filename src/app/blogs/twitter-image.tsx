@@ -6,7 +6,8 @@ export const size = {
   height: 600,
 };
 export const contentType = "image/png";
-
+export const runtime = "edge";
+export const revalidate = 3600;
 export default async function Image() {
   return new ImageResponse(
     (

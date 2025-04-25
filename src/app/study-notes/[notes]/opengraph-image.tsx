@@ -2,6 +2,7 @@ import { StudyNotesList } from "@b/_customComponents/_app/_study-notes/constant"
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
+export const revalidate = 3600;
 export const alt = "Study Note Detail";
 export const size = {
   width: 1200,

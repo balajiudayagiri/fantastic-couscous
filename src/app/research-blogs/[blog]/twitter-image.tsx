@@ -7,7 +7,8 @@ export const size = {
   height: 600,
 };
 export const contentType = "image/png";
-
+export const runtime = "edge";
+export const revalidate = 3600;
 function capitalizeTitle(slug: string) {
   // Special cases for words that should remain lowercase (if needed)
   const lowercaseWords = [

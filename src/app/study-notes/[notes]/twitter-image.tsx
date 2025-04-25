@@ -2,13 +2,13 @@ import { StudyNotesList } from "@b/_customComponents/_app/_study-notes/constant"
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
+export const revalidate = 3600;
 export const alt = "Study Note Detail";
 export const size = {
   width: 1200,
   height: 600,
 };
 export const contentType = "image/png";
-
 function parseSlugAndId(param: string): { id: number; slug: string } | null {
   const match = param.match(/^(.+)-(\d+)$/);
   if (!match) return null;

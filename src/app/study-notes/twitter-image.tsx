@@ -1,13 +1,14 @@
 import { ImageResponse } from "next/og";
 
 export const alt =
-  "Interactive Study Notes - Programming Guides & Best Practices";
+  "Interactive Study Notes - Programming Guides & Best Practices-";
 export const size = {
   width: 1200,
   height: 600,
 };
 export const contentType = "image/png";
-
+export const runtime = "edge";
+export const revalidate = 3600;
 export default async function Image() {
   return new ImageResponse(
     (
