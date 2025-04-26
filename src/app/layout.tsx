@@ -83,14 +83,14 @@ export const metadata: Metadata = {
     title: "Balaji Udayagiri",
     description:
       "Front-End Lead Engineer & AI Integration Expert, pioneering AI-powered web solutions with expertise in React, Next.js, and TypeScript.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Balaji Udayagiri",
-      },
-    ],
+    // images: [
+    //   {
+    //     url: "/og-image.png",
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "Balaji Udayagiri",
+    //   },
+    // ],
   },
   twitter: {
     card: "summary_large_image",
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
     title: "Balaji Udayagiri - Front-End Lead Engineer & AI Integration Expert",
     description:
       "Front-End Lead Engineer at PureCode Software, pioneering AI-powered web solutions with expertise in React, Next.js, and TypeScript.",
-    images: ["/twitter-image.png"],
+    // images: ["/twitter-image.png"],
   },
   verification: {
     google: "E7ho_vNUknF8hItDFVg17XuZlAHgVZBnI3R8LsGy35Y",
