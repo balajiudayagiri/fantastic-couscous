@@ -29,11 +29,7 @@ export async function generateMetadata({
     openGraph: {
       title: title,
       description: blogPost?.description,
-      type: "article",
-      publishedTime: blogPost?.publishedAt,
-      modifiedTime: blogPost?.updatedAt,
-      authors: ["Balaji Udayagiri"],
-      tags: blogPost?.content.keyPoints,
+      type: "website",
       // images: [
       //   {
       //     url: blogPost?.coverImage || "/images/default-blog-og.png",

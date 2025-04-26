@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     description:
       "Deep dives into software development, AI integration, and modern web technologies",
     url: "https://balajiudayagiri.vercel.app/research-blogs",
-    type: "article",
+    type: "website",
     // images: [
     //   {
     //     url: "/images/research-blogs-og.png",
