@@ -15,14 +15,14 @@ export const metadata: Metadata = {
       "Legal terms and conditions for using Balaji Udayagiri's services and website",
     url: "https://balajiudayagiri.vercel.app/terms",
     type: "website",
-    images: [
-      {
-        url: "/images/terms-og.png",
-        width: 1200,
-        height: 630,
-        alt: "Terms of Service - Balaji Udayagiri",
-      },
-    ],
+    // images: [
+    //   {
+    //     url: "/images/terms-og.png",
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "Terms of Service - Balaji Udayagiri",
+    //   },
+    // ],
   },
 };
 

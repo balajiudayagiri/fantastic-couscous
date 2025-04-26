@@ -17,14 +17,14 @@ export const metadata: Metadata = {
       "Frontend Lead Engineer with expertise in AI integration and modern web technologies",
     url: "https://balajiudayagiri.vercel.app/work",
     type: "profile",
-    images: [
-      {
-        url: "/images/work-experience-og.png",
-        width: 1200,
-        height: 630,
-        alt: "Balaji Udayagiri's Professional Experience",
-      },
-    ],
+    // images: [
+    //   {
+    //     url: "/images/work-experience-og.png",
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "Balaji Udayagiri's Professional Experience",
+    //   },
+    // ],
     locale: "en_US",
     siteName: "Balaji Udayagiri Portfolio",
   },

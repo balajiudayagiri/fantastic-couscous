@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     title: "AI-Driven Frontend Engineer | Balaji Udayagiri",
     description:
       "Expert in building AI-driven UI systems and optimizing web performance",
-    images: [
-      {
-        url: "/images/home-og.png",
-        width: 1200,
-        height: 630,
-        alt: "Balaji Udayagiri - Frontend Engineer",
-      },
-    ],
+    // images: [
+    //   {
+    //     url: "/images/home-og.png",
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "Balaji Udayagiri - Frontend Engineer",
+    //   },
+    // ],
     type: "website",
     locale: "en_US",
     url: "https://balajiudayagiri.vercel.app",

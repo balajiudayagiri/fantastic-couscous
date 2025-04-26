@@ -27,14 +27,14 @@ export const metadata: Metadata = {
       "Showcase of innovative web development projects and open-source contributions",
     url: "https://balajiudayagiri.vercel.app/projects",
     type: "website",
-    images: [
-      {
-        url: "/images/projects-og.png",
-        width: 1200,
-        height: 630,
-        alt: "Featured Projects - Balaji Udayagiri",
-      },
-    ],
+    // images: [
+    //   {
+    //     url: "/images/projects-og.png",
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "Featured Projects - Balaji Udayagiri",
+    //   },
+    // ],
   },
 };
 

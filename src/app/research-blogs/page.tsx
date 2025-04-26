@@ -26,14 +26,14 @@ export const metadata: Metadata = {
       "Deep dives into software development, AI integration, and modern web technologies",
     url: "https://balajiudayagiri.vercel.app/research-blogs",
     type: "article",
-    images: [
-      {
-        url: "/images/research-blogs-og.png",
-        width: 1200,
-        height: 630,
-        alt: "Research & Technical Insights - Balaji Udayagiri",
-      },
-    ],
+    // images: [
+    //   {
+    //     url: "/images/research-blogs-og.png",
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "Research & Technical Insights - Balaji Udayagiri",
+    //   },
+    // ],
   },
 };
 

@@ -26,14 +26,14 @@ export const metadata: Metadata = {
     description: "Expert insights on modern web development and AI integration",
     url: "https://balajiudayagiri.vercel.app/blogs",
     type: "article",
-    images: [
-      {
-        url: "/images/blog-og.png",
-        width: 1200,
-        height: 630,
-        alt: "Balaji Udayagiri's Technical Blog",
-      },
-    ],
+    // images: [
+    //   {
+    //     url: "/images/blog-og.png",
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "Balaji Udayagiri's Technical Blog",
+    //   },
+    // ],
   },
   robots: {
     index: true,
