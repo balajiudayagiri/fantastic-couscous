@@ -981,4 +981,243 @@ location / {
 | **Use HTTP/2**                   | Enable HTTP/2 for multiplexing and resource push     |
 `,
   },
+  {
+    id: 10,
+    title: "`Closures` in JavaScript",
+    data: "A closure is created when a function is defined inside another function and gains access to the outer function’s variables — even after the outer function has finished execution.\n\n✅ Key points:\n\n- The inner function 'remembers' the environment (variables) in which it was created.\n\n- Closures enable private variables — variables that cannot be accessed from outside the function directly.\n\n**Simple Example:**\n\n```javascript\nfunction outerFunction() {\n  let privateVariable = 'I'm private';\n\n  function innerFunction() {\n    console.log(privateVariable); // Accesses the variable from outerFunction\n  }\n\n  return innerFunction;\n}\n\nconst closureFunc = outerFunction();\nclosureFunc(); // Output: 'I'm private'\n```\nEven though outerFunction has finished running, closureFunc still remembers privateVariable.\n\n**Real-world use case: Private Counters**\n\n```javascript\nfunction createCounter() {\n  let count = 0;\n\n  return {\n    increment: function() {\n      count++;\n      console.log(count);\n    },\n    decrement: function() {\n      count--;\n      console.log(count);\n    }\n  };\n}\n\nconst counter = createCounter();\ncounter.increment(); // 1\ncounter.increment(); // 2\ncounter.decrement(); // 1\n```\nHere, count is private — it can only be modified using increment and decrement.",
+  },
+  {
+    id: 11,
+    title: "`Event Loop` in JavaScript",
+    data: "JavaScript uses a single thread. Asynchronous operations are processed using the event loop, which processes tasks once the call stack is empty. Promises and async/await simplify async handling.\n\n🧠 Main idea:\n\nJavaScript runs in a single thread, meaning it can only do one thing at a time (one line of code at a time).\n\nBut we often want to do asynchronous tasks (like fetching data, setting timers) without blocking the rest of the code.\nThis is where the event loop comes into play.\n\nHow it works step-by-step:\n\n**Call Stack:**\n\n- This is where JavaScript keeps track of what function is currently running.\n- Only one function can be on top at a time.\n\n**Web APIs / Background APIs:**\n\n- When we do async tasks (like setTimeout, fetch, etc.), they are handled outside of the call stack (by the browser environment or Node.js).\n\n**Task Queue / Microtask Queue:**\n\n- Once an async task (e.g., a fetch or timeout) finishes, it sends a callback to the Task Queue (or Microtask Queue for promises).\n\n**Event Loop:**\n\n- The event loop checks:\n  - Is the Call Stack empty?\n  - If yes, it moves the first task from the queue to the call stack and runs it.\n  - It keeps repeating this forever.\n\n**Visual idea:**\n\n```text\nCall Stack (current work)\n↓\nif empty ➔ Event Loop\n↓\nTask Queue / Microtask Queue (waiting tasks)\n↓\nMove tasks to Call Stack\n```\n**Quick Example:**\n\n```javascript\nconsole.log('Start');\n\nsetTimeout(() => {\n  console.log('Timeout callback');\n}, 1000);\n\nPromise.resolve().then(() => {\n  console.log('Promise callback');\n});\n\nconsole.log('End');\n```\nOutput:\n\n```text\nStart\nEnd\nPromise callback\nTimeout callback\n```\n**Why this order?**\n\n- Start and End run first (normal synchronous code).\n- Then Promise runs (promises use the Microtask Queue, which is prioritized).\n- Finally, setTimeout runs (tasks from the Task Queue).\n\n**Promises and async/await:**\n\n- Promises and async/await allow us to write asynchronous code that looks synchronous.\n- Under the hood, they still rely on the event loop and the microtask queue.\n\n```javascript\nasync function fetchData() {\n  const data = await fetch('https://api.example.com/data');\n  console.log('Data fetched');\n}\n```\nEven though fetch is async, await makes it look sequential — but the event loop is still managing the behind-the-scenes waiting.",
+  },
+  {
+    id: 12,
+    title: "`Prototypal Inheritance`",
+    data: "In JavaScript, objects inherit directly from other objects, unlike classical inheritance in other languages.\n\n🧠 Main idea:\n\nEvery JavaScript object has a hidden internal property called [[Prototype]] (or __proto__ in some cases).\nThis prototype is simply another object.\n\nWhen you try to access a property or method on an object:\n\n- If the object does not have it, JavaScript looks up the prototype chain — i.e., it checks the object's prototype, and so on.\n\n**Simple Example:**\n\n```javascript\nconst parent = {\n  greet() {\n    console.log('Hello from parent!');\n  }\n};\n\nconst child = Object.create(parent); // child inherits from parent\n\nchild.greet(); // Output: 'Hello from parent!'\n```\nHere, child itself doesn’t have greet(), but JavaScript looks up child.__proto__ (which is parent) and finds greet() there.\n\n**The Prototype Chain (visual):**\n\n```text\nchild → parent → Object.prototype → null\n```\nIt's like a linked list! When JavaScript can't find a property, it moves up the chain until it finds it or reaches null.\n\n**Why is it powerful?**\n\n- You can share methods across multiple objects without copying.\n- It's memory efficient: shared behavior lives once on the prototype, not on each object.\n\n**Modern JavaScript and class syntax:**\n\n```javascript\nclass Animal {\n  speak() {\n    console.log('Animal speaks');\n  }\n}\n\nconst dog = new Animal();\ndog.speak(); // Output: 'Animal speaks'\n```\ndog internally has a prototype pointing to Animal.prototype.\n\nIn short:\nPrototypes are the \"behind-the-scenes\" mechanism for inheritance in JavaScript — flexible, dynamic, and powerful.",
+  },
+  {
+    id: 13,
+    title: "`Type Inference` in TypeScript",
+    data: 'TypeScript infers types based on the assigned value, reducing the need for explicit type annotations.\n\n🧠 Main idea:\n\nType Inference means that TypeScript automatically figures out the type of a variable based on the assigned value, so you don’t always have to manually annotate types.\n\n**Simple Example:**\n\n```typescript\nlet name = "Alice";\n```\nTypeScript infers that name is a string, even though you didn’t explicitly write : string.\n\nIf you later try to assign a number:\n\n```typescript\nname = 123; // ❌ Error: Type \'number\' is not assignable to type \'string\'.\n```\nTypeScript will prevent it!\n\n**Where Type Inference Happens:**\n\n- **Variables**\n\n```typescript\nlet count = 42; // inferred as number\n```\n- **Function Return Types:**\n\n```typescript\nfunction getGreeting() {\n  return "Hello!";\n}\n```\nInferred return type: string\n\n- **Function Parameters (with Contextual Typing):**\n\n```typescript\nconst numbers = [1, 2, 3];\nnumbers.forEach(num => {\n  console.log(num.toFixed(2)); // num is inferred as number\n});\n```\nHere, num is automatically inferred as number because numbers is an array of numbers.\n\n- **Destructuring:**\n\n```typescript\nconst user = { name: "Alice", age: 30 };\n\nconst { name, age } = user;\n// name: string\n// age: number\n```\n\n**Why is it useful?**\n\n- Less code — no need to annotate every variable manually.\n- Safer code — still gets all the type-checking benefits.',
+  },
+  {
+    id: 14,
+    title: "`Type Assertion` in TypeScript",
+    data: "Type Assertion allows you to manually tell TypeScript to treat a value as a specific type, useful in situations where you are confident in the type but TypeScript cannot infer it.\n\n🧠 Main idea:\n\nType Assertion lets you manually tell TypeScript: 'Trust me, I know what I'm doing — treat this value as a specific type.'\n\n**Syntax:**\nThere are two ways to do type assertion:\n\n1. Angle-bracket syntax (mostly in .ts files, not allowed in .tsx files):\n\n```typescript\nlet value = \"hello\" as string;\n```\n\n2. `as` syntax (recommended and works everywhere):\n\n```typescript\nlet value = <string>\"hello\";\n```\n\n**Example 1: DOM Manipulation**\nWhen querying DOM elements, TypeScript only knows it returns a general Element, but you might know it's an HTMLInputElement.\n\n```typescript\nconst input = document.querySelector('input') as HTMLInputElement;\ninput.value = \"Hello world\"; // No error because TypeScript knows it's an input!\n```\n\n**Example 2: Narrowing unknown types**\nWhen working with unknown or APIs, you might assert the type:\n\n```typescript\nfunction getValue(): unknown {\n  return \"hello\";\n}\n\nconst str = getValue() as string;\nconsole.log(str.length); // safe now\n```\n\nImportant: Type Assertion doesn't do real conversion! It does NOT change the runtime type — it only tells TypeScript to treat it differently for type checking.",
+  },
+  {
+    id: 15,
+    title: "`null` vs. `undefined`",
+    data: 'null vs undefined in JavaScript:\n\n**null:** Represents intentional absence.\n\n**undefined:** Represents an uninitialized variable.\n\n**Key Differences:**\n\n| Feature               | null                                | undefined                               |\n|-----------------------|-------------------------------------|-----------------------------------------|\n| Meaning               | Intentional absence of any value.   | Variable declared but not yet assigned a value. |\n| Type                  | object (quirk from early JavaScript) | undefined                              |\n| Who sets it?          | You, the developer.                 | JavaScript itself (automatically).      |\n| Usage                 | To intentionally clear a value.     | To indicate missing, uninitialized, or unknown state. |\n\n**Example of undefined:**\n\n```javascript\nlet a;\nconsole.log(a); // Output: undefined\n```\n\na is declared but not assigned any value.\nJavaScript automatically assigns undefined.\n\n**Example of null:**\n\n```javascript\nlet b = null;\nconsole.log(b); // Output: null\n```\n\nHere, you deliberately assigned null.\nIt means \'this variable should have no value.\'\n\n**Comparison:**\n```javascript\nconsole.log(null == undefined);  // true  (loose equality - values are considered equal)\nconsole.log(null === undefined); // false (strict equality - types are different)\n```\n== allows type coercion.\n=== checks value and type — so they are not strictly equal.\n\n**Real-world examples:**\n✅ When clearing an object reference:\n\n```javascript\nlet user = { name: "Alice" };\nuser = null; // Done working with user\n```\n✅ When a function doesn\'t return anything:\n\n```javascript\nfunction sayHello() {\n  console.log("Hello");\n}\n\nconst result = sayHello();\nconsole.log(result); // Output: undefined\n```\nFunctions without a return implicitly return undefined.',
+  },
+  {
+    id: 16,
+    title: "`Spread Operator (...)` and `Rest Parameters (...)`",
+    data: 'Spread Operator (...):\n🧠 Main idea:\nSpread expands an iterable (like an array or object) into individual elements.\n\n**Example 1: Expanding an array**\n\n```javascript\nconst numbers = [1, 2, 3];\nconsole.log(...numbers);  // Output: 1 2 3\n```\n\n**Example 2: Copying an array**\n\n```javascript\nconst original = [1, 2, 3];\nconst copy = [...original];\n```\n\ncopy is now a new array with the same elements.\n\n**Example 3: Merging arrays**\n\n```javascript\nconst arr1 = [1, 2];\nconst arr2 = [3, 4];\nconst merged = [...arr1, ...arr2];  // [1, 2, 3, 4]\n```\n\n**Example 4: Expanding objects**\n\n```javascript\nconst obj1 = { a: 1 };\nconst obj2 = { b: 2 };\nconst mergedObj = { ...obj1, ...obj2 };\n// { a: 1, b: 2 }\n```\n\nRest Parameters (...):\n🧠 Main idea:\nRest collects a bunch of values into a single array.\n\n**Example 1: Collecting function arguments**\n\n```javascript\nfunction sum(...numbers) {\n  return numbers.reduce((total, num) => total + num, 0);\n}\n\nconsole.log(sum(1, 2, 3, 4)); // Output: 10\n```\n\nnumbers is an array: [1, 2, 3, 4].\n\n**Example 2: Destructuring with rest**\n\n```javascript\nconst [first, ...rest] = [10, 20, 30, 40];\nconsole.log(first); // 10\nconsole.log(rest);  // [20, 30, 40]\n```\n\n**Visual Summary:**\n\n| Operation | Purpose    | Behavior           |\n|-----------|------------|--------------------|\n| Spread    | Expand     | Breaks items out   |\n| Rest      | Collect    | Gathers items together |\n\n**Simple way to remember:**\n"Spread = break it apart. Rest = gather it together."\n\nIn short:\nSpread (...): Explodes values out into individual items.\nRest (...): Collects multiple items into one array.',
+  },
+  {
+    id: 17,
+    title: "`==` vs. `===` in JavaScript",
+    data: "You got it! Let’s dive a bit deeper into the differences between == and === in JavaScript and why understanding them is essential:\n\n**== (Loose Equality or Abstract Equality):**\n🧠 Main idea:\n\n== compares values after performing type coercion, meaning it converts the values to the same type before comparing.\n\n**Example 1: Comparing different types**\n\n```javascript\nconsole.log(5 == '5');  // true\n```\nJavaScript coerces the string '5' to a number before comparing, so it results in true.\n\n**Example 2: Comparing null and undefined**\n\n```javascript\nconsole.log(null == undefined);  // true\n```\nnull and undefined are considered equal when using ==, even though they are different types.\n\n**=== (Strict Equality):**\n🧠 Main idea:\n\n=== compares both the value and the type without performing any type coercion.\n\n**Example 1: Comparing different types**\n\n```javascript\nconsole.log(5 === '5');  // false\n```\nNo coercion happens here, so the number 5 and the string '5' are not the same.\n\n**Example 2: Comparing null and undefined**\n\n```javascript\nconsole.log(null === undefined);  // false\n```\nnull and undefined are not equal with === because their types are different (null is an object, undefined is undefined).\n\n**Key Differences:**\n```javascript\nconsole.log(5 == '5'); // true\nconsole.log(5 === '5'); // false\n```\nWhy Use ===?\n- Predictable: === avoids unexpected behavior caused by type coercion.\n- Best practice: Always use === for explicit comparison. It makes your code clearer and safer.\n- Avoiding bugs: When using ==, you might encounter tricky issues (like comparing null and undefined), leading to hard-to-find bugs.",
+  },
+  {
+    id: 18,
+    title: "Functional vs. Class Components",
+    data: `In React, there are two primary ways to define components: **Functional Components** and **Class Components**. Both have different strengths and purposes in the React ecosystem.\n\n### 🧠 **Functional Components:**
+- Functional components use hooks (introduced in React 16.8) for managing state, side effects, and context.\n
+- **Simplicity**: They are concise, easier to read, and have less boilerplate code compared to class components.\n
+- **Hooks**: With hooks like \`useState\`, \`useEffect\`, and \`useMemo\`, functional components can manage state and side effects without the need for class syntax.\n
+- **Easier to test**: Since they are just functions, functional components are easier to unit test.\n
+- **Performance**: Functional components typically have better performance because they have less overhead.\n\n**Example of a functional component:**\n
+\`\`\`javascript\nconst Counter = () => {\n  const [count, setCount] = useState(0);\n  return <button onClick={() => setCount(count + 1)}>{count}</button>;\n}\n\`\`\`\n\n### 🧠 **Class Components:**
+- Class components were the original way to define components in React.\n
+- **Lifecycle Methods**: They rely on lifecycle methods like \`componentDidMount\`, \`componentDidUpdate\`, and \`componentWillUnmount\` to handle side effects.\n
+- **Verbosity**: Class components require more boilerplate code.\n
+- **State Management**: State is managed using the \`this.state\` object and \`this.setState()\` method.\n\n**Example of a class component:**\n
+\`\`\`javascript\nclass Counter extends React.Component {\n  constructor() {\n    super();\n    this.state = { count: 0 };\n  }\n\n  increment = () => {\n    this.setState({ count: this.state.count + 1 });\n  }\n\n  render() {\n    return <button onClick={this.increment}>{this.state.count}</button>;\n  }\n}\n\`\`\`\n\n### **Conclusion:**
+- **Functional components** are now the recommended approach due to their simplicity, ease of testing, and support for hooks.\n
+- **Class components** are still supported but are generally seen as more verbose and harder to maintain.`,
+  },
+  {
+    id: 19,
+    title: "Virtual DOM in React",
+    data: `The **Virtual DOM** is a key concept in React that enhances performance by reducing the amount of direct manipulation of the real DOM.\n\n### 🧠 **How the Virtual DOM Works:**
+- **Initial Render**: React creates a virtual DOM, a lightweight representation of the actual DOM elements, during the first render of the app.\n
+- **State/Props Update**: When a component’s state or props change, React updates the virtual DOM first.\n
+- **Reconciliation**: React compares the updated virtual DOM with the previous version (called "diffing") to detect changes.\n
+- **Efficient Update**: React then updates only the parts of the real DOM that have changed, minimizing costly DOM operations.\n\n### 🧠 **Why Virtual DOM Improves Performance:**
+- **Minimized Repaints/Reflows**: By updating only the parts of the real DOM that have changed, React avoids unnecessary reflows and repaints, leading to better performance, especially in large applications.\n
+- **Batching Updates**: React groups multiple state updates into a single render cycle, reducing the number of operations on the DOM.\n
+- **Optimized Rendering**: The virtual DOM allows React to perform efficient comparisons of changes and apply them to the real DOM in the most optimized way.\n\n### **In short:**\nThe Virtual DOM improves performance by reducing unnecessary interactions with the real DOM and ensuring that only the necessary updates are applied.`,
+  },
+  {
+    id: 20,
+    title: "Component Lifecycle in React",
+    data: `The lifecycle of a component refers to the different stages a component goes through during its existence. This lifecycle is particularly important for **class components**, while functional components use hooks to replicate similar behaviors.\n\n### 🧠 **Class Component Lifecycle Methods:**
+1. **Mounting**: When the component is created and added to the DOM.\n   - \`constructor()\`: Initializes state and binds methods.\n   - \`componentDidMount()\`: Called after the component is added to the DOM.\n2. **Updating**: Happens when props or state change.\n   - \`shouldComponentUpdate()\`: Determines if a re-render is necessary.\n   - \`componentDidUpdate()\`: Called after the component is updated in the DOM.\n3. **Unmounting**: When the component is removed from the DOM.\n   - \`componentWillUnmount()\`: Used to clean up before the component is destroyed.\n\n### 🧠 **Using Hooks for Lifecycle in Functional Components:**
+- **useEffect()**: In functional components, \`useEffect()\` replaces most lifecycle methods like \`componentDidMount\` and \`componentDidUpdate\`.\n
+- It runs code after the component renders, similar to how lifecycle methods work in class components.\n\n### **In short:**\n- Class components use lifecycle methods for handling side effects and managing component state.\n- Functional components use \`useEffect()\` for similar tasks, offering a more concise and flexible solution for handling side effects.`,
+  },
+  {
+    id: 21,
+    title: "React Hooks",
+    data: `React introduced **Hooks** in version 16.8 to allow functional components to manage state and side effects, something that was previously only possible in class components.\n\n### 🧠 **useState Hook:**
+- The \`useState\` hook allows functional components to add state.\n
+- **Syntax:** \`const [state, setState] = useState(initialValue);\`\n
+- Example: A counter component that increments a number when clicked.\n
+\`\`\`javascript\nconst Counter = () => {\n  const [count, setCount] = useState(0);\n  return <button onClick={() => setCount(count + 1)}>{count}</button>;\n}\n\`\`\`\n\n### 🧠 **useEffect Hook:**
+- The \`useEffect\` hook lets you perform side effects like data fetching, subscribing to events, and manual DOM manipulation.\n
+- **Syntax:** \`useEffect(() => { /* effect */ }, [dependencies]);\`\n
+- Example: Fetching data when a component mounts.\n
+\`\`\`javascript\nuseEffect(() => {\n  fetchData();\n}, []);\n\`\`\`\n\n### 🧠 **useMemo Hook:**
+- The \`useMemo\` hook is used to memoize values, which helps optimize performance by preventing unnecessary re-calculations of expensive calculations.\n
+- **Syntax:** \`const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);\`\n\n### **In short:**\n- **useState** is used to manage state.\n- **useEffect** handles side effects in a component.\n- **useMemo** helps with performance optimization by memoizing values.`,
+  },
+  {
+    id: 22,
+    title: "Scalability in React",
+    data: `To build scalable and maintainable React applications, certain strategies should be followed to handle growing complexity and large applications.
+
+### 🧠 **Use Functional Components:**
+Functional components are generally preferred over class components because they are easier to write, test, and maintain.
+
+### 🧠 **Leverage React Hooks:**
+- Hooks like \`useState\`, \`useEffect\`, and \`useContext\` provide a cleaner and more modular approach to managing state and side effects.
+
+### 🧠 **Code Splitting and Lazy Loading:**
+React supports **code splitting** and **lazy loading** of components to ensure that only the required code is loaded on demand, improving the initial load time.
+
+- **React.lazy()**: Dynamically imports components.
+
+\`\`\`javascript
+import React, { lazy } from 'react';
+const LazyComponent = lazy(() => import('./LazyComponent'));
+\`\`\`
+
+### 🧠 **State Management Libraries:**
+For larger applications, use libraries like **Redux** or the **Context API** to handle global state and manage interactions across multiple components.\n\n### **In short:**\nFor scalable React apps, prefer functional components, use hooks, implement code splitting, and leverage state management libraries for better maintainability.`,
+  },
+  {
+    id: 23,
+    title: "React.memo() Optimization",
+    data: `React’s **React.memo()** is a higher-order component that helps optimize the performance of functional components by preventing unnecessary re-renders.\n\n### 🧠 **How React.memo() Works:**
+- \`React.memo()\` performs a shallow comparison of the component’s props and prevents re-renders if the props have not changed.\n\n**Usage Example:**\n\n\`\`\`javascript\nconst MyComponent = React.memo((props) => {\n  return <div>{props.name}</div>;\n});\n\`\`\`\n\n### 🧠 **When to Use React.memo():**
+- Use \`React.memo()\` for **pure components** that receive props and don't need to re-render unless the props change.\n
+- **Important**: It does a shallow comparison, so complex objects as props might require additional optimization.\n\n### **In short:**\nReact.memo() optimizes performance by avoiding unnecessary re-renders of functional components when their props haven’t changed.`,
+  },
+  {
+    id: 24,
+    title: "Context API vs. Redux",
+    data: `The **Context API** and **Redux** are both used for managing global state in React, but they are designed for different use cases and have different levels of complexity.\n\n### 🧠 **Context API:**
+- The Context API is built into React and allows you to share state across components without having to pass props through every level of the component tree (avoiding prop drilling).\n
+- **Simpler**: It is more lightweight and easier to implement than Redux.\n
+- **Usage**: Ideal for smaller to medium-sized apps or when the state doesn't change often.\n\n**Example:**\n
+\`\`\`javascript\nconst MyContext = React.createContext();\n\nfunction App() {\n  return (\n    <MyContext.Provider value={/* value */}>\n      <ComponentA />\n    </MyContext.Provider>\n  );\n}\n\`\`\`\n\n### 🧠 **Redux:**
+- Redux is a more powerful state management library designed for large-scale applications.\n
+- **Centralized State**: It uses a single store to manage state and provides middleware for handling async actions.\n
+- **Complexity**: Redux requires more setup and boilerplate code compared to Context API, but it provides more control over your app's state.\n\n### **In short:**\nUse **Context API** for simpler, smaller apps, and **Redux** for more complex applications that require powerful state management and additional features like middleware.`,
+  },
+  {
+    id: 25,
+    title: "Component Composition",
+    data: `**Component Composition** is the process of combining smaller, reusable components to build larger, more complex components.\n\n### 🧠 **Benefits of Component Composition:**
+- **Reusability**: Smaller components can be reused across the app.\n
+- **Maintainability**: Smaller components are easier to test, update, and debug.\n
+- **Separation of Concerns**: Component composition allows each component to have a single responsibility.\n\n### 🧠 **How to Compose Components:**
+- You can compose components by nesting them within each other.\n\n**Example of composing components:**\n
+\`\`\`javascript\nconst Header = () => <h1>Header</h1>;\nconst Body = () => <p>This is the body</p>;\n\nconst App = () => {\n  return (\n    <div>\n      <Header />\n      <Body />\n    </div>\n  );\n};\n\`\`\`\n\n### **In short:**\nComponent composition allows you to build complex UIs from smaller, reusable components, improving maintainability and scalability.`,
+  },
+  {
+    id: 26,
+    title: "Controlled vs. Uncontrolled Components",
+    data: `In React, form elements can be either **controlled** or **uncontrolled**, depending on how the form state is managed.\n\n### 🧠 **Controlled Components:**
+- In controlled components, the state of the form element is managed by React via the component's state.\n
+- React updates the state when the user interacts with the form element (e.g., typing in a text field).\n
+- **Example:**\n
+\`\`\`javascript\nconst MyForm = () => {\n  const [value, setValue] = useState('');\n\n  const handleChange = (e) => {\n    setValue(e.target.value);\n  };\n\n  return <input value={value} onChange={handleChange} />;\n}\n\`\`\`\n\n### 🧠 **Uncontrolled Components:**
+- In uncontrolled components, form state is managed by the DOM, typically using a **ref**.\n
+- React doesn’t directly manage the state of the form element.\n\n**Example:**\n
+\`\`\`javascript\nconst MyForm = () => {\n  const inputRef = useRef();\n\n  const handleSubmit = () => {\n    console.log(inputRef.current.value);\n  };\n\n  return <input ref={inputRef} />;\n}\n\`\`\`\n\n### **In short:**\n- **Controlled components** have their state managed by React, while **uncontrolled components** let the DOM manage the form state.`,
+  },
+  {
+    id: 27,
+    title: "Pure Components",
+    data: `A **Pure Component** in React is a component that only re-renders when its props or state change.\n\n### 🧠 **Why Pure Components are Useful:**
+- **Optimized Performance**: Pure components avoid unnecessary re-renders by implementing shallow comparison on props and state.\n
+- **Automatic Optimization**: React performs a shallow comparison of props and state automatically, ensuring that the component only re-renders when there are actual changes.\n\n**Example of a Pure Component:**\n
+\`\`\`javascript\nclass MyComponent extends React.PureComponent {\n  render() {\n    return <div>{this.props.value}</div>;\n  }\n}\n\`\`\`\n\n### **In short:**\nPure components are efficient because they only re-render when there is a change in their props or state, optimizing performance in React applications.`,
+  },
+
+  {
+    id: 28,
+    title: "SSR vs. SSG",
+    data: `In Next.js, **SSR (Server-Side Rendering)** and **SSG (Static Site Generation)** are two ways of rendering pages with their own unique characteristics.\n\n### 🧠 **SSR (Server-Side Rendering):**\n- **Definition**: With SSR, data is fetched on each request to the server, and the page is generated dynamically each time.\n- **Usage**: Ideal for pages that require fresh data on every request, such as user dashboards or news sites.\n- **Pros**: Ensures that the page is always up-to-date with the latest data.\n- **Cons**: Slower performance because the page is generated on each request.\n\n**Example of SSR using getServerSideProps:**\n\`\`\`javascript\nexport async function getServerSideProps(context) {\n  const res = await fetch('https://api.example.com/data');\n  const data = await res.json();\n  return { props: { data } };\n}\n\`\`\`\n\n### 🧠 **SSG (Static Site Generation):**\n- **Definition**: With SSG, data is fetched at build time, and the page is pre-rendered as static HTML.\n- **Usage**: Best suited for content that doesn’t change frequently, such as blogs or documentation.\n- **Pros**: Faster performance because the page is pre-rendered during the build process and served as static content.\n- **Cons**: Data is static until the next build; any new content will only be available after a new deployment.\n\n**Example of SSG using getStaticProps:**\n\`\`\`javascript\nexport async function getStaticProps() {\n  const res = await fetch('https://api.example.com/data');\n  const data = await res.json();\n  return { props: { data } };\n}\n\`\`\`\n\n### **In short:**\n- **SSR**: Fetches data on every request, ideal for dynamic content.\n- **SSG**: Fetches data at build time, ideal for static content that doesn’t change often.`,
+  },
+  //   {
+  //     id: 29,
+  //     title: "Dynamic Routes in Next.js",
+  //     data: `Dynamic routes in Next.js are created by using square brackets in the filename. This feature allows you to create pages based on dynamic parameters, such as an article ID or a user profile.\n\n### 🧠 **How Dynamic Routes Work:**
+  // - **Filename Convention**: Use square brackets \`[param].js\` in the filename to create a dynamic route, where \`param\` is the dynamic part of the URL.\n\n**Example of a dynamic route:**\n\`\`\`javascript\n// pages/[id].js\nexport default function Post({ id }) {\n  return <div>Post ID: {id}</div>;\n}\n\n// To fetch dynamic data, you can use getServerSideProps or getStaticProps.\n\`\`\`\n- The dynamic route can then capture any value in the URL path and use it in the component.\n\n**Example URL:**\n- If the URL is \`/posts/1\`, the \`id\` parameter will be \`1\`.\n\n### **In short:**\nDynamic routes in Next.js are created by using square brackets in the filename, allowing you to capture dynamic parameters from the URL.`
+  //   },
+  //   {
+  //     id: 30,
+  //     title: "Incremental Static Regeneration (ISR)",
+  //     data: `Incremental Static Regeneration (ISR) allows you to update static pages after the site has been deployed without needing a full rebuild. This is particularly useful for SEO and performance.\n\n### 🧠 **How ISR Works:**
+  // - ISR enables the regeneration of static pages after the site has been deployed. You can set a revalidation time, after which the page will be re-generated in the background.\n
+  // - **Revalidate Time**: The \`revalidate\` field in \`getStaticProps\` specifies how often the page should be regenerated.\n\n**Example of ISR in getStaticProps:**\n\`\`\`javascript\nexport async function getStaticProps() {\n  const res = await fetch('https://api.example.com/data');\n  const data = await res.json();\n  return { props: { data }, revalidate: 60 };\n}\n\`\`\`\n
+  // - In this example, the page will be re-generated every 60 seconds.\n\n### **In short:**\nISR allows static pages to be updated after deployment without rebuilding the whole site, improving both SEO and performance."
+  //   },
+  //   {
+  //     id: 31,
+  //     title: "API Routes in Next.js",
+  //     data: `API Routes allow you to define backend logic within your Next.js application. This feature enables you to create RESTful API endpoints without needing a separate server.\n\n### 🧠 **How API Routes Work:**
+  // - API routes are created in the \`/pages/api\` directory, where each file corresponds to an endpoint.\n\n**Example of an API route:**\n\`\`\`javascript\n// pages/api/hello.js\nexport default function handler(req, res) {\n  res.status(200).json({ message: 'Hello, World!' });\n}\n\`\`\`\n- The file \`hello.js\` defines an endpoint \`/api/hello\` that returns a JSON response.\n- API routes can handle different HTTP methods like GET, POST, DELETE, and PUT.\n\n### **In short:**\nAPI Routes allow you to define backend logic within your Next.js app, enabling you to create server-side logic alongside your frontend code."
+  //   },
+  //   {
+  //     id: 32,
+  //     title: "Middleware in Next.js",
+  //     data: `Middleware in Next.js allows you to run code before a request reaches a page or an API route. This is useful for tasks like authentication, logging, or modifying requests.\n\n### 🧠 **How Middleware Works:**
+  // - Middleware functions are executed during the request lifecycle, before the final handler is executed.\n- It can modify the request or perform checks before passing control to the next handler.\n\n**Example of middleware for authentication:**\n
+  // \`\`\`javascript\n// middleware.js\nexport function middleware(req, ev) {\n  const token = req.cookies.token;\n  if (!token) {\n    return new Response('Unauthorized', { status: 401 });\n  }\n  return NextResponse.next();\n}\n\`\`\`\n- In this example, the middleware checks for a valid authentication token in the cookies and blocks the request if the token is missing.\n\n### **In short:**\nMiddleware in Next.js runs before the request reaches the page or API route, enabling powerful features like authentication and logging."
+  //   },
+  //   {
+  //     id: 33,
+  //     title: "next/image Optimization",
+  //     data: `The **next/image** component in Next.js provides automatic image optimization to improve performance. It optimizes images by resizing them and serving them in the most appropriate format.\n\n### 🧠 **Features of next/image:**
+  // - **Automatic Optimization**: The component automatically resizes and optimizes images based on the user's device, ensuring the best performance.\n
+  // - **Format Support**: It supports modern image formats like WebP and AVIF.\n
+  // - **Lazy Loading**: Images are lazily loaded, meaning they are only loaded when they enter the viewport, improving the page's initial load time.\n\n**Example of using next/image:**\n\`\`\`javascript\nimport Image from 'next/image';\n\nexport default function MyPage() {\n  return <Image src='/path/to/image.jpg' alt='An example image' width={500} height={300} />;\n}\n\`\`\`\n\n### **In short:**\nThe \`next/image\` component automatically optimizes images, resizing them and serving them in the right format to ensure better performance and faster loading times."
+  //   },
+  //   {
+  //     id: 34,
+  //     title: "SEO and Open Graph Optimization",
+  //     data: `Next.js provides the \`next/head\` component to optimize SEO and Open Graph tags for social media sharing.\n\n### 🧠 **SEO Optimization:**
+  // - Use the \`next/head\` component to set meta tags like title, description, and other SEO-related attributes.\n
+  // - Proper SEO tags help search engines index your content and improve your page ranking.\n\n**Example of SEO optimization:**\n
+  // \`\`\`javascript\nimport Head from 'next/head';\n\nexport default function Page() {\n  return (\n    <Head>\n      <title>My Page Title</title>\n      <meta name="description" content="Description of the page" />\n    </Head>\n  );\n}\n\`\`\`\n\n### 🧠 **Open Graph Optimization:**
+  // - Open Graph tags allow you to control how your content appears when shared on social media platforms like Facebook and Twitter.\n\n**Example of Open Graph optimization:**\n
+  // \`\`\`javascript\nimport Head from 'next/head';\n\nexport default function Page() {\n  return (\n    <Head>\n      <meta property="og:title" content="My Page Title" />\n      <meta property="og:image" content="/path/to/image.jpg" />\n    </Head>\n  );\n}\n\`\`\`\n\n### **In short:**\nUse \`next/head\` to set SEO and Open Graph tags, which are crucial for improving search engine rankings and enhancing social media sharing."
+  //   },
+  //   {
+  //     id: 35,
+  //     title: "Data Fetching Methods in Next.js",
+  //     data: `Next.js provides several methods for fetching data, including **getServerSideProps**, **getStaticProps**, and **getInitialProps**.\n\n### 🧠 **getServerSideProps**:
+  // - **SSR (Server-Side Rendering)**: Fetches data on each request, ensuring the page is always up-to-date.\n
+  // - **Usage:** Ideal for pages where data needs to be fetched in real-time.\n\n**Example:**\n
+  // \`\`\`javascript\nexport async function getServerSideProps() {\n  const res = await fetch('https://api.example.com/data');\n  const data = await res.json();\n  return { props: { data } };\n}\n\`\`\`\n\n### 🧠 **getStaticProps**:
+  // - **SSG (Static Site Generation)**: Fetches data at build time and generates static HTML.\n
+  // - **Usage:** Ideal for static content that doesn’t change frequently.\n\n**Example:**\n
+  // \`\`\`javascript\nexport async function getStaticProps() {\n  const res = await fetch('https://api.example.com/data');\n  const data = await res.json();\n  return { props: { data } };\n}\n\`\`\`\n\n### 🧠 **getInitialProps**:
+  // - **Universal**: This method can be used for both SSR and client-side fetching, but it is less efficient than the other two.\n
+  // - **Usage:** Generally used for backward compatibility with older Next.js projects.\n\n### **In short:**\n- **getServerSideProps**: Fetch data on each request (SSR).\n- **getStaticProps**: Fetch data at build time (SSG).\n- **getInitialProps**: An older method used for both SSR and client-side fetching."
+  //   },
+  //   {
+  //     id: 36,
+  //     title: "Client-side Routing in Next.js",
+  //     data: `Next.js provides **automatic client-side routing** through its \`Link\` component, which helps in navigating between pages in a Next.js app without reloading the entire page.\n\n### 🧠 **How Client-Side Routing Works:**
+  // - When you use the \`Link\` component, Next.js pre-fetches the linked page and renders it without a full page reload.\n
+  // - **Usage:** This allows for smooth, fast, and efficient navigation between pages.\n\n**Example of client-side routing with the Link component:**\n
+  // \`\`\`javascript\nimport Link from 'next/link';\n\nconst HomePage = () => (\n  <div>\n    <Link href='/about'>Go to About Page</Link>\n  </div>\n);\n\`\`\`\n\n### **In short:**\nClient-side routing in Next.js is automatically handled using the \`Link\` component, providing seamless navigation between pages without full page reloads.`
+  //   }
 ];
