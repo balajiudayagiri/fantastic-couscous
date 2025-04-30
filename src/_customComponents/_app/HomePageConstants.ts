@@ -217,12 +217,15 @@ export const footerLinks = [
   {
     title: "Resources",
     links: [
-      { name: "Documentation", url: "/docs" },
-      { name: "Blog", url: "/blogs" },
-      { name: "Privacy Policy", url: "/terms" },
+      { name: "Work", url: "/work" },
       { name: "Projects", url: "/projects" },
-      { name: "Research Blogs", url: "/research-blogs" },
-      { name: "Contact Me", url: "/contact-me" },
+      { name: "Documentation", url: "/docs" },
+      { name: "Research", url: "/research-blogs" },
+      { name: "Code Examples", url: "/code" },
+      { name: "Knowledge Base", url: "/study-notes" },
+      // { name: "Contact Me", url: "/contact-me" },
+      { name: "Blog", url: "/blogs" },
+      // { name: "Privacy Policy", url: "/terms" },
 
       // { name: "Terms of Service", url: "#" },
     ],

@@ -380,7 +380,7 @@ function ContactMeForm() {
           </div>
 
           {/* Form Container */}
-          <div className="bg-white/10 backdrop-blur-sm border border-indigo-500/20 rounded-2xl p-8">
+          <div className="bg-white/10 backdrop-blur-sm border border-indigo-500/20 rounded-2xl p-8 overflow-hidden">
             {!isSubmitted && !isError ? (
               <form onSubmit={handleSubmit}>
                 {/* Step Title */}

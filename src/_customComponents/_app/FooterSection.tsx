@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { footerLinks, socialLinks } from "./HomePageConstants";
+import { HoverBorderGradient } from "@b/components/ui/hover-border-gradient";
 
 export function FooterSection() {
   return (
@@ -69,18 +70,25 @@ export function FooterSection() {
             <p className="text-sm text-muted-foreground">
               Have a project in mind? Let&apos;s work together.
             </p>
-            <Link
-              aria-label="Contact Me"
-              // href={`mailto:${process.env.EMAIL}`}
-              href={"/contact-me"}
-              className="inline-block px-4 py-2 text-sm font-medium text-primary border border-primary/10 rounded-full hover:bg-primary/5 transition-colors">
-              Contact Me
-            </Link>
+            <HoverBorderGradient as="button">
+              <Link
+                aria-label="Contact Me"
+                // href={`mailto:${process.env.EMAIL}`}
+                href={"/contact-me"}
+                className="inline-block px-4 py-2 text-sm font-medium text-primary rounded-full hover:bg-primary/5 transition-colors">
+                Contact Me
+              </Link>
+            </HoverBorderGradient>
           </div>
         </div>
 
         {/* Sitemap link */}
         <div className="mt-8 text-end">
+          <Link
+            href="/terms"
+            className="text-sm text-muted-foreground hover:text-primary transition-colors mr-4">
+            Privacy Policy
+          </Link>
           <a
             href="/sitemap.xml"
             className="text-sm text-muted-foreground hover:text-primary transition-colors">

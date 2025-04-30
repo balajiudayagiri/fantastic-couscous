@@ -109,6 +109,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://balajiudayagiri.vercel.app",
   },
+
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",

@@ -71,7 +71,7 @@ export function ProjectCard({
                 <ExternalLink className="w-4 h-4" />
                 Live Demo
               </Link>
-              <Link
+              {/* <Link
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -80,7 +80,7 @@ export function ProjectCard({
                   hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-all duration-300">
                 <Github className="w-4 h-4" />
                 Source Code
-              </Link>
+              </Link> */}
             </div>
 
             {/* Core Technologies */}

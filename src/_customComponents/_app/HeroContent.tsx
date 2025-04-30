@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import TechStacksSpinner from "@b/_icons/TechStacksSpinner";
 import { _socialLinks } from "./HomePageConstants";
 import Link from "next/link";
+import { HoverBorderGradient } from "@b/components/ui/hover-border-gradient";
 
 // FadeIn animation variants
 const fadeIn = {
@@ -85,13 +86,15 @@ export function HeroContent() {
                 <social.icon className="h-7 w-7" />
               </motion.a>
             ))}
-            <Link
-              aria-label="Contact Me"
-              // href={`mailto:${process.env.EMAIL}`}
-              href={"/contact-me"}
-              className="inline-block px-4 py-2 text-sm font-medium text-primary border border-primary/40 rounded-full hover:bg-primary/5 transition-colors">
-              Contact Me
-            </Link>
+            <HoverBorderGradient as="button">
+              <Link
+                aria-label="Contact Me"
+                // href={`mailto:${process.env.EMAIL}`}
+                href={"/contact-me"}
+                className="inline-block px-4 py-2 text-sm font-medium text-primary rounded-full hover:bg-primary/5 transition-colors">
+                Contact Me
+              </Link>
+            </HoverBorderGradient>
           </motion.div>
         </div>
       </motion.div>
