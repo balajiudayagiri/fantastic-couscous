@@ -65,9 +65,11 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    nocache: true,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
@@ -169,6 +171,7 @@ export default function RootLayout({
           sizes="512x512"
           type="image/png"
         />
+        <link rel="canonical" href="https://balajiudayagiri.vercel.app" />
         <meta name="portfolio" content="Balaji Udayagiri Portfolio" />
         {/* <meta name="google-site-verification" content="82b34b73d8e2d162" /> */}
         <meta
