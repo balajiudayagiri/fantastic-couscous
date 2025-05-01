@@ -20,60 +20,76 @@ function formatDate(date: string | Date | undefined): string {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Static routes with custom configurations
-  const staticRoutes = [
+  const baseUrl = "https://balajiudayagiri.vercel.app";
+
+  // Primary routes with high priority
+  const primaryRoutes = [
     {
-      url: "https://balajiudayagiri.vercel.app",
+      url: baseUrl,
       lastModified: formatDate(new Date()),
       changeFrequency: "daily" as const,
       priority: 1,
     },
     {
-      url: "https://balajiudayagiri.vercel.app/blogs",
-      lastModified: formatDate(new Date()),
-      changeFrequency: "weekly" as const,
-      priority: 0.9,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/projects",
-      lastModified: formatDate(new Date()),
-      changeFrequency: "weekly" as const,
-      priority: 0.85,
-    },
-    {
-      url: "https://balajiudayagiri.vercel.app/research-blogs",
+      url: `${baseUrl}/research-blogs`,
       lastModified: formatDate(new Date()),
       changeFrequency: "daily" as const,
       priority: 0.9,
     },
+  ];
+
+  // Content routes
+  const contentRoutes = [
     {
-      url: "https://balajiudayagiri.vercel.app/terms",
+      url: `${baseUrl}/blogs`,
       lastModified: formatDate(new Date()),
-      changeFrequency: "yearly" as const,
-      priority: 0.7,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
     },
     {
-      url: "https://balajiudayagiri.vercel.app/work",
+      url: `${baseUrl}/projects`,
       lastModified: formatDate(new Date()),
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
     },
   ];
 
-  // Dynamic routes from research blogs
+  // Dynamic content routes with enhanced metadata
   const blogRoutes = researchBlogs.map((blog) => ({
-    url: `https://balajiudayagiri.vercel.app/research-blogs/${blog.id}`,
+    url: `${baseUrl}/research-blogs/${blog.id}`,
     lastModified: formatDate(blog.updatedAt || blog.publishedAt),
-    changeFrequency: "monthly" as const,
-    priority: 0.75,
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
   }));
+
   const studyRoutes = StudyNotesList.map((note) => ({
-    url: `https://balajiudayagiri.vercel.app/study-notes/${createSlug(
-      note.title
-    )}-${note.id}`,
+    url: `${baseUrl}/study-notes/${createSlug(note.title)}-${note.id}`,
     lastModified: formatDate(new Date()),
-    changeFrequency: "monthly" as const,
+    changeFrequency: "weekly" as const,
     priority: 0.75,
   }));
-  return [...staticRoutes, ...blogRoutes, ...studyRoutes];
+
+  // Supporting pages
+  const supportingRoutes = [
+    {
+      url: `${baseUrl}/terms`,
+      lastModified: formatDate(new Date()),
+      changeFrequency: "yearly" as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/work`,
+      lastModified: formatDate(new Date()),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+  ];
+
+  return [
+    ...primaryRoutes,
+    ...contentRoutes,
+    ...blogRoutes,
+    ...studyRoutes,
+    ...supportingRoutes,
+  ];
 }
