@@ -64,7 +64,7 @@ export default function ResearchBlogsPage() {
                   <CardContent>
                     <div className="space-y-4">
                       {/* Author */}
-                      <div className="flex items-center gap-3">
+                      {/* <div className="flex items-center gap-3">
                         <Avatar>
                           <AvatarImage src={blog.author.avatar} />
                           <AvatarFallback>
@@ -82,19 +82,21 @@ export default function ResearchBlogsPage() {
                             {blog.author.role}
                           </p>
                         </div>
-                      </div>
+                      </div> */}
 
                       {/* Tech Stacks */}
                       <div className="flex flex-wrap gap-2">
                         {blog.techStacks.map((tech) => (
-                          <div key={tech.name}>
+                          <div
+                            key={tech.name}
+                            className="border rounded-full border-muted-foreground/20 px-3 py-1 text-xs text-muted-foreground bg-white/10 backdrop-blur-sm">
                             {tech.name} {tech.version}
                           </div>
                         ))}
                       </div>
 
                       {/* Metrics */}
-                      <div className="flex items-center justify-between text-sm text-muted-foreground pt-4">
+                      <div className="flex items-center justify-between text-sm text-muted-foreground">
                         {/* <div className="flex items-center gap-4">
                           <span className="flex items-center gap-1">
                             <Eye className="w-4 h-4" />

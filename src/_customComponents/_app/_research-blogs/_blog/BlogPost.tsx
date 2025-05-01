@@ -43,7 +43,7 @@ export default function BlogPost({ slug }: { slug: string }) {
         </div>
 
         {/* Author */}
-        <div className="flex items-center gap-4 border-y py-4">
+        {/* <div className="flex items-center gap-4 border-y py-4">
           <Avatar className="h-12 w-12">
             <AvatarImage src={blog.author.avatar} />
             <AvatarFallback>
@@ -57,7 +57,7 @@ export default function BlogPost({ slug }: { slug: string }) {
             <p className="font-semibold">{blog.author.name}</p>
             <p className="text-sm text-muted-foreground">{blog.author.role}</p>
           </div>
-        </div>
+        </div> */}
 
         {/* Tech Stacks */}
         <div className="space-y-2">
