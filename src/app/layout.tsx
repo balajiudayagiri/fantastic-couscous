@@ -69,10 +69,16 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      noimageindex: false,
+      noimageindex: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://balajiudayagiri.vercel.app",
+    languages: {
+      "en-US": "https://balajiudayagiri.vercel.app",
     },
   },
   openGraph: {
@@ -105,9 +111,6 @@ export const metadata: Metadata = {
     google: "E7ho_vNUknF8hItDFVg17XuZlAHgVZBnI3R8LsGy35Y",
     yandex: "your-yandex-verification-code",
     yahoo: "your-yahoo-verification-code",
-  },
-  alternates: {
-    canonical: "https://balajiudayagiri.vercel.app",
   },
 
   icons: {

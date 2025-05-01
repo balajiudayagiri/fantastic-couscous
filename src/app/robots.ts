@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: "/private/",
+        disallow: ["/api/", "/private/", "/*.ico$"],
       },
     ],
     sitemap: "https://balajiudayagiri.vercel.app/sitemap.xml",
