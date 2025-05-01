@@ -16,10 +16,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://balajiudayagiri.vercel.app"),
-  title: {
-    template: "%s | Balaji Udayagiri",
-    default: "Balaji Udayagiri",
-  },
+  title: "Balaji Udayagiri",
+  referrer: "origin",
   description:
     "Front-End Lead Engineer & AI Integration Expert, pioneering AI-powered web solutions with expertise in React, Next.js, and TypeScript.",
   keywords: [
