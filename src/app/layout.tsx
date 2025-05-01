@@ -5,7 +5,7 @@ import { FooterSection } from "@b/_customComponents/_app/FooterSection";
 import Header from "@b/_customComponents/_app/Header";
 import "./globals.css";
 import Script from "next/script";
-import CustomCursor from "@b/components/CustomCursor";
+// import CustomCursor from "@b/components/CustomCursor";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -173,7 +173,7 @@ export default function RootLayout({
         {/* <meta name="google-site-verification" content="82b34b73d8e2d162" /> */}
         <meta
           name="google-site-verification"
-          content="IufNjx1CiqN11ZuMQiWU7aitWu_JW5SZ7UN5AY5z9eg"
+          content="E7ho_vNUknF8hItDFVg17XuZlAHgVZBnI3R8LsGy35Y"
         />
         {/* Add Structured Data (JSON-LD) */}
         <script
@@ -181,25 +181,62 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "http://schema.org",
-              "@type": "WebSite",
-              "@id": "https://balajiudayagiri.vercel.app/#website",
-              name: "Balaji Udayagiri",
-              description: "Front-End Lead Engineer & AI Integration Expert",
+              "@type": "ProfessionalService",
+              "@id": "https://balajiudayagiri.vercel.app/#service",
+              name: "Balaji Udayagiri - Frontend Engineering Services",
+              description:
+                "Specializing in AI-driven UI systems and web performance optimization",
               url: "https://balajiudayagiri.vercel.app",
-              author: {
+              telephone: "+91-7702962021", // Add your phone number
+              priceRange: "₹₹₹", // Add your price range (₹, ₹₹, or ₹₹₹)
+              image: "https://balajiudayagiri.vercel.app/images/myphoto.jpg",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Gachibowli", // Add your street address
+                addressLocality: "Hyderabad",
+                addressRegion: "Telangana",
+                postalCode: "500032", // Add your postal code
+                addressCountry: "India",
+              },
+              provider: {
                 "@type": "Person",
                 name: "Balaji Udayagiri",
+                jobTitle: "Frontend Lead Engineer",
                 image: "https://balajiudayagiri.vercel.app/images/myphoto.jpg",
                 sameAs: [
                   "https://www.linkedin.com/in/balajiudayagiri/",
                   "https://www.twitter.com/balaji_udy",
                 ],
-                address: {
-                  "@type": "PostalAddress",
-                  addressLocality: "Hyderabad",
-                  addressRegion: "Telangana",
-                  addressCountry: "India",
-                },
+              },
+              areaServed: "Worldwide",
+              serviceType: [
+                "Web Development",
+                "AI Integration",
+                "UI/UX Design",
+              ],
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "Frontend Engineering Services",
+                itemListElement: [
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "AI-Driven UI Development",
+                      description:
+                        "Custom AI-powered user interface development using React and Next.js",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Web Performance Optimization",
+                      description:
+                        "Advanced optimization techniques for maximum web performance",
+                    },
+                  },
+                ],
               },
               knowsAbout: [
                 "React.js",
@@ -209,13 +246,6 @@ export default function RootLayout({
                 "Web Development",
                 "Frontend Architecture",
               ],
-              inLanguage: "en-US",
-              potentialAction: {
-                "@type": "SearchAction",
-                target:
-                  "https://balajiudayagiri.vercel.app/search?q={search_term_string}",
-                "query-input": "required name=search_term_string",
-              },
               mainEntity: {
                 "@type": "ItemList",
                 itemListElement: [
@@ -226,14 +256,6 @@ export default function RootLayout({
                     description: "Professional work experience and portfolio",
                     url: "https://balajiudayagiri.vercel.app/work",
                   },
-                  // {
-                  //   "@type": "SiteNavigationElement",
-                  //   position: 2,
-                  //   name: "Projects",
-                  //   description:
-                  //     "Showcase of personal and professional projects",
-                  //   url: "https://balajiudayagiri.vercel.app/projects",
-                  // },
                   {
                     "@type": "SiteNavigationElement",
                     position: 2,
