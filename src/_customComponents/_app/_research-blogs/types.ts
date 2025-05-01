@@ -23,11 +23,6 @@ export type ResearchBlog = {
   description: string;
   publishedAt: string;
   updatedAt?: string;
-  author: {
-    name: string;
-    avatar: string;
-    role: string;
-  };
   category: ResearchCategory;
   readTime: string;
   techStacks: TechStack[];

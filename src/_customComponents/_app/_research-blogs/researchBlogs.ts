@@ -8,11 +8,7 @@ export const researchBlogs: ResearchBlog[] = [
       "This comprehensive guide explores the concept of Progressive Web Apps (PWA), their significance in modern web development, and how they enhance performance and user engagement. It covers the essential technologies behind PWAs, including service workers, caching strategies, and offline capabilities, along with practical implementation steps and best practices to create high-performance web applications.",
     publishedAt: "2025-02-28",
     updatedAt: "2025-02-28",
-    author: {
-      name: "Balaji",
-      avatar: "https://example.com/avatar.jpg",
-      role: "Frontend Engineer",
-    },
+   
     category: "Frontend Development",
     readTime: "8 min",
     techStacks: [
@@ -91,11 +87,7 @@ export const researchBlogs: ResearchBlog[] = [
       "A deep dive into TypeScript types, interfaces, generics, utility types, OOP, decorators, and more.",
     publishedAt: "2024-02-27",
     updatedAt: "2024-02-27",
-    author: {
-      name: "Balu",
-      avatar: "https://example.com/avatar.jpg",
-      role: "Senior TypeScript Developer",
-    },
+   
     category: "Developer Experience",
     readTime: "20 min",
     techStacks: [
@@ -281,11 +273,7 @@ class Car {
       "A Deep Dive into Function Types, Overloading, Callbacks, Performance Optimization, and Best Practices.",
     publishedAt: "2024-02-27",
     updatedAt: "2024-02-27",
-    author: {
-      name: "Balaji Udayagiri",
-      avatar: "https://example.com/avatar.jpg",
-      role: "Frontend Lead Engineer",
-    },
+   
     category: "Backend Development",
     readTime: "15 min",
     techStacks: [
@@ -552,11 +540,7 @@ console.log(proxiedSum(5, 10)); // Logs function call and result`,
       "Learn how the enterkeyhint attribute customizes the Enter key label in virtual keyboards, improving user experience across different input fields.",
     publishedAt: "February 22, 2025",
     updatedAt: "February 22, 2025",
-    author: {
-      name: "Balaji Udayagiri",
-      avatar: "https://your-avatar-url.com/balaji.jpg",
-      role: "Front End Lead Engineer",
-    },
+   
     category: "Frontend Development",
     readTime: "6 min",
     techStacks: [
@@ -625,11 +609,7 @@ console.log(proxiedSum(5, 10)); // Logs function call and result`,
       "Web Components provide a way to create reusable UI elements. This article covers the implementation of the <element-details> component using the Shadow DOM and HTML templates.",
     publishedAt: "2025-02-22",
     updatedAt: "2025-02-22",
-    author: {
-      name: "Balaji",
-      avatar: "/images/avatar-balaji.png",
-      role: "Frontend Engineer",
-    },
+   
     category: "UI Development",
     readTime: "10 min",
     techStacks: [
@@ -766,11 +746,7 @@ customElements.define("element-details", ElementDetails);`,
       "HTML5 represents a significant milestone in web technology. It introduced semantic elements, multimedia support, and accessibility improvements that have redefined how we build and experience the web. This article delves into the evolution of HTML, its modern features, and best practices to create structured, accessible, and engaging web content.",
     publishedAt: "2024-02-01",
     updatedAt: "2024-02-03",
-    author: {
-      name: "Alice Johnson",
-      avatar: "/images/avatar-alice.png",
-      role: "Frontend Developer",
-    },
+   
     category: "Frontend Development",
     readTime: "12 min",
     techStacks: [
@@ -849,11 +825,7 @@ customElements.define("element-details", ElementDetails);`,
       "CSS3 has redefined how we style web applications with features like transitions, animations, gradients, and media queries. This article provides an in-depth look at CSS3 capabilities, exploring how to create visually appealing, responsive, and accessible designs that meet modern standards.",
     publishedAt: "2024-02-05",
     updatedAt: "2024-02-06",
-    author: {
-      name: "Emily Carter",
-      avatar: "/images/avatar-emily.png",
-      role: "UI/UX Designer",
-    },
+   
     category: "Frontend Development",
     readTime: "15 min",
     techStacks: [
@@ -917,11 +889,7 @@ customElements.define("element-details", ElementDetails);`,
       "JavaScript is the backbone of interactive web applications. This article delves into its evolution from a simple scripting language to a robust, versatile tool for both client-side and server-side development. Learn about core concepts, modern features, and best practices that make JavaScript essential for today's web.",
     publishedAt: "2024-02-10",
     updatedAt: "2024-02-12",
-    author: {
-      name: "Balaji Udayagiri",
-      avatar: "/images/avatar-balaji.png",
-      role: "Front-End Lead Engineer",
-    },
+   
     category: "Frontend Development",
     readTime: "18 min",
     techStacks: [
@@ -981,11 +949,7 @@ fetchData('https://api.example.com/data');`,
       "TypeScript adds static types to JavaScript, reducing runtime errors and enhancing overall code quality. In this article, discover how TypeScript improves development efficiency, scales large codebases, and integrates seamlessly with popular frameworks for a more robust coding experience.",
     publishedAt: "2024-02-14",
     updatedAt: "2024-02-16",
-    author: {
-      name: "Rajesh Kumar",
-      avatar: "/images/avatar-rajesh.png",
-      role: "Full-Stack Architect",
-    },
+   
     category: "Frontend Development",
     readTime: "16 min",
     techStacks: [
@@ -1039,11 +1003,7 @@ console.log(greet("World"));`,
       "React.js has transformed web development with its component-based architecture and efficient rendering. This article explores React's core principles—from state management and hooks to best practices for building modular, maintainable user interfaces that respond dynamically to user interactions.",
     publishedAt: "2024-02-18",
     updatedAt: "2024-02-20",
-    author: {
-      name: "Balaji Udayagiri",
-      avatar: "/images/avatar-balaji.png",
-      role: "Front-End Lead Engineer",
-    },
+   
     category: "Frontend Development",
     readTime: "20 min",
     techStacks: [
@@ -1100,11 +1060,7 @@ export default Greeting;`,
       "Next.js 14 introduces groundbreaking features like server components and enhanced performance optimizations. This article explores how Next.js leverages server-side rendering, dynamic routing, and hybrid rendering to build fast, scalable web applications with modern React.",
     publishedAt: "2024-02-22",
     updatedAt: "2024-02-24",
-    author: {
-      name: "Balaji Udayagiri",
-      avatar: "/images/avatar-balaji.png",
-      role: "Front-End Lead Engineer",
-    },
+   
     category: "Frontend Development",
     readTime: "22 min",
     techStacks: [
@@ -1166,11 +1122,7 @@ export default Greeting;`,
       "TailwindCSS provides a utility-first approach to styling, enabling rapid prototyping and consistent design systems. In this article, explore the fundamentals of TailwindCSS, its customization options, and best practices for building responsive, modern user interfaces.",
     publishedAt: "2024-02-26",
     updatedAt: "2024-02-28",
-    author: {
-      name: "Emily Carter",
-      avatar: "/images/avatar-emily.png",
-      role: "UI/UX Designer",
-    },
+   
     category: "Frontend Development",
     readTime: "14 min",
     techStacks: [
@@ -1224,11 +1176,7 @@ export default Greeting;`,
       "SCSS enhances CSS with features like variables, nesting, and mixins, allowing developers to write more organized and maintainable stylesheets. This article explores advanced SCSS techniques and demonstrates how to implement scalable styling systems for complex projects.",
     publishedAt: "2024-03-02",
     updatedAt: "2024-03-04",
-    author: {
-      name: "Emily Carter",
-      avatar: "/images/avatar-emily.png",
-      role: "UI/UX Designer",
-    },
+   
     category: "Frontend Development",
     readTime: "15 min",
     techStacks: [
@@ -1289,11 +1237,7 @@ export default Greeting;`,
       "Combining state management with animation techniques can create highly interactive and responsive user experiences. This article discusses various methods to manage state alongside smooth animations, ensuring a cohesive and dynamic interface that adapts to user actions.",
     publishedAt: "2024-03-06",
     updatedAt: "2024-03-08",
-    author: {
-      name: "Balaji Udayagiri",
-      avatar: "/images/avatar-balaji.png",
-      role: "Front-End Lead Engineer",
-    },
+   
     category: "UI/UX",
     readTime: "17 min",
     techStacks: [
@@ -1361,11 +1305,7 @@ export default ToggleBox;`,
       "Redux offers a predictable state container for JavaScript apps, making it easier to manage complex state interactions in large-scale applications. This article explores Redux architecture, middleware integration, and strategies for efficient state management to help you build reliable and scalable systems.",
     publishedAt: "2024-03-10",
     updatedAt: "2024-03-12",
-    author: {
-      name: "Rajesh Kumar",
-      avatar: "/images/avatar-rajesh.png",
-      role: "Full-Stack Architect",
-    },
+   
     category: "Frontend Development",
     readTime: "18 min",
     techStacks: [
@@ -1428,11 +1368,7 @@ console.log(store.getState());`,
       "Zustand provides a lightweight alternative for managing state in React applications without the boilerplate of traditional solutions. This article explores its simple API, performance benefits, and practical integration strategies for modern React projects.",
     publishedAt: "2024-03-14",
     updatedAt: "2024-03-15",
-    author: {
-      name: "Balaji Udayagiri",
-      avatar: "/images/avatar-balaji.png",
-      role: "Front-End Lead Engineer",
-    },
+   
     category: "Frontend Development",
     readTime: "15 min",
     techStacks: [
@@ -1495,11 +1431,7 @@ export default Counter;`,
       "Framer Motion offers a powerful and intuitive API for adding animations to React components. This article explains how to create smooth, interactive animations—from simple transitions to complex gesture-based interactions—that enhance user engagement.",
     publishedAt: "2024-03-18",
     updatedAt: "2024-03-20",
-    author: {
-      name: "Emily Carter",
-      avatar: "/images/avatar-emily.png",
-      role: "UI/UX Designer",
-    },
+   
     category: "UI/UX",
     readTime: "16 min",
     techStacks: [
@@ -1564,11 +1496,7 @@ export default AnimatedComponent;`,
       "GSAP is a robust JavaScript library for creating high-performance animations. This article explores its advanced features, timeline control, and how you can use it to craft immersive, interactive web experiences that capture user attention.",
     publishedAt: "2024-03-22",
     updatedAt: "2024-03-24",
-    author: {
-      name: "Balaji Udayagiri",
-      avatar: "/images/avatar-balaji.png",
-      role: "Front-End Lead Engineer",
-    },
+   
     category: "UI/UX",
     readTime: "18 min",
     techStacks: [
@@ -1623,11 +1551,7 @@ gsap.timeline()
       "Modern web architecture focuses on creating scalable, efficient, and maintainable systems. This article examines key design principles—from microservices and serverless architectures to component-based design—that drive innovation in web development.",
     publishedAt: "2024-03-26",
     updatedAt: "2024-03-28",
-    author: {
-      name: "Rajesh Kumar",
-      avatar: "/images/avatar-rajesh.png",
-      role: "Full-Stack Architect",
-    },
+   
     category: "Architecture",
     readTime: "20 min",
     techStacks: [
@@ -1672,11 +1596,7 @@ gsap.timeline()
       "Jest simplifies testing with its powerful mocking and assertion capabilities. This article details how to write robust tests for JavaScript applications, covering unit tests, integration tests, and continuous integration practices to ensure your code remains reliable.",
     publishedAt: "2024-03-30",
     updatedAt: "2024-04-01",
-    author: {
-      name: "Samantha Lee",
-      avatar: "/images/avatar-samantha.png",
-      role: "QA Lead Engineer",
-    },
+   
     category: "Testing",
     readTime: "18 min",
     techStacks: [
@@ -1729,11 +1649,7 @@ gsap.timeline()
       "Cypress offers a powerful platform for end-to-end testing, enabling developers to simulate user interactions and catch bugs before production. This article provides a deep dive into Cypress features, setup, and integration with continuous testing workflows.",
     publishedAt: "2024-04-03",
     updatedAt: "2024-04-05",
-    author: {
-      name: "Samantha Lee",
-      avatar: "/images/avatar-samantha.png",
-      role: "QA Lead Engineer",
-    },
+   
     category: "Testing",
     readTime: "20 min",
     techStacks: [
@@ -1789,11 +1705,7 @@ gsap.timeline()
       "Webpack is a powerful module bundler that transforms and optimizes your code for production. This article provides an extensive guide to configuring Webpack, leveraging loaders and plugins, and implementing performance optimizations to ensure faster load times and a smoother user experience.",
     publishedAt: "2024-04-07",
     updatedAt: "2024-04-09",
-    author: {
-      name: "Rajesh Kumar",
-      avatar: "/images/avatar-rajesh.png",
-      role: "Full-Stack Architect",
-    },
+   
     category: "Developer Experience",
     readTime: "22 min",
     techStacks: [
@@ -1859,11 +1771,7 @@ gsap.timeline()
       "Vite is revolutionizing the development experience with its lightning-fast bundling and hot module replacement. This article explores Vite's core features, modern architecture, and how it significantly speeds up the development process compared to traditional bundlers.",
     publishedAt: "2024-04-11",
     updatedAt: "2024-04-13",
-    author: {
-      name: "Rajesh Kumar",
-      avatar: "/images/avatar-rajesh.png",
-      role: "Full-Stack Architect",
-    },
+   
     category: "Developer Experience",
     readTime: "18 min",
     techStacks: [
@@ -1918,11 +1826,7 @@ export default defineConfig({
       "Design systems are critical for maintaining consistency across large-scale applications. This article examines how design systems standardize UI components, streamline development, and foster collaboration between designers and developers to create a unified product experience.",
     publishedAt: "2024-04-15",
     updatedAt: "2024-04-17",
-    author: {
-      name: "Emily Carter",
-      avatar: "/images/avatar-emily.png",
-      role: "UI/UX Designer",
-    },
+   
     category: "UI/UX",
     readTime: "20 min",
     techStacks: [
@@ -1967,11 +1871,7 @@ export default defineConfig({
       "System design is crucial for building applications that can handle high traffic and complex interactions. This article explores strategies for designing distributed systems, covering scalability, reliability, and the integration of various architectural components to build resilient applications.",
     publishedAt: "2024-04-19",
     updatedAt: "2024-04-21",
-    author: {
-      name: "Rajesh Kumar",
-      avatar: "/images/avatar-rajesh.png",
-      role: "Full-Stack Architect",
-    },
+   
     category: "Architecture",
     readTime: "22 min",
     techStacks: [
@@ -2017,11 +1917,7 @@ export default defineConfig({
       "Module Federation allows multiple independent builds to form a single application by sharing code dynamically. This article explains how to implement module federation, the benefits it offers for micro-frontend architectures, and strategies for seamless integration across different projects.",
     publishedAt: "2024-04-23",
     updatedAt: "2024-04-25",
-    author: {
-      name: "Rajesh Kumar",
-      avatar: "/images/avatar-rajesh.png",
-      role: "Full-Stack Architect",
-    },
+   
     category: "Architecture",
     readTime: "20 min",
     techStacks: [
@@ -2066,11 +1962,7 @@ export default defineConfig({
       "Micro-Frontends break down monolithic frontend architectures into smaller, independent modules. This article explores the concept of micro-frontends, their benefits, implementation strategies, and the challenges of maintaining consistency across distributed teams.",
     publishedAt: "2024-04-27",
     updatedAt: "2024-04-29",
-    author: {
-      name: "Rajesh Kumar",
-      avatar: "/images/avatar-rajesh.png",
-      role: "Full-Stack Architect",
-    },
+   
     category: "Architecture",
     readTime: "22 min",
     techStacks: [
@@ -2115,11 +2007,7 @@ export default defineConfig({
       "The modern web is constantly evolving with new technologies, frameworks, and performance optimizations. This article examines the latest trends, best practices, and innovations that are shaping the future of web development, and offers insights to help developers stay ahead in a competitive landscape.",
     publishedAt: "2024-05-01",
     updatedAt: "2024-05-03",
-    author: {
-      name: "Balaji Udayagiri",
-      avatar: "/images/avatar-balaji.png",
-      role: "Front-End Lead Engineer",
-    },
+   
     category: "Frontend Development",
     readTime: "20 min",
     techStacks: [
@@ -2164,11 +2052,7 @@ export default defineConfig({
       "Web Vitals are essential metrics that provide insights into the real-world performance of a website. This article explains the key metrics, how to measure them, and offers strategies to optimize user experience based on these insights.",
     publishedAt: "2024-05-05",
     updatedAt: "2024-05-07",
-    author: {
-      name: "Balaji Udayagiri",
-      avatar: "/images/avatar-balaji.png",
-      role: "Front-End Lead Engineer",
-    },
+   
     category: "Performance Optimization",
     readTime: "18 min",
     techStacks: [
@@ -2213,11 +2097,7 @@ export default defineConfig({
       "Optimizing web performance is crucial for user satisfaction and SEO. This article explores various strategies such as lazy loading, code splitting, caching, and server-side rendering to create fast, efficient web applications.",
     publishedAt: "2024-05-09",
     updatedAt: "2024-05-11",
-    author: {
-      name: "Rajesh Kumar",
-      avatar: "/images/avatar-rajesh.png",
-      role: "Full-Stack Architect",
-    },
+   
     category: "Performance Optimization",
     readTime: "20 min",
     techStacks: [
@@ -2268,11 +2148,7 @@ export default defineConfig({
       "Search Engine Optimization (SEO) is essential for driving organic traffic to your website. This article provides a comprehensive guide to modern SEO techniques, including on-page optimization, content strategy, and technical improvements to boost your site's ranking and visibility.",
     publishedAt: "2024-05-13",
     updatedAt: "2024-05-15",
-    author: {
-      name: "Balaji Udayagiri",
-      avatar: "/images/avatar-balaji.png",
-      role: "Front-End Lead Engineer",
-    },
+   
     category: "Performance Optimization",
     readTime: "20 min",
     techStacks: [
@@ -2317,11 +2193,7 @@ export default defineConfig({
       "Accessibility (A11y) is a key component of modern web design, ensuring that all users, including those with disabilities, have a seamless experience. This article provides a comprehensive guide to implementing accessibility best practices in web development, from semantic markup to ARIA roles.",
     publishedAt: "2024-05-17",
     updatedAt: "2024-05-19",
-    author: {
-      name: "Emily Carter",
-      avatar: "/images/avatar-emily.png",
-      role: "UI/UX Designer",
-    },
+   
     category: "UI/UX",
     readTime: "18 min",
     techStacks: [
@@ -2366,11 +2238,7 @@ export default defineConfig({
       "Server Components in React enable the separation of server-side logic from client-side rendering, resulting in improved performance and simplified data fetching. This article explores how Server Components work, the benefits they offer, and strategies for integrating them into existing React applications.",
     publishedAt: "2024-05-21",
     updatedAt: "2024-05-23",
-    author: {
-      name: "Balaji Udayagiri",
-      avatar: "/images/avatar-balaji.png",
-      role: "Front-End Lead Engineer",
-    },
+   
     category: "Frontend Development",
     readTime: "20 min",
     techStacks: [
@@ -2424,11 +2292,7 @@ export default defineConfig({
       "Edge Runtime environments allow code to run closer to the user, reducing latency and improving performance. This article explores the architecture behind edge computing, its integration into modern web applications, and the benefits it offers for real-time processing and faster response times.",
     publishedAt: "2024-05-25",
     updatedAt: "2024-05-27",
-    author: {
-      name: "Rajesh Kumar",
-      avatar: "/images/avatar-rajesh.png",
-      role: "Full-Stack Architect",
-    },
+   
     category: "Performance Optimization",
     readTime: "20 min",
     techStacks: [
@@ -2474,11 +2338,7 @@ export default defineConfig({
       "Streaming Server-Side Rendering (SSR) enables pages to load faster by sending portions of HTML to the client as they are rendered. This article explains how streaming SSR works, its advantages, and how it can significantly improve user experience by reducing initial load times.",
     publishedAt: "2024-05-29",
     updatedAt: "2024-05-31",
-    author: {
-      name: "Rajesh Kumar",
-      avatar: "/images/avatar-rajesh.png",
-      role: "Full-Stack Architect",
-    },
+   
     category: "Performance Optimization",
     readTime: "20 min",
     techStacks: [
@@ -2536,11 +2396,7 @@ function streamResponse(req, res) {
       "Progressive Web Apps (PWAs) combine the best of web and mobile, offering offline capabilities, push notifications, and an app-like experience. This article covers the core principles of PWAs, including service workers, caching strategies, and performance optimization techniques.",
     publishedAt: "2024-06-02",
     updatedAt: "2024-06-04",
-    author: {
-      name: "Balaji Udayagiri",
-      avatar: "/images/avatar-balaji.png",
-      role: "Front-End Lead Engineer",
-    },
+   
     category: "Frontend Development",
     readTime: "22 min",
     techStacks: [
@@ -2595,11 +2451,7 @@ function streamResponse(req, res) {
       "Continuous Integration and Continuous Deployment (CI/CD) are key practices that automate the software release process. This article covers CI/CD pipelines, tools, and best practices to streamline development, testing, and deployment, ensuring faster and more reliable releases.",
     publishedAt: "2024-06-06",
     updatedAt: "2024-06-08",
-    author: {
-      name: "Michael Chen",
-      avatar: "/images/avatar-michael.png",
-      role: "DevOps Specialist",
-    },
+   
     category: "DevOps",
     readTime: "20 min",
     techStacks: [
@@ -2662,11 +2514,7 @@ deploy:
       "Web Workers enable JavaScript to run in parallel threads, offloading heavy computations from the main thread. This article explains how to implement Web Workers to improve application responsiveness and performance, along with practical examples and best practices.",
     publishedAt: "2024-06-10",
     updatedAt: "2024-06-12",
-    author: {
-      name: "Rajesh Kumar",
-      avatar: "/images/avatar-rajesh.png",
-      role: "Full-Stack Architect",
-    },
+   
     category: "Performance Optimization",
     readTime: "18 min",
     techStacks: [
@@ -2726,11 +2574,7 @@ onmessage = function(e) {
       "Atomic Design is a methodology for creating robust design systems by breaking interfaces down into fundamental building blocks. This article explores the principles of Atomic Design and how to apply them to create reusable and scalable UI components for large projects.",
     publishedAt: "2024-06-14",
     updatedAt: "2024-06-16",
-    author: {
-      name: "Emily Carter",
-      avatar: "/images/avatar-emily.png",
-      role: "UI/UX Designer",
-    },
+   
     category: "UI/UX",
     readTime: "20 min",
     techStacks: [
@@ -2776,11 +2620,7 @@ onmessage = function(e) {
       "Effective team leadership is critical for fostering innovation and collaboration within tech organizations. This article explores leadership strategies, management techniques, and cultural practices that empower teams to excel in a fast-paced technological landscape.",
     publishedAt: "2024-06-18",
     updatedAt: "2024-06-20",
-    author: {
-      name: "Michael Chen",
-      avatar: "/images/avatar-michael.png",
-      role: "DevOps Specialist",
-    },
+   
     category: "Developer Experience",
     readTime: "22 min",
     techStacks: [
@@ -2824,11 +2664,7 @@ onmessage = function(e) {
       "Artificial Intelligence (AI) is transforming the way we design and develop user interfaces (UI). From personalized user experiences to automated design processes, AI technologies are playing a key role in shaping modern UI development. This article explores the integration of AI in UI design, its impact on user experience, and the future trends that will define the next generation of web and app interfaces.",
     publishedAt: "2025-02-12",
     updatedAt: "2025-02-12",
-    author: {
-      name: "balaji",
-      avatar: "/images/avatar-john.png",
-      role: "UI/UX Designer",
-    },
+   
     category: "UI Development",
     readTime: "15 min",
     techStacks: [
