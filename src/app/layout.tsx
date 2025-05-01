@@ -194,6 +194,12 @@ export default function RootLayout({
                   "https://www.linkedin.com/in/balajiudayagiri/",
                   "https://www.twitter.com/balaji_udy",
                 ],
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "Hyderabad",
+                  addressRegion: "Telangana",
+                  addressCountry: "India",
+                },
               },
               knowsAbout: [
                 "React.js",
