@@ -1154,70 +1154,158 @@ For larger applications, use libraries like **Redux** or the **Context API** to 
     title: "SSR vs. SSG",
     data: `In Next.js, **SSR (Server-Side Rendering)** and **SSG (Static Site Generation)** are two ways of rendering pages with their own unique characteristics.\n\n### 🧠 **SSR (Server-Side Rendering):**\n- **Definition**: With SSR, data is fetched on each request to the server, and the page is generated dynamically each time.\n- **Usage**: Ideal for pages that require fresh data on every request, such as user dashboards or news sites.\n- **Pros**: Ensures that the page is always up-to-date with the latest data.\n- **Cons**: Slower performance because the page is generated on each request.\n\n**Example of SSR using getServerSideProps:**\n\`\`\`javascript\nexport async function getServerSideProps(context) {\n  const res = await fetch('https://api.example.com/data');\n  const data = await res.json();\n  return { props: { data } };\n}\n\`\`\`\n\n### 🧠 **SSG (Static Site Generation):**\n- **Definition**: With SSG, data is fetched at build time, and the page is pre-rendered as static HTML.\n- **Usage**: Best suited for content that doesn’t change frequently, such as blogs or documentation.\n- **Pros**: Faster performance because the page is pre-rendered during the build process and served as static content.\n- **Cons**: Data is static until the next build; any new content will only be available after a new deployment.\n\n**Example of SSG using getStaticProps:**\n\`\`\`javascript\nexport async function getStaticProps() {\n  const res = await fetch('https://api.example.com/data');\n  const data = await res.json();\n  return { props: { data } };\n}\n\`\`\`\n\n### **In short:**\n- **SSR**: Fetches data on every request, ideal for dynamic content.\n- **SSG**: Fetches data at build time, ideal for static content that doesn’t change often.`,
   },
-  //   {
-  //     id: 29,
-  //     title: "Dynamic Routes in Next.js",
-  //     data: `Dynamic routes in Next.js are created by using square brackets in the filename. This feature allows you to create pages based on dynamic parameters, such as an article ID or a user profile.\n\n### 🧠 **How Dynamic Routes Work:**
-  // - **Filename Convention**: Use square brackets \`[param].js\` in the filename to create a dynamic route, where \`param\` is the dynamic part of the URL.\n\n**Example of a dynamic route:**\n\`\`\`javascript\n// pages/[id].js\nexport default function Post({ id }) {\n  return <div>Post ID: {id}</div>;\n}\n\n// To fetch dynamic data, you can use getServerSideProps or getStaticProps.\n\`\`\`\n- The dynamic route can then capture any value in the URL path and use it in the component.\n\n**Example URL:**\n- If the URL is \`/posts/1\`, the \`id\` parameter will be \`1\`.\n\n### **In short:**\nDynamic routes in Next.js are created by using square brackets in the filename, allowing you to capture dynamic parameters from the URL.`
-  //   },
-  //   {
-  //     id: 30,
-  //     title: "Incremental Static Regeneration (ISR)",
-  //     data: `Incremental Static Regeneration (ISR) allows you to update static pages after the site has been deployed without needing a full rebuild. This is particularly useful for SEO and performance.\n\n### 🧠 **How ISR Works:**
-  // - ISR enables the regeneration of static pages after the site has been deployed. You can set a revalidation time, after which the page will be re-generated in the background.\n
-  // - **Revalidate Time**: The \`revalidate\` field in \`getStaticProps\` specifies how often the page should be regenerated.\n\n**Example of ISR in getStaticProps:**\n\`\`\`javascript\nexport async function getStaticProps() {\n  const res = await fetch('https://api.example.com/data');\n  const data = await res.json();\n  return { props: { data }, revalidate: 60 };\n}\n\`\`\`\n
-  // - In this example, the page will be re-generated every 60 seconds.\n\n### **In short:**\nISR allows static pages to be updated after deployment without rebuilding the whole site, improving both SEO and performance."
-  //   },
-  //   {
-  //     id: 31,
-  //     title: "API Routes in Next.js",
-  //     data: `API Routes allow you to define backend logic within your Next.js application. This feature enables you to create RESTful API endpoints without needing a separate server.\n\n### 🧠 **How API Routes Work:**
-  // - API routes are created in the \`/pages/api\` directory, where each file corresponds to an endpoint.\n\n**Example of an API route:**\n\`\`\`javascript\n// pages/api/hello.js\nexport default function handler(req, res) {\n  res.status(200).json({ message: 'Hello, World!' });\n}\n\`\`\`\n- The file \`hello.js\` defines an endpoint \`/api/hello\` that returns a JSON response.\n- API routes can handle different HTTP methods like GET, POST, DELETE, and PUT.\n\n### **In short:**\nAPI Routes allow you to define backend logic within your Next.js app, enabling you to create server-side logic alongside your frontend code."
-  //   },
-  //   {
-  //     id: 32,
-  //     title: "Middleware in Next.js",
-  //     data: `Middleware in Next.js allows you to run code before a request reaches a page or an API route. This is useful for tasks like authentication, logging, or modifying requests.\n\n### 🧠 **How Middleware Works:**
-  // - Middleware functions are executed during the request lifecycle, before the final handler is executed.\n- It can modify the request or perform checks before passing control to the next handler.\n\n**Example of middleware for authentication:**\n
-  // \`\`\`javascript\n// middleware.js\nexport function middleware(req, ev) {\n  const token = req.cookies.token;\n  if (!token) {\n    return new Response('Unauthorized', { status: 401 });\n  }\n  return NextResponse.next();\n}\n\`\`\`\n- In this example, the middleware checks for a valid authentication token in the cookies and blocks the request if the token is missing.\n\n### **In short:**\nMiddleware in Next.js runs before the request reaches the page or API route, enabling powerful features like authentication and logging."
-  //   },
-  //   {
-  //     id: 33,
-  //     title: "next/image Optimization",
-  //     data: `The **next/image** component in Next.js provides automatic image optimization to improve performance. It optimizes images by resizing them and serving them in the most appropriate format.\n\n### 🧠 **Features of next/image:**
-  // - **Automatic Optimization**: The component automatically resizes and optimizes images based on the user's device, ensuring the best performance.\n
-  // - **Format Support**: It supports modern image formats like WebP and AVIF.\n
-  // - **Lazy Loading**: Images are lazily loaded, meaning they are only loaded when they enter the viewport, improving the page's initial load time.\n\n**Example of using next/image:**\n\`\`\`javascript\nimport Image from 'next/image';\n\nexport default function MyPage() {\n  return <Image src='/path/to/image.jpg' alt='An example image' width={500} height={300} />;\n}\n\`\`\`\n\n### **In short:**\nThe \`next/image\` component automatically optimizes images, resizing them and serving them in the right format to ensure better performance and faster loading times."
-  //   },
-  //   {
-  //     id: 34,
-  //     title: "SEO and Open Graph Optimization",
-  //     data: `Next.js provides the \`next/head\` component to optimize SEO and Open Graph tags for social media sharing.\n\n### 🧠 **SEO Optimization:**
-  // - Use the \`next/head\` component to set meta tags like title, description, and other SEO-related attributes.\n
-  // - Proper SEO tags help search engines index your content and improve your page ranking.\n\n**Example of SEO optimization:**\n
-  // \`\`\`javascript\nimport Head from 'next/head';\n\nexport default function Page() {\n  return (\n    <Head>\n      <title>My Page Title</title>\n      <meta name="description" content="Description of the page" />\n    </Head>\n  );\n}\n\`\`\`\n\n### 🧠 **Open Graph Optimization:**
-  // - Open Graph tags allow you to control how your content appears when shared on social media platforms like Facebook and Twitter.\n\n**Example of Open Graph optimization:**\n
-  // \`\`\`javascript\nimport Head from 'next/head';\n\nexport default function Page() {\n  return (\n    <Head>\n      <meta property="og:title" content="My Page Title" />\n      <meta property="og:image" content="/path/to/image.jpg" />\n    </Head>\n  );\n}\n\`\`\`\n\n### **In short:**\nUse \`next/head\` to set SEO and Open Graph tags, which are crucial for improving search engine rankings and enhancing social media sharing."
-  //   },
-  //   {
-  //     id: 35,
-  //     title: "Data Fetching Methods in Next.js",
-  //     data: `Next.js provides several methods for fetching data, including **getServerSideProps**, **getStaticProps**, and **getInitialProps**.\n\n### 🧠 **getServerSideProps**:
-  // - **SSR (Server-Side Rendering)**: Fetches data on each request, ensuring the page is always up-to-date.\n
-  // - **Usage:** Ideal for pages where data needs to be fetched in real-time.\n\n**Example:**\n
-  // \`\`\`javascript\nexport async function getServerSideProps() {\n  const res = await fetch('https://api.example.com/data');\n  const data = await res.json();\n  return { props: { data } };\n}\n\`\`\`\n\n### 🧠 **getStaticProps**:
-  // - **SSG (Static Site Generation)**: Fetches data at build time and generates static HTML.\n
-  // - **Usage:** Ideal for static content that doesn’t change frequently.\n\n**Example:**\n
-  // \`\`\`javascript\nexport async function getStaticProps() {\n  const res = await fetch('https://api.example.com/data');\n  const data = await res.json();\n  return { props: { data } };\n}\n\`\`\`\n\n### 🧠 **getInitialProps**:
-  // - **Universal**: This method can be used for both SSR and client-side fetching, but it is less efficient than the other two.\n
-  // - **Usage:** Generally used for backward compatibility with older Next.js projects.\n\n### **In short:**\n- **getServerSideProps**: Fetch data on each request (SSR).\n- **getStaticProps**: Fetch data at build time (SSG).\n- **getInitialProps**: An older method used for both SSR and client-side fetching."
-  //   },
-  //   {
-  //     id: 36,
-  //     title: "Client-side Routing in Next.js",
-  //     data: `Next.js provides **automatic client-side routing** through its \`Link\` component, which helps in navigating between pages in a Next.js app without reloading the entire page.\n\n### 🧠 **How Client-Side Routing Works:**
-  // - When you use the \`Link\` component, Next.js pre-fetches the linked page and renders it without a full page reload.\n
-  // - **Usage:** This allows for smooth, fast, and efficient navigation between pages.\n\n**Example of client-side routing with the Link component:**\n
-  // \`\`\`javascript\nimport Link from 'next/link';\n\nconst HomePage = () => (\n  <div>\n    <Link href='/about'>Go to About Page</Link>\n  </div>\n);\n\`\`\`\n\n### **In short:**\nClient-side routing in Next.js is automatically handled using the \`Link\` component, providing seamless navigation between pages without full page reloads.`
-  //   }
+  {
+    id: 29,
+    title: "Dynamic Routes in Next.js",
+    data: `Dynamic routes in Next.js are created by using square brackets in the filename. This feature allows you to create pages based on dynamic parameters, such as an article ID or a user profile.\n\n### 🧠 **How Dynamic Routes Work:**
+  - **Filename Convention**: Use square brackets \`[param].js\` in the filename to create a dynamic route, where \`param\` is the dynamic part of the URL.\n\n**Example of a dynamic route:**\n\`\`\`javascript\n// pages/[id].js\nexport default function Post({ id }) {\n  return <div>Post ID: {id}</div>;\n}\n\n// To fetch dynamic data, you can use getServerSideProps or getStaticProps.\n\`\`\`\n- The dynamic route can then capture any value in the URL path and use it in the component.\n\n**Example URL:**\n- If the URL is \`/posts/1\`, the \`id\` parameter will be \`1\`.\n\n### **In short:**\nDynamic routes in Next.js are created by using square brackets in the filename, allowing you to capture dynamic parameters from the URL.`,
+  },
+  {
+    id: 30,
+    title: "Incremental Static Regeneration (ISR)",
+    data: `In Next.js, **Incremental Static Regeneration (ISR)** allows you to update static pages **after deployment** without requiring a full rebuild. This makes it ideal for performance and SEO on dynamic sites.\n\n### 🧠 **How ISR Works:**\n- ISR enables the regeneration of static pages after the site has been deployed.\n- You can define a **revalidate time**, which tells Next.js how often to re-generate the page in the background.\n\n### 🔄 **Revalidate Time**\n- The \`revalidate\` field inside \`getStaticProps\` specifies the number of seconds to wait before regenerating the page.\n\n**Example of ISR using getStaticProps:**\n\`\`\`javascript\nexport async function getStaticProps() {\n  const res = await fetch('https://api.example.com/data');\n  const data = await res.json();\n  return { props: { data }, revalidate: 60 };\n}\n\`\`\`\n- In this example, the page will be re-generated **every 60 seconds** in the background when a request is made after the interval.\n\n### **In short:**\n- **ISR**: Combines the benefits of SSG and dynamic updates.\n- Keeps pages fresh without a full rebuild.\n- Great for blogs, products, and frequently updated content.`,
+  },
+
+  {
+    id: 31,
+    title: "API Routes in Next.js",
+    data: `In Next.js, **API Routes** let you create backend endpoints directly within your app, allowing you to build full-stack features without a separate server.\n\n### 🧠 **How API Routes Work:**\n- API routes are defined inside the \`/pages/api\` directory.\n- Each file in this folder maps to a corresponding API endpoint.\n\n**Example of an API Route:**\n\`\`\`javascript\n// pages/api/hello.js\nexport default function handler(req, res) {\n  res.status(200).json({ message: 'Hello, World!' });\n}\n\`\`\`\n- This file defines the endpoint \`/api/hello\` which responds with a simple JSON object.\n- API routes support different HTTP methods like **GET**, **POST**, **PUT**, and **DELETE**, enabling flexible server-side logic.\n\n### **In short:**\n- **API Routes** let you run server-side code (e.g., handling requests, accessing databases).\n- They’re great for adding dynamic backend features directly into your Next.js project.`,
+  },
+
+  {
+    id: 32,
+    title: "Middleware in Next.js",
+    data: `In Next.js, **Middleware** allows you to run logic **before a request is completed**, enabling powerful features like authentication, redirects, and request modifications.\n\n### 🧠 **How Middleware Works:**\n- Middleware runs **before** the request reaches a page or an API route.\n- It can inspect and modify the request, perform checks (like authentication), or rewrite/redirect responses.\n\n**Example of Middleware for authentication:**\n\`\`\`javascript\n// middleware.js\nimport { NextResponse } from 'next/server';\n\nexport function middleware(req) {\n  const token = req.cookies.get('token');\n  if (!token) {\n    return new NextResponse('Unauthorized', { status: 401 });\n  }\n  return NextResponse.next();\n}\n\`\`\`\n- In this example, the middleware checks for a token in cookies. If it's missing, the request is blocked with a 401 response.\n\n### **In short:**\n- **Middleware** runs code before routing completes.\n- Great for **auth checks**, **logging**, **redirects**, and other pre-processing logic.`,
+  },
+
+  {
+    id: 33,
+    title: "next/image Optimization",
+    data: `In Next.js, the **\`next/image\`** component provides built-in image optimization to enhance performance and user experience by serving images in the best format and size.\n\n### 🧠 **Features of \`next/image\`:**\n- **Automatic Optimization**: Resizes and serves images based on the user's device, screen size, and resolution.\n- **Modern Formats**: Supports formats like **WebP** and **AVIF** for better compression and quality.\n- **Lazy Loading**: Loads images only when they enter the viewport, reducing initial page load time.\n\n**Example of using \`next/image\`:**\n\`\`\`javascript\nimport Image from 'next/image';\n\nexport default function MyPage() {\n  return (\n    <Image \n      src='/path/to/image.jpg' \n      alt='An example image' \n      width={500} \n      height={300} \n    />\n  );\n}\n\`\`\`\n\n### **In short:**\n- The \`next/image\` component automatically handles image optimization, resizing, and format conversion.\n- It improves performance, SEO, and loading speeds with minimal setup.`,
+  },
+
+  {
+    id: 34,
+    title: "SEO and Open Graph Optimization",
+    data: `In Next.js, SEO and Open Graph optimization are achieved using the **\`next/head\`** component, allowing you to customize how your pages appear in search engines and on social media.\n\n### 🧠 **SEO Optimization:**\n- Use the \`next/head\` component to define meta tags such as title, description, and keywords.\n- Helps search engines understand your content, improving indexing and page rankings.\n\n**Example of SEO optimization:**\n\`\`\`javascript\nimport Head from 'next/head';\n\nexport default function Page() {\n  return (\n    <Head>\n      <title>My Page Title</title>\n      <meta name="description" content="Description of the page" />\n    </Head>\n  );\n}\n\`\`\`\n\n### 🧠 **Open Graph Optimization:**\n- Open Graph tags control how your content appears when shared on platforms like Facebook, Twitter, and LinkedIn.\n\n**Example of Open Graph optimization:**\n\`\`\`javascript\nimport Head from 'next/head';\n\nexport default function Page() {\n  return (\n    <Head>\n      <meta property="og:title" content="My Page Title" />\n      <meta property="og:image" content="/path/to/image.jpg" />\n    </Head>\n  );\n}\n\`\`\`\n\n### **In short:**\nUse \`next/head\` to inject SEO and Open Graph tags into your pages for better search engine visibility and rich social media previews.`,
+  },
+
+  {
+    id: 35,
+    title: "Data Fetching Methods in Next.js",
+    data: `Next.js supports multiple data fetching strategies to balance performance and dynamic content needs, including **getServerSideProps**, **getStaticProps**, and **getInitialProps**.\n\n### 🧠 **getServerSideProps**\n- **SSR (Server-Side Rendering):** Fetches data on each request, ensuring real-time freshness.\n- **Use Case:** Ideal for pages where the content changes frequently or needs to be always up to date.\n\n**Example:**\n\`\`\`javascript\nexport async function getServerSideProps() {\n  const res = await fetch('https://api.example.com/data');\n  const data = await res.json();\n  return { props: { data } };\n}\n\`\`\`\n\n### 🧠 **getStaticProps**\n- **SSG (Static Site Generation):** Fetches data at build time, generating static HTML.\n- **Use Case:** Best for pages with data that doesn't change often (e.g., blog posts, documentation).\n\n**Example:**\n\`\`\`javascript\nexport async function getStaticProps() {\n  const res = await fetch('https://api.example.com/data');\n  const data = await res.json();\n  return { props: { data } };\n}\n\`\`\`\n\n### 🧠 **getInitialProps**\n- **Universal:** Runs on the server during SSR and on the client during client-side navigation.\n- **Note:** Generally used for backward compatibility; not recommended for new projects.\n\n### **In short:**\n- \`getServerSideProps\`: Server-side rendering, fetch on every request.\n- \`getStaticProps\`: Static generation, fetch at build time.\n- \`getInitialProps\`: Legacy method for both SSR and client use, less preferred today.`,
+  },
+  {
+    id: 36,
+    title: "Client-side Routing in Next.js",
+    data: `Next.js provides **automatic client-side routing** through its \`Link\` component, which helps in navigating between pages in a Next.js app without reloading the entire page.\n\n### 🧠 **How Client-Side Routing Works:**
+  - When you use the \`Link\` component, Next.js pre-fetches the linked page and renders it without a full page reload.\n
+  - **Usage:** This allows for smooth, fast, and efficient navigation between pages.\n\n**Example of client-side routing with the Link component:**\n
+  \`\`\`javascript\nimport Link from 'next/link';\n\nconst HomePage = () => (\n  <div>\n    <Link href='/about'>Go to About Page</Link>\n  </div>\n);\n\`\`\`\n\n### **In short:**\nClient-side routing in Next.js is automatically handled using the \`Link\` component, providing seamless navigation between pages without full page reloads.`,
+  },
+  {
+    id: 37,
+    title: "`map`, `filter`, `reduce` - Explained",
+    data: `Sure! Here's a **clear breakdown** of \`map\`, \`filter\`, and \`reduce\` — three core JavaScript array methods that are widely used for data transformation.
+
+---
+
+## 🗺️ 1. \`map()\`
+
+### ✅ **What it does**:
+
+Transforms each element in an array and returns a **new array** of the same length.
+
+### 📌 Syntax:
+
+\`\`\`js
+array.map((item, index, array) => {
+  return newItem;
+});
+\`\`\`
+
+### 📦 Example:
+
+\`\`\`js
+const nums = [1, 2, 3];
+const doubled = nums.map(n => n * 2);
+console.log(doubled); // [2, 4, 6]
+\`\`\`
+
+### 🔍 Use Cases:
+
+* Converting data formats
+* Applying transformations (e.g., currency formatting, string formatting)
+
+---
+
+## 🔍 2. \`filter()\`
+
+### ✅ **What it does**:
+
+Returns a **new array** containing only the elements that match the given condition (predicate).
+
+### 📌 Syntax:
+
+\`\`\`js
+array.filter((item, index, array) => {
+  return condition; // true to keep, false to discard
+});
+\`\`\`
+
+### 📦 Example:
+
+\`\`\`js
+const nums = [1, 2, 3, 4];
+const even = nums.filter(n => n % 2 === 0);
+console.log(even); // [2, 4]
+\`\`\`
+
+### 🔍 Use Cases:
+
+* Filtering out invalid data
+* Getting items that match criteria (e.g., isActive users)
+
+---
+
+## 🧮 3. \`reduce()\`
+
+### ✅ **What it does**:
+
+Reduces an array to a **single value** by applying a function to each item with an accumulator.
+
+### 📌 Syntax:
+
+\`\`\`js
+array.reduce((accumulator, item, index, array) => {
+  return updatedAccumulator;
+}, initialValue);
+\`\`\`
+
+### 📦 Example:
+
+\`\`\`js
+const nums = [1, 2, 3, 4];
+const sum = nums.reduce((acc, curr) => acc + curr, 0);
+console.log(sum); // 10
+\`\`\`
+
+### 🔍 Use Cases:
+
+* Calculating totals (sum, average)
+* Grouping data
+* Building objects from arrays
+
+---
+
+## 🧠 Summary Table
+
+| Method   | Return Value       | Use Case                        | Mutates Original? |
+| -------- | ------------------ | ------------------------------- | ----------------- |
+| \`map\`    | New array          | Transform data                  | ❌ No              |
+| \`filter\` | New array (subset) | Select specific items           | ❌ No              |
+| \`reduce\` | Single value (any) | Aggregate or transform entirely | ❌ No              |
+
+---`,
+  },
 ];
